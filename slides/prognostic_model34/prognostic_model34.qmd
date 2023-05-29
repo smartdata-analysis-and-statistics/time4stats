@@ -1,0 +1,31 @@
+---
+title: "Meta-analysis of Prognostic Studies"
+author: "Thomas Debray, PhD"
+format:
+  revealjs: 
+    transition: none
+    slide-number: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/logo_footer.png
+    theme: slide-styles.scss
+    footer: "fromdatatowisdom.com"
+    css: additional-styles.css
+title-slide-attributes: 
+  data-background-image: images/smartdata-logo.png
+  data-background-size: 30%
+  data-background-position: 2% 2%
+---
+
+### Numerous models for same target population + outcomes
+
+- $>$ 300 models predicting cardiovascular disease
+- $>$ 
+
+---
+
+### Need for Systematic Reviews
+
+
+
