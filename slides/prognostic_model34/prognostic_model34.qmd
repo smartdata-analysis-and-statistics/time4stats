@@ -8,7 +8,7 @@ format:
     chalkboard: 
       buttons: false
     preview-links: auto
-    logo: images/logo_footer.png
+    logo: images/logo-copyright.png
     theme: slide-styles.scss
     footer: "fromdatatowisdom.com"
     css: additional-styles.css
