@@ -1,8 +1,8 @@
 ---
-title: "slides"
+title: "Meta-analysis of Prognostic Studies"
 ---
 
-This is where the link for presentation slides placed
+The presentation
 
 ```{=html}
 <iframe width="600px" src="slides/prognostic_model34/prognostic_model34.html" height="337.5px" style="border: 1px solid black;"></iframe>
