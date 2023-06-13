@@ -1,37 +1,23 @@
 [
   {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "slides",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "This is where the link for presentation slides placed"
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "time4stats",
     "section": "",
-    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "slides",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "slides/prognostic_model34/prognostic_model34.html#numerous-models-for-same-target-population-outcomes",
-    "href": "slides/prognostic_model34/prognostic_model34.html#numerous-models-for-same-target-population-outcomes",
-    "title": "Meta-analysis of Prognostic Studies",
-    "section": "Numerous models for same target population + outcomes",
-    "text": "Numerous models for same target population + outcomes\n\n\\(>\\) 300 models predicting cardiovascular disease"
-  },
-  {
-    "objectID": "slides/prognostic_model34/prognostic_model34.html#need-for-systematic-reviews",
-    "href": "slides/prognostic_model34/prognostic_model34.html#need-for-systematic-reviews",
-    "title": "Meta-analysis of Prognostic Studies",
-    "section": "Need for Systematic Reviews",
-    "text": "Need for Systematic Reviews\n\n\n\nfromdatatowisdom.com"
+    "text": "This is where the link for presentation slides placed"
   }
 ]
