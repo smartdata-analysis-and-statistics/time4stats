@@ -3,3 +3,7 @@ title: "slides"
 ---
 
 This is where the link for presentation slides placed
+
+```{=html}
+<iframe width="600px" src="slides/prognostic_model34/prognostic_model34.html" height="337.5px" style="border: 1px solid black;"></iframe>
+```

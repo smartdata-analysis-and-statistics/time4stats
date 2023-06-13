@@ -7,8 +7,11 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.353">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
+<link href="../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.361">
 
   <meta name="author" content="Thomas Debray, PhD">
   <title>time4stats - Meta-analysis of Prognostic Studies</title>
@@ -344,18 +347,300 @@ Thomas Debray, PhD
 <h3 id="numerous-models-for-same-target-population-outcomes">Numerous models for same target population + outcomes</h3>
 <ul>
 <li><span class="math inline">\(&gt;\)</span> 300 models predicting cardiovascular disease</li>
-<li><span class="math inline">\(&gt;\)</span></li>
+<li><span class="math inline">\(&gt;\)</span> 100 models for brain trauma patients</li>
+<li><span class="math inline">\(&gt;\)</span> 100 diabetes type 2 models</li>
+<li><span class="math inline">\(&gt;\)</span> 60 models for breast cancer prognosis</li>
 </ul>
 </section>
 <section class="slide level2">
 
 <h3 id="need-for-systematic-reviews">Need for Systematic Reviews</h3>
-
-
-<img src="images/logo-copyright.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p>fromdatatowisdom.com</p>
-</div>
+<p>Abundance of CPMs, with poor understanding of</p>
+<ul>
+<li>The comparative performance of these CPMs</li>
+<li>The consistency of effects and risk estimates across CPMs</li>
+<li>The clinical impact of these CPMs</li>
+</ul>
+<p>Systematic review of validation studies may help to identify promising models and evaluate the need for further improvements.</p>
 </section>
+<section class="slide level2">
+
+<h3 id="why-do-we-need-meta-analysis">Why do we need meta-analysis?</h3>
+<ul>
+<li>To summarize the predictive performance of a CPM</li>
+<li>To evaluate whether a CPM yileds consistently good performance across different populations, outcomes etc</li>
+<li>To identify possible improvements of CPMs</li>
+<li>To establish boundaries of applicability and generalizability</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="is-it-even-possible">Is it even possible?</h3>
+
+<img data-src="images/paste-FD7D9A9D.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="is-it-even-possible-1">Is it even possible?</h3>
+
+<img data-src="images/paste-71EFF46D.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="guidance-paper">Guidance paper</h3>
+
+<img data-src="images/paste-78C57468.png" width="828" class="r-stretch"><p>Ref: https://doi.org/10.1136/bmj.i6460</p>
+</section>
+<section class="slide level2">
+
+<h3 id="required-steps-of-the-meta-analysis">Required steps of the meta-analysis</h3>
+<ol type="1">
+<li>Well formulates systematic review question</li>
+<li>Extensive search</li>
+<li>Selection &amp; data extraction</li>
+<li>Critical appraisal</li>
+<li>Data synthesis, <em>Pooling of CPM performance</em></li>
+<li>Interpretations of results, <em>Confidence &amp; prediction intervals, meta-regression, subgroup analysis, sensitivity analysis</em></li>
+</ol>
+</section>
+<section class="slide level2">
+
+</section>
+<section>
+<section id="data-extraction" class="title-slide slide level1 center">
+<h1>Data extraction</h1>
+
+</section>
+<section class="slide level2">
+
+<h3 id="recap-what-are-validation-studies">Recap: what are validation studies?</h3>
+<ul>
+<li>Apply the CPM to new individuals
+<ul>
+<li>Internal validation</li>
+<li>Temporal validation</li>
+<li>Geographical validation</li>
+<li>Domain validation</li>
+</ul></li>
+<li>Evaluate the predictive accuracy
+<ul>
+<li>Overall performance</li>
+<li>Calibration</li>
+<li>Discrimination</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="discrimination">Discrimination</h3>
+<p>Quantifies the model’s extent to distinguish between events and non-events</p>
+<ul>
+<li>Visual inspection
+<ul>
+<li>Receiving Operating Characteristics (ROC) curve</li>
+</ul></li>
+<li>Summary statistics
+<ul>
+<li>Concordance (c) index</li>
+<li>Area under the ROC curve (AUC)</li>
+<li>Discrimination slope</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="calibration">Calibration</h3>
+<p>Agreement between observed outcomes and predictions</p>
+
+<img data-src="images/paste-0E96A320.png" class="r-stretch quarto-figure-center"><p class="caption">Ref: Genders et al.&nbsp;Prediction model to estimate presence of coronary artery disease: retrospective pooled analysis of existing cohorts. BMJ 2012</p></section>
+<section class="slide level2">
+
+<h3 id="how-to-obtain-the-c-statistics">How to obtain the c-statistics?</h3>
+<ul>
+<li>Area under the receiver operating characteristic curve</li>
+<li>Somer’s D statistics</li>
+<li>Cohen’s effect size</li>
+<li>Distribution of prognostic index (PI)</li>
+<li>Log odds ratio of the PI</li>
+</ul>
+<p>The SE can be derived from</p>
+<ul>
+<li>Confidence interval</li>
+<li>Sample-size, total #events and c-statistics</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="how-to-obtain-the-total-oe-ratio">How to obtain the total O:E ratio?</h3>
+<ul>
+<li>Total number of patients</li>
+<li>Total number of proportion of observed events</li>
+<li>Total number of proportion of predicted events</li>
+<li>Predicted risk for the “average” patient</li>
+</ul>
+<p>The SE can be derived from the total number of observed and expected events.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="software">Software</h3>
+<p>The <code>metamisc</code> R package</p>
+
+<img data-src="images/paste-FE9CC2F4.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="software-1">Software</h3>
+<p><strong>The metamisc R package</strong></p>
+<ul>
+<li>Estimation of performance statistics and corresponding standard errors from reported quantities</li>
+<li>Transformation of performance estimates and corresponding standard errors</li>
+<li>Meta-analysis &amp; meta-regression
+<ul>
+<li>Frequentist (via metafor)</li>
+<li>Bayesian (via JAGS)</li>
+</ul></li>
+<li>Visualization of results</li>
+<li><a href="https://CRAN.R-project.org/package=metamisc">CRAN documentation</a></li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="meta-analysis-of-validation-studies" class="title-slide slide level1 center">
+<h1>Meta-analysis of validation studies</h1>
+
+</section>
+<section class="slide level2">
+
+<h3 id="fixed-effect-or-random-effects">Fixed effect or random effects?</h3>
+<p>Homogeneous model performance often unrealistic</p>
+<ul>
+<li>Model discrimination varies according to case-mix heterogeneity <em>(e.g.&nbsp;primary vs.&nbsp;secondary care)</em></li>
+<li>Model calibration varies according to outcome occurrence</li>
+<li>Model performance may vary due to covariates not included by the model</li>
+<li>Model performance may vary due to differences in study design</li>
+<li>Model performance may vary due to differences treatment standards</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="fixed-effect-or-random-effects-1">Fixed effect or random effects?</h3>
+<p>Homogeneous model performance often unrealistic</p>
+<ul>
+<li>Heterogeneity in the predictive performance of a CPM is to be expected!</li>
+<li>Ignoring such heterogeneity leads to an overly precise summary estimate</li>
+<li>Pooled estimates of model performance have little value when there is strong heterogeneity</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="fixed-effect-or-random-effects-2">Fixed effect or random effects?</h3>
+<p>Traditional meta-analysis methods approcimate within-study variability with a Normal distribution</p>
+<p>This approximation may introduce bias or show other pool statistical properties when</p>
+<ul>
+<li>The c-statistics or O:E ratio is close to 0 or 1</li>
+<li>When sample sizes are relatively small</li>
+</ul>
+<p><strong>Need for transformations!</strong></p>
+<ul>
+<li>Meta-analysis of logit c-statistics</li>
+<li>Meta-analysis of log O:E ratio</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="use-of-appropriate-meta-analysis-methods">Use of appropriate meta-analysis methods</h3>
+<p><strong>Individual Participant Data (IPD) meta-analysis</strong></p>
+
+<img data-src="images/paste-AB2A3297.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="investigating-heterogeneity">Investigating heterogeneity</h3>
+<p><strong>Meta-regression</strong></p>
+<p>Adjust the meta-analysis for study-lvel variables such as:</p>
+<ul>
+<li>Study characteristics
+<ul>
+<li>Study design</li>
+<li>Follow-up time</li>
+<li>Predictor and outcome definitions</li>
+<li>Cut-point for dichotomozing prognostic factor</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="investigating-heterogeneity-1">Investigating heterogeneity</h3>
+<p><strong>Meta-regression</strong></p>
+<ul>
+<li>Population characteristics
+<ul>
+<li>Mean of linear predictor or individual covariates</li>
+<li>SD of linear predictor or individual covariates</li>
+<li>Treatment standars (beware of ecological fallacy)</li>
+</ul></li>
+</ul>
+<p><strong>Ref</strong>: Berlin et al.&nbsp;Individual patient- versus group-level data meta-regressions of treatment effect modifiers: ecological bias rears its ugly head. Stat Med 2002.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="investigating-heterogeneity-2">Investigating heterogeneity</h3>
+<p><strong>Sensitivity analysis</strong></p>
+<p>Exclude studies of questionable quality <em>(cfr. PROBAST)</em></p>
+<ul>
+<li>Risk bias
+<ul>
+<li>Participant selection</li>
+<li>Predictors</li>
+<li>Outcome</li>
+<li>Sample size and participant flow</li>
+<li>Analysis</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="investigating-heterogeneity-3">Investigating heterogeneity</h3>
+<p><strong>Sensitivity analysis</strong></p>
+<ul>
+<li>Applicability
+<ul>
+<li>Participant selection</li>
+<li>Predictors</li>
+<li>Outcome</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="interpretation-of-meta-analysis-result">Interpretation of meta-analysis result</h3>
+<p><strong>Describe model generalizability</strong></p>
+<ul>
+<li>Evaluate model robustness when applied in new populations
+<ul>
+<li>Pooled estimate and 95% CI</li>
+<li>Prediction interval</li>
+</ul></li>
+<li>Identify populations where model performance is satisfactory and onther where it is inadequate</li>
+</ul>
+
+<p><img src="images/copyright.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://fromdatatowisdom.com/" class="uri">https://fromdatatowisdom.com/</a></p>
+</div>
+<div class="reveal-header">
+<div class="header-logo" data-hide-from-titleslide="true">
+<img data-src="images/smartdata-logo.png">
+</div>
+<div class="sc-title">
+<p> </p>
+</div>
+<div class="header-text" data-hide-from-titleslide="true">
+<p> </p>
+</div>
+<div class="sb-title">
+<p> </p>
+</div>
+</div>
+</section></section>
     </div>
   </div>
 
@@ -381,7 +666,7 @@ Thomas Debray, PhD
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': true,
 'smaller': false,
 'pdfSeparateFragments': false,
@@ -393,7 +678,7 @@ Thomas Debray, PhD
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -540,7 +825,7 @@ Thomas Debray, PhD
         height: 700,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 0.2,
 
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',

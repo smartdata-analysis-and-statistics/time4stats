@@ -2,14 +2,35 @@
 
 .reveal .footer {
   color: #244367;
-  background-color: #83C220;
   display: block;
   position: fixed;
+  bottom: 18px;
   padding-bottom: 12px;
   padding-top: 12px;
   width: 100%;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   z-index: 2;
+}
+
+
+.reveal .slide-logo {
+  display: block;
+  position: fixed;
+  bottom: 18px;
+  right: 12px;
+  max-height: 2.2rem;
+  height: 100%;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  width: auto;
+  z-index: 3;
+}
+
+.reveal-header .header-logo{
+  margin-bottom: 18px;
+  height: 30%;
+  width: 100%;
+  margin-top: 0px;;
 }
 
