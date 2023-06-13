@@ -10,16 +10,16 @@ format:
       buttons: false
     preview-links: auto
     margin: 0.2
-    logo: images/copyright.svg
-    header-logo: images/smartdata-logo.png
+    logo: ../images/copyright.svg
+    header-logo: ../images/smartdata-logo.png
     hide-from-titleSlide: "all"
-    theme: slide-styles.scss
+    theme: ../styles/slide-styles.scss
     footer: <https://fromdatatowisdom.com/>
-    css: additional-styles.css
+    css: ../styles/additional-styles.css
 filters: 
-  - reveal-header
+  - ../reveal-header
 title-slide-attributes: 
-  data-background-image: images/smartdata-logo.png
+  data-background-image: ../images/smartdata-logo.png
   data-background-size: 30%
   data-background-position: 2% 2%
 ---
