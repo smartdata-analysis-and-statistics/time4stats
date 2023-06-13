@@ -20,12 +20,9 @@ title-slide-attributes:
 
 ### Numerous models for same target population + outcomes
 
-- $>$ 300 models predicting cardiovascular disease
-- $>$ 
+-   $>$ 300 models predicting cardiovascular disease
+-   $>$
 
----
+------------------------------------------------------------------------
 
 ### Need for Systematic Reviews
-
-
-
