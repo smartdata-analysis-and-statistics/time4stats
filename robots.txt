@@ -1,1 +1,0 @@
-Sitemap: https://smartdata-analysis-and-statistics.github.io/time4stats/sitemap.xml
