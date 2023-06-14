@@ -31,7 +31,6 @@ title-slide-attributes:
 -   $>$ 100 diabetes type 2 models
 -   $>$ 60 models for breast cancer prognosis
 
-
 ------------------------------------------------------------------------
 
 ### Need for Systematic Reviews
@@ -219,8 +218,7 @@ This approximation may introduce bias or show other pool statistical properties 
 
 **Individual Participant Data (IPD) meta-analysis**
 
-![](images/paste-AB2A3297.png)
----
+## ![](images/paste-AB2A3297.png)
 
 ### Investigating heterogeneity
 
@@ -228,26 +226,26 @@ This approximation may introduce bias or show other pool statistical properties 
 
 Adjust the meta-analysis for study-lvel variables such as:
 
-- Study characteristics
-  - Study design
-  - Follow-up time
-  - Predictor and outcome definitions
-  - Cut-point for dichotomozing prognostic factor
-  
----
+-   Study characteristics
+    -   Study design
+    -   Follow-up time
+    -   Predictor and outcome definitions
+    -   Cut-point for dichotomozing prognostic factor
+
+------------------------------------------------------------------------
 
 ### Investigating heterogeneity
 
 **Meta-regression**
 
-- Population characteristics 
-  - Mean of linear predictor or individual covariates
-  - SD of linear predictor or individual covariates
-  - Treatment standars (beware of ecological fallacy)
-  
+-   Population characteristics
+    -   Mean of linear predictor or individual covariates
+    -   SD of linear predictor or individual covariates
+    -   Treatment standars (beware of ecological fallacy)
+
 **Ref**: Berlin et al. Individual patient- versus group-level data meta-regressions of treatment effect modifiers: ecological bias rears its ugly head. Stat Med 2002.
 
----
+------------------------------------------------------------------------
 
 ### Investigating heterogeneity
 
@@ -255,33 +253,31 @@ Adjust the meta-analysis for study-lvel variables such as:
 
 Exclude studies of questionable quality *(cfr. PROBAST)*
 
-- Risk bias
-  - Participant selection
-  - Predictors
-  - Outcome
-  - Sample size and participant flow
-  - Analysis
+-   Risk bias
+    -   Participant selection
+    -   Predictors
+    -   Outcome
+    -   Sample size and participant flow
+    -   Analysis
 
----
+------------------------------------------------------------------------
 
 ### Investigating heterogeneity
 
 **Sensitivity analysis**
 
-- Applicability
-  - Participant selection
-  - Predictors
-  - Outcome
-  
----
+-   Applicability
+    -   Participant selection
+    -   Predictors
+    -   Outcome
+
+------------------------------------------------------------------------
 
 ### Interpretation of meta-analysis result
 
 **Describe model generalizability**
 
-- Evaluate model robustness when applied in new populations
-  - Pooled estimate and 95% CI
-  - Prediction interval
-- Identify populations where model performance is satisfactory and onther where it is inadequate
-
-
+-   Evaluate model robustness when applied in new populations
+    -   Pooled estimate and 95% CI
+    -   Prediction interval
+-   Identify populations where model performance is satisfactory and onther where it is inadequate

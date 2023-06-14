@@ -3,3 +3,6 @@ title: "time4stats"
 ---
 
 Let's talk about statistics
+
+# 2023
+[Comparative effectiveness and personalized medicine research using real-world data](slides/2023-06-14 - Workshop Bern/seminar.html)

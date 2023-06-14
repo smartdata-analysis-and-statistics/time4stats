@@ -1,0 +1,399 @@
+---
+title: "Comparative effectiveness and personalized medicine research using real-world data"
+author: "Thomas Debray, PhD"
+format:
+  revealjs: 
+    transition: none
+    controls: true
+    slide-number: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    margin: 0.2
+    logo: ../images/copyright.svg
+    header-logo: ../images/smartdata-logo.png
+    hide-from-titleSlide: "all"
+    theme: ../styles/slide-styles.scss
+    footer: <https://fromdatatowisdom.com/>
+    css: ../styles/additional-styles.css
+filters: 
+  - ../reveal-header
+title-slide-attributes: 
+  data-background-image: ../images/smartdata-logo.png
+  data-background-size: 30%
+  data-background-position: 2% 2%
+---
+
+### Introduction
+
+Randomization evenly distributes measured and unmeasured factors among intervention groups and thereby
+
+-   Facilitates identification of causal relationships 
+-   Avoids bias and confounding 
+-   Offers a framework for assessing efficacy
+
+The results of randomized, controlled trials are considered to be evidence of the highest grade
+
+------------------------------------------------------------------------
+
+### The Hierarchy of Evidence Pyramid
+
+![](images/evidence_hierarchy.png)
+
+::: aside
+'Hierarchy of Evidence Pyramid' adapted from EBP \& the Medical Librarian training manual, Duke University 2019, and Online EBM Page Generator, Dartmouth College and Yale University 2019, under the license CC-BY-NC and 113P.
+:::
+
+------------------------------------------------------------------------
+
+### Limitations of randomized trials
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/black_why_1996.png)
+![](images/egger_getreal_2016.png)
+:::
+
+::: {.column width="50%"}
+![](images/frieden_evidence_2017.png)
+:::
+
+::::
+
+------------------------------------------------------------------------
+
+### Limitations of randomized trials
+
+-   Experimentation may be unnecessary
+-   Experimentation may be inappropriate
+-   Experimentation may be impossible
+-   Experimentation may be inadequate
+
+::: aside
+Black N. BMJ. 1996 May 11;312(7040):1215–8. 
+:::
+
+------------------------------------------------------------------------
+
+### The efficacy-effectiveness gap
+Variability in drug response may arise due to
+
+- Heterogeneity in case-mix (e.g., comorbidities)
+- Heterogeneity in concomitant medications
+- Heterogeneity in treatment adherence
+- Heterogeneity in prescription behaviour
+
+::: aside
+Eichler HG, et al.Nat Rev Drug Discov. 2011 Jul 1;10(7):495–506. 
+:::
+
+------------------------------------------------------------------------
+
+### The role of real-world data
+- The Achilles heel of experimental studies is **sample size** and the **lack of random selection**
+- The Achilles heel of observational studies is error due to **imbalance** in (un)observed variables
+
+
+
+------------------------------------------------------------------------
+
+# Personalized Medicine
+
+------------------------------------------------------------------------
+
+### Prediction
+
+Estimate something that is yet unknown
+
+-   Presence of a certain disease (*diagnosis*)
+-   Future occurrence of a particular event  (*prognosis*)
+
+
+![](images/prediction_01.png)
+------------------------------------------------------------------------
+
+### Why?
+
+-   Identify high-risk individuals
+-   Facilite causal inferece (e.g., estimation of treatment effects)
+-   Target decision making to individuals
+-   Interest has been fueled by availability of *big data*
+
+
+------------------------------------------------------------------------
+
+### How?
+
+Calculate the absolute risk (probability) for distinct individuals
+
+-   Combine information from multiple predictors
+-   Subject characteristics (e.g. age, gender)
+-   History and physical examination results (e.g. blood pressure)
+-   Imaging results
+-   (Bio)markers (e.g. coronary plaque)
+
+------------------------------------------------------------------------
+
+### Recap: what are validation studies?
+
+-   Apply the CPM to new individuals
+    -   Internal validation
+    -   Temporal validation
+    -   Geographical validation
+    -   Domain validation
+-   Evaluate the predictive accuracy
+    -   Overall performance
+    -   Calibration
+    -   Discrimination
+
+
+
+
+
+
+### Numerous models for same target population + outcomes
+
+-   $>$ 300 models predicting cardiovascular disease
+-   $>$ 100 models for brain trauma patients
+-   $>$ 100 diabetes type 2 models
+-   $>$ 60 models for breast cancer prognosis
+
+------------------------------------------------------------------------
+
+### Need for Systematic Reviews
+
+Abundance of CPMs, with poor understanding of
+
+-   The comparative performance of these CPMs
+-   The consistency of effects and risk estimates across CPMs
+-   The clinical impact of these CPMs
+
+Systematic review of validation studies may help to identify promising models and evaluate the need for further improvements.
+
+------------------------------------------------------------------------
+
+### Why do we need meta-analysis?
+
+-   To summarize the predictive performance of a CPM
+-   To evaluate whether a CPM yileds consistently good performance across different populations, outcomes etc
+-   To identify possible improvements of CPMs
+-   To establish boundaries of applicability and generalizability
+
+------------------------------------------------------------------------
+
+### Is it even possible?
+
+![](images/paste-FD7D9A9D.png)
+
+------------------------------------------------------------------------
+
+### Is it even possible?
+
+![](images/paste-71EFF46D.png)
+
+------------------------------------------------------------------------
+
+### Guidance paper
+
+![](images/paste-78C57468.png){width="828"}
+
+Ref: https://doi.org/10.1136/bmj.i6460
+
+------------------------------------------------------------------------
+
+### Required steps of the meta-analysis
+
+1.  Well formulates systematic review question
+2.  Extensive search
+3.  Selection & data extraction
+4.  Critical appraisal
+5.  Data synthesis, *Pooling of CPM performance*
+6.  Interpretations of results, *Confidence & prediction intervals, meta-regression, subgroup analysis, sensitivity analysis*
+
+------------------------------------------------------------------------
+
+# Data extraction
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+### Discrimination
+
+Quantifies the model's extent to distinguish between events and non-events
+
+-   Visual inspection
+    -   Receiving Operating Characteristics (ROC) curve
+-   Summary statistics
+    -   Concordance (c) index
+    -   Area under the ROC curve (AUC)
+    -   Discrimination slope
+
+------------------------------------------------------------------------
+
+### Calibration
+
+Agreement between observed outcomes and predictions
+
+![Ref: Genders et al. Prediction model to estimate presence of coronary artery disease: retrospective pooled analysis of existing cohorts. BMJ 2012](images/paste-0E96A320.png)
+
+------------------------------------------------------------------------
+
+### How to obtain the c-statistics?
+
+-   Area under the receiver operating characteristic curve
+-   Somer's D statistics
+-   Cohen's effect size
+-   Distribution of prognostic index (PI)
+-   Log odds ratio of the PI
+
+The SE can be derived from
+
+-   Confidence interval
+-   Sample-size, total #events and c-statistics
+
+------------------------------------------------------------------------
+
+### How to obtain the total O:E ratio?
+
+-   Total number of patients
+-   Total number of proportion of observed events
+-   Total number of proportion of predicted events
+-   Predicted risk for the "average" patient
+
+The SE can be derived from the total number of observed and expected events.
+
+------------------------------------------------------------------------
+
+### Software
+
+The `metamisc` R package
+
+![](images/paste-FE9CC2F4.png)
+
+------------------------------------------------------------------------
+
+### Software
+
+**The metamisc R package**
+
+-   Estimation of performance statistics and corresponding standard errors from reported quantities
+-   Transformation of performance estimates and corresponding standard errors
+-   Meta-analysis & meta-regression
+    -   Frequentist (via metafor)
+    -   Bayesian (via JAGS)
+-   Visualization of results
+-   [CRAN documentation](https://CRAN.R-project.org/package=metamisc)
+
+------------------------------------------------------------------------
+
+# Meta-analysis of validation studies
+
+------------------------------------------------------------------------
+
+### Fixed effect or random effects?
+
+Homogeneous model performance often unrealistic
+
+-   Model discrimination varies according to case-mix heterogeneity *(e.g. primary vs. secondary care)*
+-   Model calibration varies according to outcome occurrence
+-   Model performance may vary due to covariates not included by the model
+-   Model performance may vary due to differences in study design
+-   Model performance may vary due to differences treatment standards
+
+------------------------------------------------------------------------
+
+### Fixed effect or random effects?
+
+Homogeneous model performance often unrealistic
+
+-   Heterogeneity in the predictive performance of a CPM is to be expected!
+-   Ignoring such heterogeneity leads to an overly precise summary estimate
+-   Pooled estimates of model performance have little value when there is strong heterogeneity
+
+------------------------------------------------------------------------
+
+### Fixed effect or random effects?
+
+Traditional meta-analysis methods approcimate within-study variability with a Normal distribution
+
+This approximation may introduce bias or show other pool statistical properties when
+
+-   The c-statistics or O:E ratio is close to 0 or 1
+-   When sample sizes are relatively small
+
+**Need for transformations!**
+
+-   Meta-analysis of logit c-statistics
+-   Meta-analysis of log O:E ratio
+
+------------------------------------------------------------------------
+
+### Use of appropriate meta-analysis methods
+
+**Individual Participant Data (IPD) meta-analysis**
+
+## ![](images/paste-AB2A3297.png)
+
+### Investigating heterogeneity
+
+**Meta-regression**
+
+Adjust the meta-analysis for study-lvel variables such as:
+
+-   Study characteristics
+    -   Study design
+    -   Follow-up time
+    -   Predictor and outcome definitions
+    -   Cut-point for dichotomozing prognostic factor
+
+------------------------------------------------------------------------
+
+### Investigating heterogeneity
+
+**Meta-regression**
+
+-   Population characteristics
+    -   Mean of linear predictor or individual covariates
+    -   SD of linear predictor or individual covariates
+    -   Treatment standars (beware of ecological fallacy)
+
+**Ref**: Berlin et al. Individual patient- versus group-level data meta-regressions of treatment effect modifiers: ecological bias rears its ugly head. Stat Med 2002.
+
+------------------------------------------------------------------------
+
+### Investigating heterogeneity
+
+**Sensitivity analysis**
+
+Exclude studies of questionable quality *(cfr. PROBAST)*
+
+-   Risk bias
+    -   Participant selection
+    -   Predictors
+    -   Outcome
+    -   Sample size and participant flow
+    -   Analysis
+
+------------------------------------------------------------------------
+
+### Investigating heterogeneity
+
+**Sensitivity analysis**
+
+-   Applicability
+    -   Participant selection
+    -   Predictors
+    -   Outcome
+
+------------------------------------------------------------------------
+
+### Interpretation of meta-analysis result
+
+**Describe model generalizability**
+
+-   Evaluate model robustness when applied in new populations
+    -   Pooled estimate and 95% CI
+    -   Prediction interval
+-   Identify populations where model performance is satisfactory and onther where it is inadequate
