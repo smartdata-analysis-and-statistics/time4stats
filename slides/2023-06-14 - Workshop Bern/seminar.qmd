@@ -24,6 +24,37 @@ title-slide-attributes:
   data-background-position: 2% 2%
 ---
 
+
+------------------------------------------------------------------------
+
+### Background
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](images/GETREAL.jpg)
+:::
+
+::: {.column width="80%"}
+IMI GetReal: Incorporating real-life clinical data into drug development
+
+:::
+
+::::
+
+-   GetReal aimed to show how robust new methods of real-world evidence collection and synthesis could be adopted earlier in pharmaceutical research and development and the healthcare decision-making process.
+-   Together with Bern, we investigated statistical methods for network meta-analysis
+
+------------------------------------------------------------------------
+
+### ISCB Utrecht
+
+![](images/getreal_2015.jpeg)
+
+
+
+------------------------------------------------------------------------
+
 ### Introduction
 
 Randomization evenly distributes measured and unmeasured factors among intervention groups and thereby
@@ -43,6 +74,8 @@ The results of randomized, controlled trials are considered to be evidence of th
 ::: aside
 'Hierarchy of Evidence Pyramid' adapted from EBP \& the Medical Librarian training manual, Duke University 2019, and Online EBM Page Generator, Dartmouth College and Yale University 2019, under the license CC-BY-NC and 113P.
 :::
+
+
 
 ------------------------------------------------------------------------
 
@@ -91,6 +124,19 @@ Eichler HG, et al.Nat Rev Drug Discov. 2011 Jul 1;10(7):495–506.
 ------------------------------------------------------------------------
 
 ### The efficacy-effectiveness gap
+> Information from RCTs can only answer a minuscule fraction of the near-infinite number of questions about subpopulations, interactions, treatment settings, effects, etc., that are relevant to patients and healthcare professionals at the point of care
+
+::: aside
+Eichler H, et al. Clin Pharmacol Ther. 2021 May;109(5):1212–8. 
+:::
+
+------------------------------------------------------------------------
+
+# Real-world data and Real-world evidence
+
+------------------------------------------------------------------------
+
+### Randomized trials and real-world data
 - The Achilles heel of experimental studies is **sample size** and the **lack of random selection**
 - The Achilles heel of observational studies is error due to **imbalance** in (un)observed variables
 
@@ -155,51 +201,68 @@ RWD is commonly understood as observational data
 #| warning: false
 library(ggplot2)
 library(dplyr)
+library(forcats)
 
-sourcesRWD <- data.frame(RWDsource = c("Pharmacy Data",
-                                       "Patients charts",
-                                       "Social Media",
+sourcesRWD <- data.frame(RWDsource = c("EHR from primary care",
+                                       "EHR from secondary care",
+                                       "Medical records from primary care",
                                        "Hospital Data",
-                                       "Health Surveys",
-                                       "Patient Reported Outcomes",
-                                       "Administrative Databases",
-                                       "Claims Databases",
-                                       "Electronic Health Records",
-                                       "Registries"
+                                       "Claims data"
                                        ), 
-                         Count = c(2,
-                                   2,
-                                   3,
-                                   3,
-                                   4,
-                                   10,
-                                   6,
-                                   12,
-                                   16,
-                                   17),
-                         Type = "Data Source")
+                         Count = c(8/63,
+                                   8/63,
+                                   8/63,
+                                   20/63,
+                                   5/63),
+                         Type = "Marketing authorization applications (N=63)")
 
-ggplot(data=sourcesRWD, aes(x=RWDsource,y=Count)) +
+sourcesRWD <- sourcesRWD %>% add_row(sourcesRWD <- data.frame(RWDsource = c("EHR from primary care",
+                                       "EHR from secondary care",
+                                       "Medical records from primary care",
+                                       "Hospital Data",
+                                       "Claims data"
+                                       ), 
+                         Count = c(2/28,
+                                   0/28,
+                                   5/28,
+                                   7/28,
+                                   2/28),
+                         Type = "Extensions of indication (N=28)"))
+
+ggplot(data=sourcesRWD, aes(x=fct_reorder(RWDsource, Count),y=Count)) +
   geom_bar(position="dodge",stat="identity") + 
   coord_flip() +
-  ggtitle("Frequency of occurrence of RWD sources retrieved from literature documents") +
   ylab("") +
-  xlab("")
+  xlab("") +
+  facet_wrap(~ Type)
 ```
 
 ::: aside
-Makady A, et al. Value in Health. 2017 May;20(7):858–65. 
+Flynn R, et al. Clin Pharma and Therapeutics. 2022 Jan;111(1):90–7. 
 :::
 
 ------------------------------------------------------------------------
 
 ### Studies generating real-world data
 
+Real-world data is not new in medical decision making
+
 - Phase IV trials
 - Post-authorisation safety studies (PASS) 
 - Post-authorisation efficacy studies (PAES)
 - Studies to measure the effectiveness of risk minimisation measures (RMMs)
 - Studies to support life cycle benefit-risk evaluation
+
+------------------------------------------------------------------
+
+### How is real-world data used?
+
+-   Explore and quantify the unmet medical need within a particular disease area
+-   Derive information on the current standard of care in different jurisdictions
+-   Augment or replace the concurrent control of a randomized clinical trial
+-   Monitor long-term safety and effectiveness
+-   Tailor the  usage, schedule and dosage of a treatment to an individual patient's needs
+
 
 ------------------------------------------------------------------------
 
@@ -212,22 +275,78 @@ Evidence generated from the analysis of real-world data
 Concato J, Corrigan-Curay J. N Engl J Med. 2022 May 5;386(18):1680–2. 
 :::
 
+------------------------------------------------------------------------
+
+### How is RWE used?
+
+![](images/brown_use_2019_tbl2.png)
+
+::: aside
+Brown JP, et al. BMJ Open. 2019 Oct;9(10):e028133. 
+:::
+
+------------------------------------------------------------------------
+
+### How is RWE used?
+
+```{r}
+#| echo: false
+#| warning: false
+ggdat <- data.frame(Objective = c("Safety",
+                                       "Efficacy",
+                                       "Disease Epidemiology",
+                                       "Drug Utilization",
+                                       "Abuse of drug",
+                                       "Other objectives"
+                                       ), 
+                         Count = c(55/63,
+                                   31/63,
+                                   5/63,
+                                   13/63,
+                                   6/63,
+                                   8/63),
+                         Type = "Marketing authorization applications (N=63)")
+
+ggdat <- ggdat %>% add_row(ggdat <- data.frame(Objective = c("Safety",
+                                       "Efficacy",
+                                       "Disease Epidemiology",
+                                       "Drug Utilization",
+                                       "Abuse of drug",
+                                       "Other objectives"
+                                       ), 
+                         Count = c(23/28,
+                                   15/28,
+                                   3/28,
+                                   6/28,
+                                   0/28,
+                                   3/28),
+                         Type = "Extensions of indication (N=28)"))
+
+ggplot(data=ggdat, aes(x=fct_reorder(Objective, Count),y=Count)) +
+  geom_bar(position="dodge",stat="identity") + 
+  coord_flip() +
+  ylab("") +
+  xlab("") +
+  facet_wrap(~ Type)
+```
+
+::: aside
+Flynn R, et al. Clin Pharma and Therapeutics. 2022 Jan;111(1):90–7. 
+:::
 
 ------------------------------------------------------------------------
 
 ### RWE studies - what is the catch?
 
-
 - Selection bias
 - Information bias 
-  -   due to missing or inaccurate data on population eligibility criteria, interventions or exposures, outcomes and covariates
-    - due to misspecification of the follow-up period
 - Confounding 
-- Other 
+
+These biases may also appear in clinical trials, for instance when conducting subgroup analysis, principal stratum analysis, or indirect treatment comparisons.
 
 ------------------------------------------------------------------------
 
-### Conduct of quantitative RWE studies
+### Recommendations for RWE studies
 
 ![](images/nice_rwe_framework_2022_02.png){width=65%}
 
@@ -237,11 +356,33 @@ NICE real-world evidence framework. National Institute for Health and Care Excel
 
 ------------------------------------------------------------------------
 
-### Conduct of quantitative RWE studies
+### Recommendations for RWE studies
+
+![](images/jahanshahi_use_2021_fig1.webp){width=65%}
+
+::: aside
+Jahanshahi M, et al. Ther Innov Regul Sci. 2021 Sep;55(5):1019–35. 
+:::
+
+
+------------------------------------------------------------------------
+
+### Recommendations for RWE studies
+
+![](images/sarri_framework_2020_fig3.jpg)
+
+::: aside
+Sarri G, et al. BMJ EBM. 2020 Dec 9;27:109–19. 
+:::
+
+
+------------------------------------------------------------------------
+
+### Recommendations for RWE studies
 
 :::: {.columns}
 
-::: {.column width="30%"}
+::: {.column width="45%"}
 ```{mermaid}
 flowchart TD
   Z[Study planning] --> A(Defining the research question)
@@ -253,7 +394,7 @@ flowchart TD
 ```
 :::
 
-::: {.column width="70%"}
+::: {.column width="55%"}
 ```{mermaid}
 flowchart TD
   Z[Study conduct] --> A(Choosing study design and analytical methods)
@@ -266,347 +407,182 @@ flowchart TD
 
 ::::
 
-------------------------------------------------------------------------
-
-### Analysis of RWE studies
-
--   Identify potential confounders using a systematic approach and clearly articulate causal assumptions.
--   Use a statistical method that addresses confounding considering observed and unobserved confounders
--   Consider the impact of bias from informative censoring, missing data, and measurement error
--   Use sensitivity and bias analysis to assess the robustness of results
-
-::: aside
-NICE real-world evidence framework. National Institute for Health and Care Excellence; 2022 Jun. Report No.: ECD9.
-:::
 
 ------------------------------------------------------------------------
 
 ### Analysis of RWE studies
-Statistical methods for addressing bias from observed confounders
+Statistical methods for addressing confounding
 
 - Covariate adjustment
 - Propensity score analysis
 - Prognostic score analysis
 
-These methods are also the building blocks for Matching-Adjusted Indirect Comparisons (MAIC) and historical control studies
+These methods are also the building blocks for studies conducting indirect treatment comparisons or incorporating historical controls.
 
 ------------------------------------------------------------------------
 
 ### Analysis of RWE studies
+Many other concerns should be explored:
 
-Although propensity score analysis is very common, prognostic score analysis may be advantageous when:
+-   Operational definitions of key study variables
+-   Definition of time windows
+-   Choice of patient eligibility criteria
+-   Missing data and measurement error
+-   Alternative model specifications
+-   Treatment switching or loss to follow up
+-   Non-adherence
 
-- it is difficult to identify confounders that predict treatment (e.g. new interventions)
-- the outcome is common and the treatment exposure(s) are rare
-- investigating multiple exposures or multiple exposure levels
+
+------------------------------------------------------------------------
+
+# What is next?
+
+------------------------------------------------------------------------
+
+### Regulatory decision making
+
+![](images/eichler_randomized_2021.png){width=60%}
+
+-   The future is not about randomized controlled trials (RCTs) ***vs.*** real-world evidence (RWE) but about RCTs ***and*** RWE — not just for the assessment of safety but also of effectiveness
+-   Patients will need to be followed up for prolonged periods of time to empirically confirm or refute *a priori* comparative effectiveness assumptions
+
+
+------------------------------------------------------------------------
+
+### Requirements
+
+-   Need for additional sources of (non-RCT) evidence 
+-   Need for better methods for evidence synthesis
+-   Need for revised regulatory (and other decision) frameworks
+
+------------------------------------------------------------------------
+
+### Data platforms
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](images/darwin-eu-logo.png)
+:::
+
+::: {.column width="70%"}
+Catalogue of observational data sources for use in medicines regulation
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](images/EHDEN_Logo_JPG.jpg)
+:::
+
+::: {.column width="70%"}
+Federated data network of allowing access to the data of EU citizens standardised to a common data model.
+:::
+
+::::
+
+------------------------------------------------------------------------
+
+### Individualizing treatment decisions
+
+-   Causal treatment effects are estimated at the population level in randomised controlled trials (RCTs)
+-   However, clinical decision is often to be made at the individual level in practice
+-   Individualized absolute treatment effects provide a natural starting point to engage in shared decision making
 
 ::: aside
-Nguyen TL, Debray TPA. Stat Med. 2019 Jan 16;38:2013–29. 
+Nguyen TL, et al. J Clin Epidemiol. 2020 May 25;125:47–56. 
+:::
+
+
+------------------------------------------------------------------------
+
+### Estimating individualized treatment effects
+
+-   Subgroup analysis is often used to investigate heterogeneity in treatment effects
+-   Although subgroup effects can provide interesting insights and generate new hypotheses, they may be difficult to use for guiding treatment
+-  It may be more informative to move to the absolute risk scale and estimate multivariable models that adjust for individual patient characteristics
+
+------------------------------------------------------------------------
+
+### Estimating individualized treatment effects
+
+-   Small RCTs
+    -   Hard to improve beyond risk-magnification
+    -   However, the price to pay to allow for treatment-covariate interactions was small when using both shrinkage and selection, especially for the hierarchical group lasso
+-   Large RCTs
+    -   Shrinkage and selection still needed
+    -   Allowing for all interactions was beneficial 
+
+::: aside
+Hoogland J, et al. Stat Med. 2021 Nov 20;40(26):5961–81. 
 :::
 
 
 
+------------------------------------------------------------------------
+
+### Estimating individualized treatment effects
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/hoogland_tutorial_2021.png)
+:::
+
+::: {.column width="50%"}
+![](images/seo_comparing_2020.png)
+:::
+
+::::
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/efthimiou_measuring_2023.png)
+:::
+
+::: {.column width="50%"}
+![](images/chalkou_two-stage_2021.png)
+:::
+
+::::
+
+
 
 
 
 ------------------------------------------------------------------------
 
-# Personalized Medicine
+### precmed: Precision Medicine
+
+A doubly robust precision medicine approach to fit, cross-validate and visualize prediction models for the conditional average treatment effect. Available from [GitHub](https://smartdata-analysis-and-statistics.github.io/precmed/) and [CRAN](https://CRAN.R-project.org/package=precmed).
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/precmed.png)
+:::
+
+::: {.column width="50%"}
+![](images/precmed_CRAN.png)
+:::
+
+::::
 
 ------------------------------------------------------------------------
 
-### Prediction
+### Comparative effectiveness and personalized medicine using real-world data
 
-Estimate something that is yet unknown
+-   Edited by TPA Debray, T-L Nguyen and RW Platt
+-   21 chapters; publication expected in 2024
+-   Contributions from ~ 40 authors (academia; industry; contract resesarch organizations; health technology assessment agencies; regulatory decision-making)
+-   Example code on [GitHub](https://smartdata-analysis-and-statistics.github.io/comparative-effectiveness/)
 
--   Presence of a certain disease (*diagnosis*)
--   Future occurrence of a particular event  (*prognosis*)
+![](images/taylor_francis.png){height=80%}
 
-![](images/prediction_01.png){width=65%}
 
-------------------------------------------------------------------------
-
-### Why?
-
--   Identify high-risk individuals
--   Facilite causal inferece (e.g., estimation of treatment effects)
--   Target decision making to individuals
--   Interest has been fueled by availability of *big data*
-
-
-------------------------------------------------------------------------
-
-### How?
-
-Calculate the absolute risk (probability) for distinct individuals
-
--   Combine information from multiple predictors
--   Subject characteristics (e.g. age, gender)
--   History and physical examination results (e.g. blood pressure)
--   Imaging results
--   (Bio)markers (e.g. coronary plaque)
-
-------------------------------------------------------------------------
-
-### Recap: what are validation studies?
-
--   Apply the CPM to new individuals
-    -   Internal validation
-    -   Temporal validation
-    -   Geographical validation
-    -   Domain validation
--   Evaluate the predictive accuracy
-    -   Overall performance
-    -   Calibration
-    -   Discrimination
-
-
-
-
-
-
-### Numerous models for same target population + outcomes
-
--   $>$ 300 models predicting cardiovascular disease
--   $>$ 100 models for brain trauma patients
--   $>$ 100 diabetes type 2 models
--   $>$ 60 models for breast cancer prognosis
-
-------------------------------------------------------------------------
-
-### Need for Systematic Reviews
-
-Abundance of CPMs, with poor understanding of
-
--   The comparative performance of these CPMs
--   The consistency of effects and risk estimates across CPMs
--   The clinical impact of these CPMs
-
-Systematic review of validation studies may help to identify promising models and evaluate the need for further improvements.
-
-------------------------------------------------------------------------
-
-### Why do we need meta-analysis?
-
--   To summarize the predictive performance of a CPM
--   To evaluate whether a CPM yileds consistently good performance across different populations, outcomes etc
--   To identify possible improvements of CPMs
--   To establish boundaries of applicability and generalizability
-
-------------------------------------------------------------------------
-
-### Is it even possible?
-
-![](images/paste-FD7D9A9D.png)
-
-------------------------------------------------------------------------
-
-### Is it even possible?
-
-![](images/paste-71EFF46D.png)
-
-------------------------------------------------------------------------
-
-### Guidance paper
-
-![](images/paste-78C57468.png){width="828"}
-
-Ref: https://doi.org/10.1136/bmj.i6460
-
-------------------------------------------------------------------------
-
-### Required steps of the meta-analysis
-
-1.  Well formulates systematic review question
-2.  Extensive search
-3.  Selection & data extraction
-4.  Critical appraisal
-5.  Data synthesis, *Pooling of CPM performance*
-6.  Interpretations of results, *Confidence & prediction intervals, meta-regression, subgroup analysis, sensitivity analysis*
-
-------------------------------------------------------------------------
-
-# Data extraction
-
-------------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-### Discrimination
-
-Quantifies the model's extent to distinguish between events and non-events
-
--   Visual inspection
-    -   Receiving Operating Characteristics (ROC) curve
--   Summary statistics
-    -   Concordance (c) index
-    -   Area under the ROC curve (AUC)
-    -   Discrimination slope
-
-------------------------------------------------------------------------
-
-### Calibration
-
-Agreement between observed outcomes and predictions
-
-![Ref: Genders et al. Prediction model to estimate presence of coronary artery disease: retrospective pooled analysis of existing cohorts. BMJ 2012](images/paste-0E96A320.png)
-
-------------------------------------------------------------------------
-
-### How to obtain the c-statistics?
-
--   Area under the receiver operating characteristic curve
--   Somer's D statistics
--   Cohen's effect size
--   Distribution of prognostic index (PI)
--   Log odds ratio of the PI
-
-The SE can be derived from
-
--   Confidence interval
--   Sample-size, total #events and c-statistics
-
-------------------------------------------------------------------------
-
-### How to obtain the total O:E ratio?
-
--   Total number of patients
--   Total number of proportion of observed events
--   Total number of proportion of predicted events
--   Predicted risk for the "average" patient
-
-The SE can be derived from the total number of observed and expected events.
-
-------------------------------------------------------------------------
-
-### Software
-
-The `metamisc` R package
-
-![](images/paste-FE9CC2F4.png)
-
-------------------------------------------------------------------------
-
-### Software
-
-**The metamisc R package**
-
--   Estimation of performance statistics and corresponding standard errors from reported quantities
--   Transformation of performance estimates and corresponding standard errors
--   Meta-analysis & meta-regression
-    -   Frequentist (via metafor)
-    -   Bayesian (via JAGS)
--   Visualization of results
--   [CRAN documentation](https://CRAN.R-project.org/package=metamisc)
-
-------------------------------------------------------------------------
-
-# Meta-analysis of validation studies
-
-------------------------------------------------------------------------
-
-### Fixed effect or random effects?
-
-Homogeneous model performance often unrealistic
-
--   Model discrimination varies according to case-mix heterogeneity *(e.g. primary vs. secondary care)*
--   Model calibration varies according to outcome occurrence
--   Model performance may vary due to covariates not included by the model
--   Model performance may vary due to differences in study design
--   Model performance may vary due to differences treatment standards
-
-------------------------------------------------------------------------
-
-### Fixed effect or random effects?
-
-Homogeneous model performance often unrealistic
-
--   Heterogeneity in the predictive performance of a CPM is to be expected!
--   Ignoring such heterogeneity leads to an overly precise summary estimate
--   Pooled estimates of model performance have little value when there is strong heterogeneity
-
-------------------------------------------------------------------------
-
-### Fixed effect or random effects?
-
-Traditional meta-analysis methods approcimate within-study variability with a Normal distribution
-
-This approximation may introduce bias or show other pool statistical properties when
-
--   The c-statistics or O:E ratio is close to 0 or 1
--   When sample sizes are relatively small
-
-**Need for transformations!**
-
--   Meta-analysis of logit c-statistics
--   Meta-analysis of log O:E ratio
-
-------------------------------------------------------------------------
-
-### Use of appropriate meta-analysis methods
-
-**Individual Participant Data (IPD) meta-analysis**
-
-## ![](images/paste-AB2A3297.png)
-
-### Investigating heterogeneity
-
-**Meta-regression**
-
-Adjust the meta-analysis for study-lvel variables such as:
-
--   Study characteristics
-    -   Study design
-    -   Follow-up time
-    -   Predictor and outcome definitions
-    -   Cut-point for dichotomozing prognostic factor
-
-------------------------------------------------------------------------
-
-### Investigating heterogeneity
-
-**Meta-regression**
-
--   Population characteristics
-    -   Mean of linear predictor or individual covariates
-    -   SD of linear predictor or individual covariates
-    -   Treatment standars (beware of ecological fallacy)
-
-**Ref**: Berlin et al. Individual patient- versus group-level data meta-regressions of treatment effect modifiers: ecological bias rears its ugly head. Stat Med 2002.
-
-------------------------------------------------------------------------
-
-### Investigating heterogeneity
-
-**Sensitivity analysis**
-
-Exclude studies of questionable quality *(cfr. PROBAST)*
-
--   Risk bias
-    -   Participant selection
-    -   Predictors
-    -   Outcome
-    -   Sample size and participant flow
-    -   Analysis
-
-------------------------------------------------------------------------
-
-### Investigating heterogeneity
-
-**Sensitivity analysis**
-
--   Applicability
-    -   Participant selection
-    -   Predictors
-    -   Outcome
-
-------------------------------------------------------------------------
-
-### Interpretation of meta-analysis result
-
-**Describe model generalizability**
-
--   Evaluate model robustness when applied in new populations
-    -   Pooled estimate and 95% CI
-    -   Prediction interval
--   Identify populations where model performance is satisfactory and onther where it is inadequate
