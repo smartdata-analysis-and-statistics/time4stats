@@ -1,10 +1,31 @@
 [
   {
+    "objectID": "slides/prognostic_model34/prognostic_model34.html#section",
+    "href": "slides/prognostic_model34/prognostic_model34.html#section",
+    "title": "Meta-analysis of Prognostic Studies",
+    "section": "",
+    "text": "Investigating heterogeneity\nMeta-regression\nAdjust the meta-analysis for study-lvel variables such as:\n\nStudy characteristics\n\nStudy design\nFollow-up time\nPredictor and outcome definitions\nCut-point for dichotomozing prognostic factor"
+  },
+  {
+    "objectID": "slides/2023-06-14 - Workshop Bern/seminar.html#section",
+    "href": "slides/2023-06-14 - Workshop Bern/seminar.html#section",
+    "title": "Comparative effectiveness and personalized medicine research using real-world data",
+    "section": "",
+    "text": "Why?\n\nIdentify high-risk individuals\nFacilite causal inferece (e.g., estimation of treatment effects)\nTarget decision making to individuals\nInterest has been fueled by availability of big data"
+  },
+  {
+    "objectID": "slides/2023-06-14 - Workshop Bern/seminar.html#section-1",
+    "href": "slides/2023-06-14 - Workshop Bern/seminar.html#section-1",
+    "title": "Comparative effectiveness and personalized medicine research using real-world data",
+    "section": "",
+    "text": "Investigating heterogeneity\nMeta-regression\nAdjust the meta-analysis for study-lvel variables such as:\n\nStudy characteristics\n\nStudy design\nFollow-up time\nPredictor and outcome definitions\nCut-point for dichotomozing prognostic factor"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "time4stats",
     "section": "",
-    "text": "Let’s talk about statistics"
+    "text": "Let’s talk about statistics\n\n2023\nComparative effectiveness and personalized medicine research using real-world data"
   },
   {
     "objectID": "about.html",
