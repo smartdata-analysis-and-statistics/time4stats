@@ -325,6 +325,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -342,6 +345,26 @@ Thomas Debray, PhD
 </div>
 
 </section>
+<section class="slide level2">
+
+<h3 id="background">Background</h3>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="images/GETREAL.jpg"></p>
+</div><div class="column" style="width:80%;">
+<p>IMI GetReal: Incorporating real-life clinical data into drug development</p>
+</div>
+</div>
+<ul>
+<li>GetReal aimed to show how robust new methods of real-world evidence collection and synthesis could be adopted earlier in pharmaceutical research and development and the healthcare decision-making process.</li>
+<li>Together with Bern, we investigated statistical methods for network meta-analysis</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="iscb-utrecht">ISCB Utrecht</h3>
+
+<img data-src="images/getreal_2015.jpeg" class="r-stretch"></section>
 <section class="slide level2">
 
 <h3 id="introduction">Introduction</h3>
@@ -401,329 +424,355 @@ Thomas Debray, PhD
 </div></aside></section>
 <section class="slide level2">
 
-<h3 id="the-role-of-real-world-data">The role of real-world data</h3>
+<h3 id="the-efficacy-effectiveness-gap-1">The efficacy-effectiveness gap</h3>
+<blockquote>
+<p>Information from RCTs can only answer a minuscule fraction of the near-infinite number of questions about subpopulations, interactions, treatment settings, effects, etc., that are relevant to patients and healthcare professionals at the point of care</p>
+</blockquote>
+
+<aside><div>
+<p>Eichler H, et al.&nbsp;Clin Pharmacol Ther. 2021 May;109(5):1212–8.</p>
+</div></aside></section>
+<section class="slide level2">
+
+</section>
+<section>
+<section id="real-world-data-and-real-world-evidence" class="title-slide slide level1 center">
+<h1>Real-world data and Real-world evidence</h1>
+
+</section>
+<section class="slide level2">
+
+<h3 id="randomized-trials-and-real-world-data">Randomized trials and real-world data</h3>
 <ul>
 <li>The Achilles heel of experimental studies is <strong>sample size</strong> and the <strong>lack of random selection</strong></li>
 <li>The Achilles heel of observational studies is error due to <strong>imbalance</strong> in (un)observed variables</li>
 </ul>
+<blockquote>
+<p>‘’Real-world data can improve our understanding of health and social care delivery, patient health and experiences, and the effects of interventions on patient and system outcomes in routine settings’’ (NICE)</p>
+</blockquote>
 </section>
 <section class="slide level2">
 
-</section>
-<section>
-<section id="personalized-medicine" class="title-slide slide level1 center">
-<h1>Personalized Medicine</h1>
-
-</section>
-<section class="slide level2">
-
-<h3 id="prediction">Prediction</h3>
-<p>Estimate something that is yet unknown</p>
-<ul>
-<li>Presence of a certain disease (<em>diagnosis</em>)</li>
-<li>Future occurrence of a particular event (<em>prognosis</em>)</li>
-</ul>
-</section>
-<section id="section" class="slide level2">
-<h2><img data-src="images/prediction_01.png"></h2>
-<h3 id="why">Why?</h3>
-<ul>
-<li>Identify high-risk individuals</li>
-<li>Facilite causal inferece (e.g., estimation of treatment effects)</li>
-<li>Target decision making to individuals</li>
-<li>Interest has been fueled by availability of <em>big data</em></li>
-</ul>
+<h3 id="what-is-real-world-data-rwd">What is real-world data (RWD)?</h3>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/fda.png"></p>
+</div><div class="column" style="width:70%;">
+<p>Data relating to patient health status and/or the delivery of health care routinely collected from a variety of sources</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/ema.svg"></p>
+</div><div class="column" style="width:70%;">
+<p>Routinely collected data relating to a patient’s health status or the delivery of health care from a variety of sources other than traditional clinical trials</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/NICE.png"></p>
+</div><div class="column" style="width:70%;">
+<p>Data collected outside the context of a highly controlled clinical trial</p>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
-<h3 id="how">How?</h3>
-<p>Calculate the absolute risk (probability) for distinct individuals</p>
+<h3 id="what-is-real-world-data-rwd-1">What is real-world data (RWD)?</h3>
+<p>RWD is commonly understood as observational data</p>
 <ul>
-<li>Combine information from multiple predictors</li>
-<li>Subject characteristics (e.g.&nbsp;age, gender)</li>
-<li>History and physical examination results (e.g.&nbsp;blood pressure)</li>
-<li>Imaging results</li>
-<li>(Bio)markers (e.g.&nbsp;coronary plaque)</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="recap-what-are-validation-studies">Recap: what are validation studies?</h3>
-<ul>
-<li>Apply the CPM to new individuals
-<ul>
-<li>Internal validation</li>
-<li>Temporal validation</li>
-<li>Geographical validation</li>
-<li>Domain validation</li>
-</ul></li>
-<li>Evaluate the predictive accuracy
-<ul>
-<li>Overall performance</li>
-<li>Calibration</li>
-<li>Discrimination</li>
-</ul></li>
-</ul>
-<h3 id="numerous-models-for-same-target-population-outcomes">Numerous models for same target population + outcomes</h3>
-<ul>
-<li><span class="math inline">\(&gt;\)</span> 300 models predicting cardiovascular disease</li>
-<li><span class="math inline">\(&gt;\)</span> 100 models for brain trauma patients</li>
-<li><span class="math inline">\(&gt;\)</span> 100 diabetes type 2 models</li>
-<li><span class="math inline">\(&gt;\)</span> 60 models for breast cancer prognosis</li>
+<li>Primary use of data (e.g., data collected in an observational study, data collected with digital wearable devices or patients’ or physicians’ surveys)</li>
+<li>Secondary use of data (e.g., electronic healthcare records, claims data, registries)</li>
+<li>A combination of both</li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="need-for-systematic-reviews">Need for Systematic Reviews</h3>
-<p>Abundance of CPMs, with poor understanding of</p>
+<h3 id="sources-of-real-world-data">Sources of real-world data</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="seminar_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</div>
+</div>
+
+<aside><div>
+<p>Flynn R, et al.&nbsp;Clin Pharma and Therapeutics. 2022 Jan;111(1):90–7.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="studies-generating-real-world-data">Studies generating real-world data</h3>
+<p>Real-world data is not new in medical decision making</p>
 <ul>
-<li>The comparative performance of these CPMs</li>
-<li>The consistency of effects and risk estimates across CPMs</li>
-<li>The clinical impact of these CPMs</li>
+<li>Phase IV trials</li>
+<li>Post-authorisation safety studies (PASS)</li>
+<li>Post-authorisation efficacy studies (PAES)</li>
+<li>Studies to measure the effectiveness of risk minimisation measures (RMMs)</li>
+<li>Studies to support life cycle benefit-risk evaluation</li>
 </ul>
-<p>Systematic review of validation studies may help to identify promising models and evaluate the need for further improvements.</p>
 </section>
 <section class="slide level2">
 
-<h3 id="why-do-we-need-meta-analysis">Why do we need meta-analysis?</h3>
+<h3 id="how-is-real-world-data-used">How is real-world data used?</h3>
 <ul>
-<li>To summarize the predictive performance of a CPM</li>
-<li>To evaluate whether a CPM yileds consistently good performance across different populations, outcomes etc</li>
-<li>To identify possible improvements of CPMs</li>
-<li>To establish boundaries of applicability and generalizability</li>
+<li>Explore and quantify the unmet medical need within a particular disease area</li>
+<li>Derive information on the current standard of care in different jurisdictions</li>
+<li>Augment or replace the concurrent control of a randomized clinical trial</li>
+<li>Monitor long-term safety and effectiveness</li>
+<li>Tailor the usage, schedule and dosage of a treatment to an individual patient’s needs</li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="is-it-even-possible">Is it even possible?</h3>
+<h3 id="what-is-real-world-evidence-rwe">What is real-world evidence (RWE)?</h3>
+<p>Evidence generated from the analysis of real-world data</p>
+<p><img data-src="images/reliance_RWD.png"></p>
 
-<img data-src="images/paste-FD7D9A9D.png" class="r-stretch"></section>
+<aside><div>
+<p>Concato J, Corrigan-Curay J. N Engl J Med. 2022 May 5;386(18):1680–2.</p>
+</div></aside></section>
 <section class="slide level2">
 
-<h3 id="is-it-even-possible-1">Is it even possible?</h3>
+<h3 id="how-is-rwe-used">How is RWE used?</h3>
+<p><img data-src="images/brown_use_2019_tbl2.png"></p>
 
-<img data-src="images/paste-71EFF46D.png" class="r-stretch"></section>
+<aside><div>
+<p>Brown JP, et al.&nbsp;BMJ Open. 2019 Oct;9(10):e028133.</p>
+</div></aside></section>
 <section class="slide level2">
 
-<h3 id="guidance-paper">Guidance paper</h3>
+<h3 id="how-is-rwe-used-1">How is RWE used?</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="seminar_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</div>
+</div>
 
-<img data-src="images/paste-78C57468.png" width="828" class="r-stretch"><p>Ref: https://doi.org/10.1136/bmj.i6460</p>
+<aside><div>
+<p>Flynn R, et al.&nbsp;Clin Pharma and Therapeutics. 2022 Jan;111(1):90–7.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="rwe-studies---what-is-the-catch">RWE studies - what is the catch?</h3>
+<ul>
+<li>Selection bias</li>
+<li>Information bias</li>
+<li>Confounding</li>
+</ul>
+<p>These biases may also appear in clinical trials, for instance when conducting subgroup analysis, principal stratum analysis, or indirect treatment comparisons.</p>
 </section>
 <section class="slide level2">
 
-<h3 id="required-steps-of-the-meta-analysis">Required steps of the meta-analysis</h3>
-<ol type="1">
-<li>Well formulates systematic review question</li>
-<li>Extensive search</li>
-<li>Selection &amp; data extraction</li>
-<li>Critical appraisal</li>
-<li>Data synthesis, <em>Pooling of CPM performance</em></li>
-<li>Interpretations of results, <em>Confidence &amp; prediction intervals, meta-regression, subgroup analysis, sensitivity analysis</em></li>
-</ol>
+<h3 id="recommendations-for-rwe-studies">Recommendations for RWE studies</h3>
+<p><img data-src="images/nice_rwe_framework_2022_02.png" style="width:65.0%"></p>
+
+<aside><div>
+<p>NICE real-world evidence framework. National Institute for Health and Care Excellence; 2022 Jun.&nbsp;Report No.: ECD9.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="recommendations-for-rwe-studies-1">Recommendations for RWE studies</h3>
+<p><img data-src="images/jahanshahi_use_2021_fig1.webp" style="width:65.0%"></p>
+
+<aside><div>
+<p>Jahanshahi M, et al.&nbsp;Ther Innov Regul Sci. 2021 Sep;55(5):1019–35.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="recommendations-for-rwe-studies-2">Recommendations for RWE studies</h3>
+<p><img data-src="images/sarri_framework_2020_fig3.jpg"></p>
+
+<aside><div>
+<p>Sarri G, et al.&nbsp;BMJ EBM. 2020 Dec 9;27:109–19.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="recommendations-for-rwe-studies-3">Recommendations for RWE studies</h3>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  Z[Study planning] --&gt; A(Defining the research question)
+  A --&gt; B(Planning study conduct)
+  B --&gt; C(Choosing fit-for-purpose data)
+  C --&gt; D(Primary data collection)
+  C --&gt; E[Study conduct]
+  D --&gt; E
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:55%;">
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  Z[Study conduct] --&gt; A(Choosing study design and analytical methods)
+  A --&gt; B(Minimising risk of bias)
+  B --&gt; C(Assessing robustness of study results)
+  C --&gt; D(Using proportionate quality assurance processes)
+  D --&gt; E[Study reporting]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="analysis-of-rwe-studies">Analysis of RWE studies</h3>
+<p>Statistical methods for addressing confounding</p>
+<ul>
+<li>Covariate adjustment</li>
+<li>Propensity score analysis</li>
+<li>Prognostic score analysis</li>
+</ul>
+<p>These methods are also the building blocks for studies conducting indirect treatment comparisons or incorporating historical controls.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="analysis-of-rwe-studies-1">Analysis of RWE studies</h3>
+<p>Many other concerns should be explored:</p>
+<ul>
+<li>Operational definitions of key study variables</li>
+<li>Definition of time windows</li>
+<li>Choice of patient eligibility criteria</li>
+<li>Missing data and measurement error</li>
+<li>Alternative model specifications</li>
+<li>Treatment switching or loss to follow up</li>
+<li>Non-adherence</li>
+</ul>
 </section>
 <section class="slide level2">
 
 </section></section>
 <section>
-<section id="data-extraction" class="title-slide slide level1 center">
-<h1>Data extraction</h1>
+<section id="what-is-next" class="title-slide slide level1 center">
+<h1>What is next?</h1>
 
 </section>
 <section class="slide level2">
 
+<h3 id="regulatory-decision-making">Regulatory decision making</h3>
+
+<img data-src="images/eichler_randomized_2021.png" style="width:60.0%" class="r-stretch"><ul>
+<li>The future is not about randomized controlled trials (RCTs) <strong><em>vs.</em></strong> real-world evidence (RWE) but about RCTs <strong><em>and</em></strong> RWE — not just for the assessment of safety but also of effectiveness</li>
+<li>Patients will need to be followed up for prolonged periods of time to empirically confirm or refute <em>a priori</em> comparative effectiveness assumptions</li>
+</ul>
 </section>
 <section class="slide level2">
 
-<h3 id="discrimination">Discrimination</h3>
-<p>Quantifies the model’s extent to distinguish between events and non-events</p>
+<h3 id="requirements">Requirements</h3>
 <ul>
-<li>Visual inspection
+<li>Need for additional sources of (non-RCT) evidence</li>
+<li>Need for better methods for evidence synthesis</li>
+<li>Need for revised regulatory (and other decision) frameworks</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="data-platforms">Data platforms</h3>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/darwin-eu-logo.png"></p>
+</div><div class="column" style="width:70%;">
+<p>Catalogue of observational data sources for use in medicines regulation</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/EHDEN_Logo_JPG.jpg"></p>
+</div><div class="column" style="width:70%;">
+<p>Federated data network of allowing access to the data of EU citizens standardised to a common data model.</p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="individualizing-treatment-decisions">Individualizing treatment decisions</h3>
 <ul>
-<li>Receiving Operating Characteristics (ROC) curve</li>
+<li>Causal treatment effects are estimated at the population level in randomised controlled trials (RCTs)</li>
+<li>However, clinical decision is often to be made at the individual level in practice</li>
+<li>Individualized absolute treatment effects provide a natural starting point to engage in shared decision making</li>
+</ul>
+
+<aside><div>
+<p>Nguyen TL, et al.&nbsp;J Clin Epidemiol. 2020 May 25;125:47–56.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="estimating-individualized-treatment-effects">Estimating individualized treatment effects</h3>
+<ul>
+<li>Subgroup analysis is often used to investigate heterogeneity in treatment effects</li>
+<li>Although subgroup effects can provide interesting insights and generate new hypotheses, they may be difficult to use for guiding treatment</li>
+<li>It may be more informative to move to the absolute risk scale and estimate multivariable models that adjust for individual patient characteristics</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="estimating-individualized-treatment-effects-1">Estimating individualized treatment effects</h3>
+<ul>
+<li>Small RCTs
+<ul>
+<li>Hard to improve beyond risk-magnification</li>
+<li>However, the price to pay to allow for treatment-covariate interactions was small when using both shrinkage and selection, especially for the hierarchical group lasso</li>
 </ul></li>
-<li>Summary statistics
+<li>Large RCTs
 <ul>
-<li>Concordance (c) index</li>
-<li>Area under the ROC curve (AUC)</li>
-<li>Discrimination slope</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="calibration">Calibration</h3>
-<p>Agreement between observed outcomes and predictions</p>
-
-<img data-src="images/paste-0E96A320.png" class="r-stretch quarto-figure-center"><p class="caption">Ref: Genders et al.&nbsp;Prediction model to estimate presence of coronary artery disease: retrospective pooled analysis of existing cohorts. BMJ 2012</p></section>
-<section class="slide level2">
-
-<h3 id="how-to-obtain-the-c-statistics">How to obtain the c-statistics?</h3>
-<ul>
-<li>Area under the receiver operating characteristic curve</li>
-<li>Somer’s D statistics</li>
-<li>Cohen’s effect size</li>
-<li>Distribution of prognostic index (PI)</li>
-<li>Log odds ratio of the PI</li>
-</ul>
-<p>The SE can be derived from</p>
-<ul>
-<li>Confidence interval</li>
-<li>Sample-size, total #events and c-statistics</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="how-to-obtain-the-total-oe-ratio">How to obtain the total O:E ratio?</h3>
-<ul>
-<li>Total number of patients</li>
-<li>Total number of proportion of observed events</li>
-<li>Total number of proportion of predicted events</li>
-<li>Predicted risk for the “average” patient</li>
-</ul>
-<p>The SE can be derived from the total number of observed and expected events.</p>
-</section>
-<section class="slide level2">
-
-<h3 id="software">Software</h3>
-<p>The <code>metamisc</code> R package</p>
-
-<img data-src="images/paste-FE9CC2F4.png" class="r-stretch"></section>
-<section class="slide level2">
-
-<h3 id="software-1">Software</h3>
-<p><strong>The metamisc R package</strong></p>
-<ul>
-<li>Estimation of performance statistics and corresponding standard errors from reported quantities</li>
-<li>Transformation of performance estimates and corresponding standard errors</li>
-<li>Meta-analysis &amp; meta-regression
-<ul>
-<li>Frequentist (via metafor)</li>
-<li>Bayesian (via JAGS)</li>
-</ul></li>
-<li>Visualization of results</li>
-<li><a href="https://CRAN.R-project.org/package=metamisc">CRAN documentation</a></li>
-</ul>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="meta-analysis-of-validation-studies" class="title-slide slide level1 center">
-<h1>Meta-analysis of validation studies</h1>
-
-</section>
-<section class="slide level2">
-
-<h3 id="fixed-effect-or-random-effects">Fixed effect or random effects?</h3>
-<p>Homogeneous model performance often unrealistic</p>
-<ul>
-<li>Model discrimination varies according to case-mix heterogeneity <em>(e.g.&nbsp;primary vs.&nbsp;secondary care)</em></li>
-<li>Model calibration varies according to outcome occurrence</li>
-<li>Model performance may vary due to covariates not included by the model</li>
-<li>Model performance may vary due to differences in study design</li>
-<li>Model performance may vary due to differences treatment standards</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="fixed-effect-or-random-effects-1">Fixed effect or random effects?</h3>
-<p>Homogeneous model performance often unrealistic</p>
-<ul>
-<li>Heterogeneity in the predictive performance of a CPM is to be expected!</li>
-<li>Ignoring such heterogeneity leads to an overly precise summary estimate</li>
-<li>Pooled estimates of model performance have little value when there is strong heterogeneity</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="fixed-effect-or-random-effects-2">Fixed effect or random effects?</h3>
-<p>Traditional meta-analysis methods approcimate within-study variability with a Normal distribution</p>
-<p>This approximation may introduce bias or show other pool statistical properties when</p>
-<ul>
-<li>The c-statistics or O:E ratio is close to 0 or 1</li>
-<li>When sample sizes are relatively small</li>
-</ul>
-<p><strong>Need for transformations!</strong></p>
-<ul>
-<li>Meta-analysis of logit c-statistics</li>
-<li>Meta-analysis of log O:E ratio</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="use-of-appropriate-meta-analysis-methods">Use of appropriate meta-analysis methods</h3>
-<p><strong>Individual Participant Data (IPD) meta-analysis</strong></p>
-</section>
-<section id="section-1" class="slide level2">
-<h2><img data-src="images/paste-AB2A3297.png"></h2>
-<h3 id="investigating-heterogeneity">Investigating heterogeneity</h3>
-<p><strong>Meta-regression</strong></p>
-<p>Adjust the meta-analysis for study-lvel variables such as:</p>
-<ul>
-<li>Study characteristics
-<ul>
-<li>Study design</li>
-<li>Follow-up time</li>
-<li>Predictor and outcome definitions</li>
-<li>Cut-point for dichotomozing prognostic factor</li>
+<li>Shrinkage and selection still needed</li>
+<li>Allowing for all interactions was beneficial</li>
 </ul></li>
 </ul>
+
+<aside><div>
+<p>Hoogland J, et al.&nbsp;Stat Med. 2021 Nov 20;40(26):5961–81.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="estimating-individualized-treatment-effects-2">Estimating individualized treatment effects</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/hoogland_tutorial_2021.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/seo_comparing_2020.png"></p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/efthimiou_measuring_2023.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/chalkou_two-stage_2021.png"></p>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
-<h3 id="investigating-heterogeneity-1">Investigating heterogeneity</h3>
-<p><strong>Meta-regression</strong></p>
-<ul>
-<li>Population characteristics
-<ul>
-<li>Mean of linear predictor or individual covariates</li>
-<li>SD of linear predictor or individual covariates</li>
-<li>Treatment standars (beware of ecological fallacy)</li>
-</ul></li>
-</ul>
-<p><strong>Ref</strong>: Berlin et al.&nbsp;Individual patient- versus group-level data meta-regressions of treatment effect modifiers: ecological bias rears its ugly head. Stat Med 2002.</p>
+<h3 id="precmed-precision-medicine">precmed: Precision Medicine</h3>
+<p>A doubly robust precision medicine approach to fit, cross-validate and visualize prediction models for the conditional average treatment effect. Available from <a href="https://smartdata-analysis-and-statistics.github.io/precmed/">GitHub</a> and <a href="https://CRAN.R-project.org/package=precmed">CRAN</a>.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/precmed.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/precmed_CRAN.png"></p>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
-<h3 id="investigating-heterogeneity-2">Investigating heterogeneity</h3>
-<p><strong>Sensitivity analysis</strong></p>
-<p>Exclude studies of questionable quality <em>(cfr. PROBAST)</em></p>
+<h3 id="comparative-effectiveness-and-personalized-medicine-using-real-world-data">Comparative effectiveness and personalized medicine using real-world data</h3>
 <ul>
-<li>Risk bias
-<ul>
-<li>Participant selection</li>
-<li>Predictors</li>
-<li>Outcome</li>
-<li>Sample size and participant flow</li>
-<li>Analysis</li>
-</ul></li>
+<li>Edited by TPA Debray, T-L Nguyen and RW Platt</li>
+<li>21 chapters; publication expected in 2024</li>
+<li>Contributions from ~ 40 authors (academia; industry; contract resesarch organizations; health technology assessment agencies; regulatory decision-making)</li>
+<li>Example code on <a href="https://smartdata-analysis-and-statistics.github.io/comparative-effectiveness/">GitHub</a></li>
 </ul>
-</section>
-<section class="slide level2">
-
-<h3 id="investigating-heterogeneity-3">Investigating heterogeneity</h3>
-<p><strong>Sensitivity analysis</strong></p>
-<ul>
-<li>Applicability
-<ul>
-<li>Participant selection</li>
-<li>Predictors</li>
-<li>Outcome</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="interpretation-of-meta-analysis-result">Interpretation of meta-analysis result</h3>
-<p><strong>Describe model generalizability</strong></p>
-<ul>
-<li>Evaluate model robustness when applied in new populations
-<ul>
-<li>Pooled estimate and 95% CI</li>
-<li>Prediction interval</li>
-</ul></li>
-<li>Identify populations where model performance is satisfactory and onther where it is inadequate</li>
-</ul>
+<p><img data-src="images/taylor_francis.png" style="height:80.0%"></p>
 
 <p><img src="../images/copyright.svg" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -957,6 +1006,44 @@ Thomas Debray, PhD
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
