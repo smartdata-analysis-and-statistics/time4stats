@@ -324,6 +324,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -400,12 +403,187 @@ Thomas Debray, PhD
 </div></aside></section>
 <section class="slide level2">
 
-<h3 id="the-role-of-real-world-data">The role of real-world data</h3>
+<h3 id="the-efficacy-effectiveness-gap-1">The efficacy-effectiveness gap</h3>
 <ul>
 <li>The Achilles heel of experimental studies is <strong>sample size</strong> and the <strong>lack of random selection</strong></li>
 <li>The Achilles heel of observational studies is error due to <strong>imbalance</strong> in (un)observed variables</li>
 </ul>
+<blockquote>
+<p>‘’Real-world data can improve our understanding of health and social care delivery, patient health and experiences, and the effects of interventions on patient and system outcomes in routine settings’’ (NICE)</p>
+</blockquote>
 </section>
+<section class="slide level2">
+
+<h3 id="what-is-real-world-data-rwd">What is real-world data (RWD)?</h3>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/fda.png"></p>
+</div><div class="column" style="width:70%;">
+<p>Data relating to patient health status and/or the delivery of health care routinely collected from a variety of sources</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/ema.svg"></p>
+</div><div class="column" style="width:70%;">
+<p>Routinely collected data relating to a patient’s health status or the delivery of health care from a variety of sources other than traditional clinical trials</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/NICE.png"></p>
+</div><div class="column" style="width:70%;">
+<p>Data collected outside the context of a highly controlled clinical trial</p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="what-is-real-world-data-rwd-1">What is real-world data (RWD)?</h3>
+<p>RWD is commonly understood as observational data</p>
+<ul>
+<li>Primary use of data (e.g., data collected in an observational study, data collected with digital wearable devices or patients’ or physicians’ surveys)</li>
+<li>Secondary use of data (e.g., electronic healthcare records, claims data, registries)</li>
+<li>A combination of both</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="sources-of-real-world-data">Sources of real-world data</h3>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="seminar_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</div>
+</div>
+
+<aside><div>
+<p>Makady A, et al.&nbsp;Value in Health. 2017 May;20(7):858–65.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="studies-generating-real-world-data">Studies generating real-world data</h3>
+<ul>
+<li>Phase IV trials</li>
+<li>Post-authorisation safety studies (PASS)</li>
+<li>Post-authorisation efficacy studies (PAES)</li>
+<li>Studies to measure the effectiveness of risk minimisation measures (RMMs)</li>
+<li>Studies to support life cycle benefit-risk evaluation</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="what-is-real-world-evidence-rwe">What is real-world evidence (RWE)?</h3>
+<p>Evidence generated from the analysis of real-world data</p>
+<p><img data-src="images/reliance_RWD.png"></p>
+
+<aside><div>
+<p>Concato J, Corrigan-Curay J. N Engl J Med. 2022 May 5;386(18):1680–2.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="rwe-studies---what-is-the-catch">RWE studies - what is the catch?</h3>
+<ul>
+<li>Selection bias</li>
+<li>Information bias
+<ul>
+<li>due to missing or inaccurate data on population eligibility criteria, interventions or exposures, outcomes and covariates</li>
+<li>due to misspecification of the follow-up period</li>
+</ul></li>
+<li>Confounding</li>
+<li>Other</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="conduct-of-quantitative-rwe-studies">Conduct of quantitative RWE studies</h3>
+<p><img data-src="images/nice_rwe_framework_2022_02.png" style="width:65.0%"></p>
+
+<aside><div>
+<p>NICE real-world evidence framework. National Institute for Health and Care Excellence; 2022 Jun.&nbsp;Report No.: ECD9.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="conduct-of-quantitative-rwe-studies-1">Conduct of quantitative RWE studies</h3>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart TD
+  Z[Study planning] --&gt; A(Defining the research question)
+  A --&gt; B(Planning study conduct)
+  B --&gt; C(Choosing fit-for-purpose data)
+  C --&gt; D(Primary data collection)
+  C --&gt; E[Study conduct]
+  D --&gt; E
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-2">flowchart TD
+  Z[Study conduct] --&gt; A(Choosing study design and analytical methods)
+  A --&gt; B(Minimising risk of bias)
+  B --&gt; C(Assessing robustness of study results)
+  C --&gt; D(Using proportionate quality assurance processes)
+  D --&gt; E[Study reporting]
+</pre>
+<div id="mermaid-tooltip-2" class="mermaidTooltip">
+
+</div>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="analysis-of-rwe-studies">Analysis of RWE studies</h3>
+<ul>
+<li>Identify potential confounders using a systematic approach and clearly articulate causal assumptions.</li>
+<li>Use a statistical method that addresses confounding considering observed and unobserved confounders</li>
+<li>Consider the impact of bias from informative censoring, missing data, and measurement error</li>
+<li>Use sensitivity and bias analysis to assess the robustness of results</li>
+</ul>
+
+<aside><div>
+<p>NICE real-world evidence framework. National Institute for Health and Care Excellence; 2022 Jun.&nbsp;Report No.: ECD9.</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="analysis-of-rwe-studies-1">Analysis of RWE studies</h3>
+<p>Statistical methods for addressing bias from observed confounders</p>
+<ul>
+<li>Covariate adjustment</li>
+<li>Propensity score analysis</li>
+<li>Prognostic score analysis</li>
+</ul>
+<p>These methods are also the building blocks for Matching-Adjusted Indirect Comparisons (MAIC) and historical control studies</p>
+</section>
+<section class="slide level2">
+
+<h3 id="analysis-of-rwe-studies-2">Analysis of RWE studies</h3>
+<p>Although propensity score analysis is very common, prognostic score analysis may be advantageous when:</p>
+<ul>
+<li>it is difficult to identify confounders that predict treatment (e.g.&nbsp;new interventions)</li>
+<li>the outcome is common and the treatment exposure(s) are rare</li>
+<li>investigating multiple exposures or multiple exposure levels</li>
+</ul>
+
+<aside><div>
+<p>Nguyen TL, Debray TPA. Stat Med. 2019 Jan 16;38:2013–29.</p>
+</div></aside></section>
 <section class="slide level2">
 
 </section>
@@ -422,9 +600,10 @@ Thomas Debray, PhD
 <li>Presence of a certain disease (<em>diagnosis</em>)</li>
 <li>Future occurrence of a particular event (<em>prognosis</em>)</li>
 </ul>
-</section>
-<section id="section" class="slide level2">
-<h2><img data-src="images/prediction_01.png"></h2>
+
+<img data-src="images/prediction_01.png" style="width:65.0%" class="r-stretch"></section>
+<section class="slide level2">
+
 <h3 id="why">Why?</h3>
 <ul>
 <li>Identify high-risk individuals</li>
@@ -653,7 +832,7 @@ Thomas Debray, PhD
 <h3 id="use-of-appropriate-meta-analysis-methods">Use of appropriate meta-analysis methods</h3>
 <p><strong>Individual Participant Data (IPD) meta-analysis</strong></p>
 </section>
-<section id="section-1" class="slide level2">
+<section id="section" class="slide level2">
 <h2><img data-src="images/paste-AB2A3297.png"></h2>
 <h3 id="investigating-heterogeneity">Investigating heterogeneity</h3>
 <p><strong>Meta-regression</strong></p>
@@ -956,6 +1135,44 @@ Thomas Debray, PhD
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

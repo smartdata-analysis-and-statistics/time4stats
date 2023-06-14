@@ -90,9 +90,222 @@ Eichler HG, et al.Nat Rev Drug Discov. 2011 Jul 1;10(7):495–506.
 
 ------------------------------------------------------------------------
 
-### The role of real-world data
+### The efficacy-effectiveness gap
 - The Achilles heel of experimental studies is **sample size** and the **lack of random selection**
 - The Achilles heel of observational studies is error due to **imbalance** in (un)observed variables
+
+> ''Real-world data can improve our understanding of health and social care delivery, patient health and experiences, and the effects of interventions on patient and system outcomes in routine settings'' (NICE)
+
+------------------------------------------------------------------------
+
+### What is real-world data (RWD)?
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](images/fda.png)
+:::
+
+::: {.column width="70%"}
+Data relating to patient health status and/or the delivery of health care routinely collected from a variety of sources
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](images/ema.svg)
+:::
+
+::: {.column width="70%"}
+Routinely collected data relating to a patient’s health status or the delivery of health care from a variety of sources other than traditional clinical trials
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](images/NICE.png)
+:::
+
+::: {.column width="70%"}
+Data collected outside the context of a highly controlled clinical trial
+:::
+
+::::
+
+------------------------------------------------------------------------
+
+### What is real-world data (RWD)?
+
+RWD is commonly understood as observational data 
+
+- Primary use of data (e.g., data collected in an observational study, data collected with digital wearable devices or patients’ or physicians’ surveys) 
+- Secondary use of data (e.g., electronic healthcare records, claims data, registries)
+- A combination of both
+
+------------------------------------------------------------------------
+
+### Sources of real-world data
+
+```{r}
+#| echo: false
+#| warning: false
+library(ggplot2)
+library(dplyr)
+
+sourcesRWD <- data.frame(RWDsource = c("Pharmacy Data",
+                                       "Patients charts",
+                                       "Social Media",
+                                       "Hospital Data",
+                                       "Health Surveys",
+                                       "Patient Reported Outcomes",
+                                       "Administrative Databases",
+                                       "Claims Databases",
+                                       "Electronic Health Records",
+                                       "Registries"
+                                       ), 
+                         Count = c(2,
+                                   2,
+                                   3,
+                                   3,
+                                   4,
+                                   10,
+                                   6,
+                                   12,
+                                   16,
+                                   17),
+                         Type = "Data Source")
+
+ggplot(data=sourcesRWD, aes(x=RWDsource,y=Count)) +
+  geom_bar(position="dodge",stat="identity") + 
+  coord_flip() +
+  ggtitle("Frequency of occurrence of RWD sources retrieved from literature documents") +
+  ylab("") +
+  xlab("")
+```
+
+::: aside
+Makady A, et al. Value in Health. 2017 May;20(7):858–65. 
+:::
+
+------------------------------------------------------------------------
+
+### Studies generating real-world data
+
+- Phase IV trials
+- Post-authorisation safety studies (PASS) 
+- Post-authorisation efficacy studies (PAES)
+- Studies to measure the effectiveness of risk minimisation measures (RMMs)
+- Studies to support life cycle benefit-risk evaluation
+
+------------------------------------------------------------------------
+
+### What is real-world evidence (RWE)?
+Evidence generated from the analysis of real-world data
+
+![](images/reliance_RWD.png)
+
+::: aside
+Concato J, Corrigan-Curay J. N Engl J Med. 2022 May 5;386(18):1680–2. 
+:::
+
+
+------------------------------------------------------------------------
+
+### RWE studies - what is the catch?
+
+
+- Selection bias
+- Information bias 
+  -   due to missing or inaccurate data on population eligibility criteria, interventions or exposures, outcomes and covariates
+    - due to misspecification of the follow-up period
+- Confounding 
+- Other 
+
+------------------------------------------------------------------------
+
+### Conduct of quantitative RWE studies
+
+![](images/nice_rwe_framework_2022_02.png){width=65%}
+
+::: aside
+NICE real-world evidence framework. National Institute for Health and Care Excellence; 2022 Jun. Report No.: ECD9.
+:::
+
+------------------------------------------------------------------------
+
+### Conduct of quantitative RWE studies
+
+:::: {.columns}
+
+::: {.column width="30%"}
+```{mermaid}
+flowchart TD
+  Z[Study planning] --> A(Defining the research question)
+  A --> B(Planning study conduct)
+  B --> C(Choosing fit-for-purpose data)
+  C --> D(Primary data collection)
+  C --> E[Study conduct]
+  D --> E
+```
+:::
+
+::: {.column width="70%"}
+```{mermaid}
+flowchart TD
+  Z[Study conduct] --> A(Choosing study design and analytical methods)
+  A --> B(Minimising risk of bias)
+  B --> C(Assessing robustness of study results)
+  C --> D(Using proportionate quality assurance processes)
+  D --> E[Study reporting]
+```
+:::
+
+::::
+
+------------------------------------------------------------------------
+
+### Analysis of RWE studies
+
+-   Identify potential confounders using a systematic approach and clearly articulate causal assumptions.
+-   Use a statistical method that addresses confounding considering observed and unobserved confounders
+-   Consider the impact of bias from informative censoring, missing data, and measurement error
+-   Use sensitivity and bias analysis to assess the robustness of results
+
+::: aside
+NICE real-world evidence framework. National Institute for Health and Care Excellence; 2022 Jun. Report No.: ECD9.
+:::
+
+------------------------------------------------------------------------
+
+### Analysis of RWE studies
+Statistical methods for addressing bias from observed confounders
+
+- Covariate adjustment
+- Propensity score analysis
+- Prognostic score analysis
+
+These methods are also the building blocks for Matching-Adjusted Indirect Comparisons (MAIC) and historical control studies
+
+------------------------------------------------------------------------
+
+### Analysis of RWE studies
+
+Although propensity score analysis is very common, prognostic score analysis may be advantageous when:
+
+- it is difficult to identify confounders that predict treatment (e.g. new interventions)
+- the outcome is common and the treatment exposure(s) are rare
+- investigating multiple exposures or multiple exposure levels
+
+::: aside
+Nguyen TL, Debray TPA. Stat Med. 2019 Jan 16;38:2013–29. 
+:::
+
+
+
 
 
 
@@ -109,8 +322,8 @@ Estimate something that is yet unknown
 -   Presence of a certain disease (*diagnosis*)
 -   Future occurrence of a particular event  (*prognosis*)
 
+![](images/prediction_01.png){width=65%}
 
-![](images/prediction_01.png)
 ------------------------------------------------------------------------
 
 ### Why?

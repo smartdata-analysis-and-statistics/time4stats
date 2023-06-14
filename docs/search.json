@@ -25,13 +25,6 @@
     "href": "slides/2023-06-14 - Workshop Bern/seminar.html#section",
     "title": "Comparative effectiveness and personalized medicine research using real-world data",
     "section": "",
-    "text": "Why?\n\nIdentify high-risk individuals\nFacilite causal inferece (e.g., estimation of treatment effects)\nTarget decision making to individuals\nInterest has been fueled by availability of big data"
-  },
-  {
-    "objectID": "slides/2023-06-14 - Workshop Bern/seminar.html#section-1",
-    "href": "slides/2023-06-14 - Workshop Bern/seminar.html#section-1",
-    "title": "Comparative effectiveness and personalized medicine research using real-world data",
-    "section": "",
     "text": "Investigating heterogeneity\nMeta-regression\nAdjust the meta-analysis for study-lvel variables such as:\n\nStudy characteristics\n\nStudy design\nFollow-up time\nPredictor and outcome definitions\nCut-point for dichotomozing prognostic factor"
   },
   {
