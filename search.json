@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "slides/prognostic_model34/prognostic_model34.html#section",
-    "href": "slides/prognostic_model34/prognostic_model34.html#section",
+    "objectID": "slides.html",
+    "href": "slides.html",
     "title": "Meta-analysis of Prognostic Studies",
     "section": "",
-    "text": "Investigating heterogeneity\nMeta-regression\nAdjust the meta-analysis for study-lvel variables such as:\n\nStudy characteristics\n\nStudy design\nFollow-up time\nPredictor and outcome definitions\nCut-point for dichotomozing prognostic factor"
+    "text": "The presentation"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "time4stats",
     "section": "",
-    "text": "Let’s talk about statistics\n\n2023\nComparative effectiveness and personalized medicine research using real-world data"
+    "text": "Let’s talk about statistics\n\n2023\n\n25 jun. Comparative effectiveness and personalized medicine research using real-world data. Institute of Social and Preventive Medicine, Universitat Bern. Switzerland"
   },
   {
     "objectID": "about.html",
@@ -21,10 +21,10 @@
     "text": "About this site"
   },
   {
-    "objectID": "slides.html",
-    "href": "slides.html",
+    "objectID": "slides/prognostic_model34/prognostic_model34.html#section",
+    "href": "slides/prognostic_model34/prognostic_model34.html#section",
     "title": "Meta-analysis of Prognostic Studies",
     "section": "",
-    "text": "The presentation"
+    "text": "Investigating heterogeneity\nMeta-regression\nAdjust the meta-analysis for study-lvel variables such as:\n\nStudy characteristics\n\nStudy design\nFollow-up time\nPredictor and outcome definitions\nCut-point for dichotomozing prognostic factor"
   }
 ]
