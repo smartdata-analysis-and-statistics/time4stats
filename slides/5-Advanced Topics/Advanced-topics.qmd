@@ -1,0 +1,199 @@
+---
+title: "Advanced Topics"
+author: "Thomas Debray, PhD"
+format:
+  revealjs: 
+    transition: none
+    smaller: true
+    controls: true
+    slide-number: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    margin: 0.2
+    logo: ../_assets/images/copyright.svg
+    header-logo: ../_assets/images/smartdata-logo.png
+    hide-from-titleSlide: "all"
+    theme: ../_assets/styles/slide-styles.scss
+    footer: <https://fromdatatowisdom.com/>
+    css: ../_assets/styles/additional-styles.css
+filters: 
+  - ../reveal-header
+title-slide-attributes: 
+  data-background-image: ../_assets/images/smartdata-logo.png
+  data-background-size: 30%
+  data-background-position: 2% 2%
+---
+
+### Key issues
+
+-   The model used for imputation should adjust for predictors of missingness
+-   The model used for imputation should be consistent with the model(s) used for analysing the data (**congeniality**)
+-   The main analysis is performed separately in each imputed dataset
+-   The results from each imputed dataset are pooled using Rubin's rules
+
+------------------------------------------------------------------------
+
+### Congeniality of input sources
+
+The analysis procedure needs to correspond to (or be more specific than) the imputation model
+
+-   Any assumptions in the analysis model should also be present in the imputation model
+
+-   Potential sources of uncongeniality
+
+    -   Adjustment for confounders
+    -   Nonlinearity terms
+    -   Interaction terms
+    -   Clustering and between-study heterogeneity
+
+------------------------------------------------------------------------
+
+### Congeniality of input sources
+
+Strategies to improve/ensure congeniality
+
+-   Generate new variables for interactions, data transformations etc. and treat them as "**just another variable**" in the imputation model (JAV)
+
+-   Adopt **passive imputation** to maintain consistency among different transformations of the same data
+
+-   Adopt **flexible models** for imputing variables with non-linear trends (e.g. predictive mean matching, broken-stick)
+
+------------------------------------------------------------------------
+
+### Examples
+
+**Uncongenial sources of input**
+
+![](images/Picture1.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Examples
+
+**Congenial sources of input**
+
+![](images/Picture2.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Congeniality in time-to-event analyses
+
+-   Sometimes, the analysis model focuses on a survival outcome (e.g. Cox regression)
+
+-   The outcome is now defined by:
+
+    -   Event indicator (D)
+    -   Observed event or censoring time (T)
+
+-   Rather than including D and T as covariates in the impuation model, it is recommended to include D and the cumulative baseline hazard (which can be obtained via nelsonAalen() in the R package mice)
+
+------------------------------------------------------------------------
+
+### Congeniality in clustered datasets
+
+Many datasets have clustering
+
+    - Multi-center data
+    - Meta-analysis of individual participant data
+
+Possible types of missing data in clustered datasets
+
+    - Partially missing data
+    - Systematically missing data
+    - Combination of above issues
+
+------------------------------------------------------------------------
+
+### Congeniality in clustered datasets
+
+![](images/Picture3.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Congeniality in clustered datasets
+
+![](images/Picture4.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Congeniality in clustered datasets
+
+Imputation that ignores clustering leads to underestimation of the magnitude of clustering and hence underestimated standard errors
+
+-   Imputation models should account for clustering!
+
+    -   Within-study imputation
+    -   Hierarchical imputation
+
+------------------------------------------------------------------------
+
+### Congeniality in clustered datasets
+
+**Within-study imputation**
+
+Impute each cluster (e.g. study) separately using traditional methods
+
+-   Pros:
+
+    -   No need for advanced software packages
+    -   Preserves heterogeneity across data sources
+
+-   Cons:
+
+    -   Unfeasible for small studies with many missings
+    -   Unfeasible when there are systematically missing variables (unless datasets or variables are entirely omitted)
+
+------------------------------------------------------------------------
+
+### Congeniality in clustered datasets
+
+**Hierarchical imputation**
+
+Adopt mixed effect models to impute missing values simultaneously in all clusters
+
+-   Pros:
+
+    -   Preserve uncertainty within and across data sources
+    -   Impute systematically missing variables
+
+-   Cons:
+
+    -   Requires careful modeling
+    -   Convergence may be problematic
+
+------------------------------------------------------------------------
+
+### Congeniality in clustered datasets
+
+![](images/Picture5.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Congeniality in clustered datasets
+
+**Hierarchical imputation in R**
+
+-   Multilevel imputation methods perform well, but have distinct strengths and weaknesses
+-   Heteroscedastic MI methods (e.g. **FCS-2stage**) perform better than homoscedastic methods (e.g. **FCS-GLM**), unless clusters are small
+-   Methods based on conjugate prior distributions (such as **FCS-JOMO**) should be used with caution when the proportion of missing values is very high
+
+------------------------------------------------------------------------
+
+### Rubin's rules
+
+After imputation, the resulting D versions of the completed data are analyzed separately.
+
+![](images/Picture6.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Rubin's rules
+
+![](images/Picture7.png){width="100%"}
+
+------------------------------------------------------------------------
+
+## Rubin's rules
+
+![](images/Picture8.png){width="70%"}

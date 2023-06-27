@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - href: slides.qmd
+      - href: slides_prognostic.qmd
         text: Materials
 
 format:

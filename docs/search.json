@@ -1,24 +1,122 @@
 [
   {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Meta-analysis of Prognostic Studies",
-    "section": "",
-    "text": "The presentation"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "time4stats",
-    "section": "",
-    "text": "Let’s talk about statistics\n\n2023\n\n25 jun. Comparative effectiveness and personalized medicine research using real-world data. Institute of Social and Preventive Medicine, Universitat Bern. Switzerland"
-  },
-  {
     "objectID": "slides/prognostic_model34/prognostic_model34.html#section",
     "href": "slides/prognostic_model34/prognostic_model34.html#section",
     "title": "Meta-analysis of Prognostic Studies",
     "section": "",
     "text": "Investigating heterogeneity\nMeta-regression\nAdjust the meta-analysis for study-lvel variables such as:\n\nStudy characteristics\n\nStudy design\nFollow-up time\nPredictor and outcome definitions\nCut-point for dichotomozing prognostic factor"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-of-input-sources-1",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-of-input-sources-1",
+    "title": "Advanced Topics",
+    "section": "Congeniality of input sources",
+    "text": "Congeniality of input sources\n\nStrategies to improve/ensure congeniality\n\nGenerate new variables for interactions, data transformations etc. and treat them as “just another variable” in the imputation model (JAV)\nAdopt passive imputation to maintain consistency among different transformations of the same data\nAdopt flexible models for imputing variables with non-linear trends (e.g. predictive mean matching, broken-stick)"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#examples",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#examples",
+    "title": "Advanced Topics",
+    "section": "Examples",
+    "text": "Examples\nUncongenial sources of input"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#examples-1",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#examples-1",
+    "title": "Advanced Topics",
+    "section": "Examples",
+    "text": "Examples\nCongenial sources of input"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-time-to-event-analyses",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-time-to-event-analyses",
+    "title": "Advanced Topics",
+    "section": "Congeniality in time-to-event analyses",
+    "text": "Congeniality in time-to-event analyses\n\n\nSometimes, the analysis model focuses on a survival outcome (e.g. Cox regression)\nThe outcome is now defined by:\n\nEvent indicator (D)\nObserved event or censoring time (T)\n\nRather than including D and T as covariates in the impuation model, it is recommended to include D and the cumulative baseline hazard (which can be obtained via nelsonAalen() in the R package mice)"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets",
+    "title": "Advanced Topics",
+    "section": "Congeniality in clustered datasets",
+    "text": "Congeniality in clustered datasets\nMany datasets have clustering\n- Multi-center data\n- Meta-analysis of individual participant data\nPossible types of missing data in clustered datasets\n- Partially missing data\n- Systematically missing data\n- Combination of above issues"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-1",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-1",
+    "title": "Advanced Topics",
+    "section": "Congeniality in clustered datasets",
+    "text": "Congeniality in clustered datasets"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-2",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-2",
+    "title": "Advanced Topics",
+    "section": "Congeniality in clustered datasets",
+    "text": "Congeniality in clustered datasets"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-3",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-3",
+    "title": "Advanced Topics",
+    "section": "Congeniality in clustered datasets",
+    "text": "Congeniality in clustered datasets\nImputation that ignores clustering leads to underestimation of the magnitude of clustering and hence underestimated standard errors\n\nImputation models should account for clustering!\n\nWithin-study imputation\nHierarchical imputation"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-4",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-4",
+    "title": "Advanced Topics",
+    "section": "Congeniality in clustered datasets",
+    "text": "Congeniality in clustered datasets\n\nWithin-study imputation\nImpute each cluster (e.g. study) separately using traditional methods\n\nPros:\n\nNo need for advanced software packages\nPreserves heterogeneity across data sources\n\nCons:\n\nUnfeasible for small studies with many missings\nUnfeasible when there are systematically missing variables (unless datasets or variables are entirely omitted)"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-5",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-5",
+    "title": "Advanced Topics",
+    "section": "Congeniality in clustered datasets",
+    "text": "Congeniality in clustered datasets\nHierarchical imputation\nAdopt mixed effect models to impute missing values simultaneously in all clusters\n\nPros:\n\nPreserve uncertainty within and across data sources\nImpute systematically missing variables\n\nCons:\n\nRequires careful modeling\nConvergence may be problematic"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-6",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-6",
+    "title": "Advanced Topics",
+    "section": "Congeniality in clustered datasets",
+    "text": "Congeniality in clustered datasets"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-7",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#congeniality-in-clustered-datasets-7",
+    "title": "Advanced Topics",
+    "section": "Congeniality in clustered datasets",
+    "text": "Congeniality in clustered datasets\nHierarchical imputation in R\n\nMultilevel imputation methods perform well, but have distinct strengths and weaknesses\nHeteroscedastic MI methods (e.g. FCS-2stage) perform better than homoscedastic methods (e.g. FCS-GLM), unless clusters are small\nMethods based on conjugate prior distributions (such as FCS-JOMO) should be used with caution when the proportion of missing values is very high"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules",
+    "title": "Advanced Topics",
+    "section": "Rubin’s rules",
+    "text": "Rubin’s rules\nAfter imputation, the resulting D versions of the completed data are analyzed separately."
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-1",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-1",
+    "title": "Advanced Topics",
+    "section": "Rubin’s rules",
+    "text": "Rubin’s rules"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
+    "title": "Advanced Topics",
+    "section": "Rubin’s rules",
+    "text": "Rubin’s rules\n\n\n\n\nhttps://fromdatatowisdom.com/"
+  },
+  {
+    "objectID": "slides/MA-Prognostic-factor/MA-Prognostic-factors.html",
+    "href": "slides/MA-Prognostic-factor/MA-Prognostic-factors.html",
+    "title": "Meta-analysis of prognostic factor studies",
+    "section": "",
+    "text": "Prognostic factors\nWhat are prognostic factors?\nAny information that, among people with a given health condition, is associated with a subsequent health outcome\nExample\n\nInformation:\n\ntumour grade\n\nHealth condition:\n\npatients diagnosed with cancer\n\nHealth outcome(s):\n\nsubsequent disease\nrecurrence of death\n\n\n\n\n\nCommon examples\nRoutinely collected patient characteristics\n\nSex\nAge\nbody mass index\nsmoking status\nblood pressure\nco-morbidities\nsymptoms\n\n\n\n\nCommon examples\nBiomarkers\n\nBlood\nUrine\nImaging\nElectrophysiological\nphysiological variables\n\n\n\n\n\nUse of prognostic factors\n\nAiding treatment decisions\nImproving individual risk prediction\nProviding novel targets for new treatment\nEnhancing the design and analysis of randomised trials\n\n\n\n\nReff: Altman. Systematic reviews of evaluations of prognostic variables. BMJ 2001\n\n\n\n\n\nNeed for evidence synthesis\nIt is important to identify genuine prognostic factors.\nHowever:\n\nThere is often conflicting evidence about the prognostic value of certain variables\nThe quality of many prognostic studies is poor\n\nThis motivates the need for systematic reviews and meta-analyses that summarise the (adjusted) prognostic effect of each factor of interest.\n\n\n\nData extraction\nData extraction\nKey elements to extract for each factor of interest\n\nEstimates of the (adjusted) prognostic effect\n\nrisk ratio or odds ratio (for binary outcomes)\nhazard ratio (for time-to-event outcome)\nmean difference (for continuous outcomes such as pain or depression score)\n\nCorresponding standard errors or confidence intervals\n\n\n\n\nData extraction\nWhen not reported, unadjusted hazard ratios (and their variances) can be estimated:\n\nusing the number of outcomes (events) and an available p-value (e.g. from a log-rank test or Cox regression)\n\n\n\n\n\nData extraction\nWhen not reported, unadjusted hazard ratios (and their variances) can be estimated:\n\nfrom survival proportions\n\n\n\n\n\nAn example\nA systematic review was performed\n\nto evaluate the quality of prognostic research evidence\nfor the association of C-reactive protein (CRP)\nwith fatal and nonfatal events\namong patients with stable coronary disease\n\nRef: 10.1371/journal.pmed.1000286\n\n\n\nAn example\nData extraction\n\n“We extracted the reported relative risk, odds ratio or hazard ratio, and 95% CIs from each study.”\n“We extracted the relative risks with the largest number of adjustment variables”\n“We converted the reported relative risk estimates onto a standard scale of effect, comparing the highest third with the lowest third of the CRP distribution”\n\nRef: 10.1371/journal.pmed.1000286\n\n\n\nMeta-Analysis\nMeta-Analysis\nSummarize multiple estimates of a certain factor-outcome association (e.g. log hazard ratios)\n2 options:\n\nFixed effect meta-analysis\nRandom effects meta-analysis\n\n\n\n\nFixed effect meta-analysis\nIt is assumed that all studies share the same factor-outcome association\n\n\n\n\nFixed effect meta-analysis\nIt is assumed that all studies share the same factor-outcome association. The only source of variation is estimation error (\\(𝜀\\)) due to limited sample size.\n\n\n\n\nFixed effect meta-analysis\nThe pooled estimate is an average of all factor-outcome associations, weighted by their precision:\n\\(\\hat{\\theta}_k \\sim\\) N \\((D_F,\\) \\(V(\\hat{\\delta_k}))\\)\nwhere\n\n\\(\\hat{\\theta}_k\\) represents the estimated factor-outcome association (e.g. log hazard ratio) of study k,\n\\(V(\\hat{\\delta_k})\\) is the error variance\n\\(D_F\\) is the fixed effect meta-analysis summary (e.g. pooled log hazard ratio)\n\n\n\n\nArguments against fixed effect MA\nIt is often unrealistic to assume that all studies estimate the same prognostic effect\n\n\n\n\nRandom effects meta-analysis\n\nUnexplained heterogeneity is likely to exist due to:\n\nPublication bias\nVariation in study design & quality\nVariation in inclusion criteria\nDifferences in treatments received during follow-up\nDifferent types of prognostic effect measures (e.g. odds ratio and hazard ratios)\nDifferent sets of adjustment factors\n…\n\nA random effects meta-analysis approach is essential to allow for unexplained heterogeneity across studies\n\n\n\n\nRandom effects meta-analysis\nHeterogeneity may, for instance, appear when reviewing a continuous prognostic factor, as individual studies…\n\nmay consider non-linear trends\nmay consider a linear trend\nmay examine a trend across multiple categories of prognostic factor values.\nmay apply a cut-point (threshold) to dichotomise the continuous factor into two groups. The choice of cut-point often varies across studies\n\n\n\n\nRandom effects meta-analysis\nEach study has a distinct prognostic effect, but there is a distribution of true effects. We are interested in estimating the mean (and variance) of this distribution\n\n\n\n\nRandom effects meta-analysis\nThe meta-analysis now accounts for 2 sources of variation:\n\nEstimation error within studies (\\(𝜀\\))\nTrue variation in effect sizes between studies (\\(ζ\\))\n\n\n\n\n\nRandom effects meta-analysis\nWe now have:\n\\(\\hat{\\theta}_k \\sim N (D_F, V(\\hat{\\delta_k}))\\)\n\\(\\hat{\\delta_k} \\sim N(D_R, \\tau^2)\\)\nWith\n\n\\(V({\\theta}_k)\\) the within-study error variance\n\\(\\tau^2\\) the between-study variance\n\\(D_R\\) is the random effect meta-analysis summary (e.g. pooled log hazard ratio)\n\n\n\n\nAvoiding heterogeneity\nMeta-analysis results of prognostic factor studies will be most interpretable and thus useful when considering:\n\nHazard ratios, odds ratios and risk ratios separately\nUnadjusted and adjusted associations separately\nPrognostic factor effects at distinct cut-points \u000b(or groups of similar cut-points) separately\nPrognostic factor effects corresponding to a linear trend (association) separately\nPrognostic factor effects corresponding to non-linear trends separately\nEach method of measurement (for factors and outcomes) separately\n\n\n\n\nCRP example\nForest plot showing the study-specific estimates and meta-analysis summary result of the adjusted prognostic effect (risk ratio) of CRP. All studies were minimally adjusted for age, gender, smoking, diabetes, obesity, and lipids.\n\n\n\n\nCRP example\nThe summary meta-analysis result was a risk ratio of 1.65 (95% CI: 1.34 to 2.04)\n\nwhich gives the average prognostic effect of CRP (for those in the top versus bottom third of CRP distribution)\nwhich suggests larger CRP values are associated with higher risk.\n\nRef: 10.1371/journal.pmed.1000286\n\n\n\nUse of appropriate meta-analysis methods\nWhen calculating confidence intervals\n\nAdjust the standard error of the summary estimate using the method proposed by Hartung-Knapp-Sidik-Jonkman\nUse a Student T distribution (instead of a Normal distribution)\n\nRef: IntHout et al. The Hartung-Knapp Sidik-Jonkman method for random effects meta-analysis is striaightforward and considerably outperforms the standard DerSimonian-Laird method. BMC Med Res Meth 2014\n\n\n\nCRP example\nThe summary meta-analysis result was a risk ratio of\n\nWithout Hartung-Knapp correction\n1.65 (95% CI: 1.39 to 1.96)\nWith Hartung-Knapp correction\n1.65 (95% CI: 1.34 to 2.04)\n\n\n\n\nAdvanced meta-analysis methods\n\nDose-response models\n\nto summarize the effect size as a function of exposure level\n\nMultivariate meta-analysis methods, to jointly handle\n\nmultiple cut-points\nmultiple methods of measurement\ndifferent adjustment factors in prognostic factor studies\n\n\n\n\n\nInvestigating heterogeneity\nRecommendations\nIf heterogeneity is present\n\nThe random-effects estimate should be interpreted differently from the fixed effect estimate\nFocusing on the mean is insufficient, and the effect of heterogeneity should be quantified (e.g. prediction intervals)\nExplore possible causes of heterogeneity\n\n\n\n\nPrediction interval\nWe can derive an approximate 95% prediction interval, which provides a range for the true prognostic effect in a new study population:\n\\(\\hat{D_R} \\pm\\) \\(t_{K-2}\\) \\(\\sqrt{{\\hat{\\tau}^2} + var(\\hat{D_R})}\\)\n\\(t_{K-2}\\) is the \\(100(1−𝛼⁄2)\\) percentile of the t distribution with K–2 degrees of freedom, where K is the number of studies in the meta-analysis and is usually chosen as 0.05, to give a 5% significance level and thus 95% prediction interval.\nNote that the prediction interval can be calculated more accurately within a Bayesian framework (as it allows for estimation error of \\(\\hat{\\tau}^2\\))\n\n\n\nCRP Example\n\n\n\n\nMeta-regression\nAdjust the meta-analysis for study-level variables\n\nStudy characteristics\n\nStudy design\nFollow-up time\nPredictor- and outcome definitions\n\nPopulation characteristics\n\nMean of individual covariates\nSD of individual covariates\nTreatment standards\n\n\nSuch that the summary estimate becomes defined by one (or more) study-level covariates.\n\n\n\nMeta-regression\nLimitations\n\nThere will often be few studies per subgroup and low power to detect genuine causes of heterogeneity\nDanger of study-level confounding, such that it is difficult to disentangle the associations for one covariate from another (ecological bias)\n\nFor example, studies with a low risk of bias may also have a different length of follow-up, or a particular cut-point level, compared with studies at higher risk of bias."
   },
   {
     "objectID": "about.html",

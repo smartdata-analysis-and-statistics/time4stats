@@ -1,0 +1,404 @@
+---
+title: "Meta-analysis of Prognostic Factor Studies"
+author: "Thomas Debray, PhD"
+format:
+  revealjs: 
+    transition: none
+    smaller: true
+    controls: true
+    slide-number: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    margin: 0.2
+    logo: ../_assets/images/copyright.svg
+    header-logo: ../_assets/images/smartdata-logo.png
+    hide-from-titleSlide: "all"
+    theme: ../_assets/styles/slide-styles.scss
+    footer: <https://fromdatatowisdom.com/>
+    css: ../_assets/styles/additional-styles.css
+filters: 
+  - ../reveal-header
+title-slide-attributes: 
+  data-background-image: ../_assets/images/smartdata-logo.png
+  data-background-size: 30%
+  data-background-position: 2% 2%
+---
+
+### Prognostic factors
+
+**What are prognostic factors?**
+
+Any information that, among people with a given health condition, is associated with a subsequent health outcome
+
+Example
+
+-   Information:
+    -   tumour grade
+-   Health condition:
+    -   patients diagnosed with cancer
+-   Health outcome(s):
+    -   subsequent disease
+    -   recurrence of death
+
+------------------------------------------------------------------------
+
+### Common examples
+
+Routinely collected patient characteristics
+
+-   Sex
+-   Age
+-   body mass index
+-   smoking status
+-   blood pressure
+-   co-morbidities
+-   symptoms
+
+------------------------------------------------------------------------
+
+### Common examples
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+Biomarkers
+
+1.  Blood
+2.  Urine
+3.  Imaging
+4.  Electrophysiological
+5.  physiological variables
+
+:::
+
+::: {.column width="60%"}
+
+![](images/Picture1.png)
+
+:::
+
+::::
+
+
+
+
+------------------------------------------------------------------------
+
+### Use of prognostic factors
+
+1.  Aiding treatment decisions
+2.  Improving individual risk prediction
+3.  Providing novel targets for new treatment
+4.  Enhancing the design and analysis of randomised trials
+
+![Reff: Altman. Systematic reviews of evaluations of prognostic variables. BMJ 2001](images/Picture2.png)
+
+------------------------------------------------------------------------
+
+### Need for evidence synthesis
+
+It is important to identify genuine prognostic factors.
+
+However:
+
+-   There is often conflicting evidence about the prognostic value of certain variables
+-   The quality of many prognostic studies is poor
+
+This motivates the need for systematic reviews and meta-analyses that summarise the (adjusted) prognostic effect of each factor of interest.
+
+------------------------------------------------------------------------
+
+### Data extraction
+
+**Data extraction**
+
+Key elements to extract for each factor of interest
+
+-   Estimates of the (adjusted) prognostic effect
+    -   risk ratio or odds ratio (for binary outcomes)
+    -   hazard ratio (for time-to-event outcome)
+    -   mean difference (for continuous outcomes such as pain or depression score)
+-   Corresponding standard errors or confidence intervals
+
+------------------------------------------------------------------------
+
+### Data extraction
+
+When not reported, unadjusted hazard ratios (and their variances) can be estimated:
+
+-   Using the number of outcomes (events) and an available p-value (e.g. from a log-rank test or Cox regression)
+
+![](images/Picture3.png)
+
+------------------------------------------------------------------------
+
+### Data extraction
+
+When not reported, unadjusted hazard ratios (and their variances) can be estimated:
+
+-   from survival proportions
+
+![](images/Picture4.png)
+
+------------------------------------------------------------------------
+
+### An example
+
+A systematic review was performed
+
+-   to evaluate the quality of prognostic research evidence
+-   for the association of C-reactive protein (CRP)
+-   with fatal and nonfatal events
+-   among patients with stable coronary disease
+
+**Ref**: 10.1371/journal.pmed.1000286
+
+------------------------------------------------------------------------
+
+### An example
+
+Data extraction
+
+-   "We extracted the reported relative risk, odds ratio or hazard ratio, and 95% CIs from each study."
+-   "We extracted the relative risks with the largest number of adjustment variables"
+-   "We converted the reported relative risk estimates onto a standard scale of effect, comparing the highest third with the lowest third of the CRP distribution"
+
+**Ref**: 10.1371/journal.pmed.1000286
+
+------------------------------------------------------------------------
+
+### Meta-Analysis
+
+**Meta-Analysis**
+
+Summarize multiple estimates of a certain factor-outcome association (e.g. log hazard ratios)\
+2 options:
+
+-   Fixed effect meta-analysis
+-   Random effects meta-analysis
+
+------------------------------------------------------------------------
+
+### Fixed effect meta-analysis
+
+It is assumed that all studies share the same factor-outcome association
+
+![](images/Picture5.png)
+
+------------------------------------------------------------------------
+
+### Fixed effect meta-analysis
+
+It is assumed that all studies share the same factor-outcome association. *The only source of variation is estimation error* ($𝜀$) due to limited sample size.
+
+![](images/Picture6.png)
+
+------------------------------------------------------------------------
+
+### Fixed effect meta-analysis
+
+The pooled estimate is an average of all factor-outcome associations, weighted by their precision:
+
+$\hat{\theta}_k \sim$ N $(D_F,$ $V(\hat{\delta_k}))$
+
+where
+
+-   $\hat{\theta}_k$ represents the estimated factor-outcome association (e.g. log hazard ratio) of study *k*,
+-   $V(\hat{\delta_k})$ is the error variance
+-   $D_F$ is the fixed effect meta-analysis summary (e.g. pooled log hazard ratio)
+
+------------------------------------------------------------------------
+
+### Arguments against fixed effect MA
+
+It is often unrealistic to assume that all studies estimate the same prognostic effect
+
+![](images/Picture7.png)
+
+------------------------------------------------------------------------
+
+### Random effects meta-analysis
+
+-   Unexplained heterogeneity is likely to exist due to:
+    -   Publication bias
+    -   Variation in study design & quality
+    -   Variation in inclusion criteria
+    -   Differences in treatments received during follow-up
+    -   Different types of prognostic effect measures (e.g. odds ratio and hazard ratios)
+    -   Different sets of adjustment factors
+    -   ...
+-   A random effects meta-analysis approach is essential to allow for unexplained heterogeneity across studies
+
+------------------------------------------------------------------------
+
+### Random effects meta-analysis
+
+Heterogeneity may, for instance, appear when reviewing a continuous prognostic factor, as individual studies...
+
+-   may consider non-linear trends
+-   may consider a linear trend
+-   may examine a trend across multiple categories of prognostic factor values.
+-   may apply a cut-point (threshold) to dichotomise the continuous factor into two groups. The choice of cut-point often varies across studies
+
+------------------------------------------------------------------------
+
+### Random effects meta-analysis
+
+Each study has a distinct prognostic effect, but there is a distribution of true effects. We are interested in estimating the mean (and variance) of this distribution
+
+![](images/Picture8.png)
+
+------------------------------------------------------------------------
+
+### Random effects meta-analysis
+
+The meta-analysis now accounts for 2 sources of variation:
+
+1.  Estimation error within studies ($𝜀$)
+2.  True variation in effect sizes between studies ($ζ$)
+
+![](images/Picture9.png)
+
+------------------------------------------------------------------------
+
+### Random effects meta-analysis
+
+We now have:
+
+$\hat{\theta}_k \sim N (D_F, V(\hat{\delta_k}))$
+
+$\hat{\delta_k} \sim N(D_R, \tau^2)$
+
+With
+
+-   $V({\theta}_k)$ the within-study error variance
+-   $\tau^2$ the between-study variance
+-   $D_R$ is the random effect meta-analysis summary (e.g. pooled log hazard ratio)
+
+------------------------------------------------------------------------
+
+### Avoiding heterogeneity
+
+Meta-analysis results of prognostic factor studies will be most interpretable and thus useful when considering:
+
+-   Hazard ratios, odds ratios and risk ratios separately
+-   Unadjusted and adjusted associations separately
+-   Prognostic factor effects at distinct cut-points (or groups of similar cut-points) separately
+-   Prognostic factor effects corresponding to a linear trend (association) separately
+-   Prognostic factor effects corresponding to non-linear trends separately
+-   Each method of measurement (for factors and outcomes) separately
+
+------------------------------------------------------------------------
+
+### CRP example
+
+Forest plot showing the study-specific estimates and meta-analysis summary result of the adjusted prognostic effect (risk ratio) of CRP. All studies were minimally adjusted for age, gender, smoking, diabetes, obesity, and lipids.
+
+![](images/Picture10.png)
+
+------------------------------------------------------------------------
+
+### CRP example
+
+The summary meta-analysis result was a risk ratio of 1.65 (95% CI: 1.34 to 2.04)
+
+-   which gives the average prognostic effect of CRP (for those in the top versus bottom third of CRP distribution)
+-   which suggests larger CRP values are associated with higher risk.
+
+**Ref**: 10.1371/journal.pmed.1000286
+
+------------------------------------------------------------------------
+
+### Use of appropriate meta-analysis methods
+
+When calculating confidence intervals
+
+-   Adjust the standard error of the summary estimate using the method proposed by Hartung-Knapp-Sidik-Jonkman
+-   Use a Student T distribution (instead of a Normal distribution)
+
+**Ref**: IntHout et al. The Hartung-Knapp Sidik-Jonkman method for random effects meta-analysis is striaightforward and considerably outperforms the standard DerSimonian-Laird method. BMC Med Res Meth 2014
+
+------------------------------------------------------------------------
+
+### CRP example
+
+The summary meta-analysis result was a risk ratio of
+
+-   Without Hartung-Knapp correction
+
+    1.65 (95% CI: 1.39 to 1.96)
+
+-   With Hartung-Knapp correction
+
+    1.65 (95% CI: 1.34 to 2.04)
+
+------------------------------------------------------------------------
+
+### Advanced meta-analysis methods
+
+-   Dose-response models
+    -   to summarize the effect size as a function of exposure level
+-   Multivariate meta-analysis methods, to jointly handle
+    -   multiple cut-points
+    -   multiple methods of measurement
+    -   different adjustment factors in prognostic factor studies
+
+------------------------------------------------------------------------
+
+### Investigating heterogeneity
+
+**Recommendations**
+
+If heterogeneity is present
+
+-   The random-effects estimate should be interpreted differently from the fixed effect estimate
+-   Focusing on the mean is insufficient, and the effect of heterogeneity should be quantified (e.g. prediction intervals)
+-   Explore possible causes of heterogeneity
+
+------------------------------------------------------------------------
+
+### Prediction interval
+
+We can derive an approximate 95% prediction interval, which provides a range for the true prognostic effect in a new study population:
+
+$\hat{D_R} \pm$ $t_{K-2}$ $\sqrt{{\hat{\tau}^2} + var(\hat{D_R})}$
+
+$t_{K-2}$ is the $100(1−𝛼⁄2)$ percentile of the t distribution with *K--2* degrees of freedom, where *K* is the number of studies in the meta-analysis and is usually chosen as 0.05, to give a 5% significance level and thus 95% prediction interval.
+
+Note that the prediction interval can be calculated more accurately within a Bayesian framework (as it allows for estimation error of $\hat{\tau}^2$)
+
+------------------------------------------------------------------------
+
+### CRP Example
+
+![](images/Picture11.png)
+
+------------------------------------------------------------------------
+
+### Meta-regression
+
+Adjust the meta-analysis for study-level variables
+
+-   Study characteristics
+    -   *Study design*
+    -   *Follow-up time*
+    -   *Predictor- and outcome definitions*
+-   Population characteristics
+    -   *Mean of individual covariates*
+    -   *SD of individual covariates*
+    -   *Treatment standards*
+
+Such that the summary estimate becomes defined by one (or more) study-level covariates.
+
+------------------------------------------------------------------------
+
+### Meta-regression
+
+Limitations
+
+-   There will often be few studies per subgroup and low power to detect genuine causes of heterogeneity
+-   Danger of study-level confounding, such that it is difficult to disentangle the associations for one covariate from another (**ecological bias**)
+
+For example, studies with a low risk of bias may also have a different length of follow-up, or a particular cut-point level, compared with studies at higher risk of bias.

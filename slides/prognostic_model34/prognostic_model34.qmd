@@ -4,22 +4,23 @@ author: "Thomas Debray, PhD"
 format:
   revealjs: 
     transition: none
+    smaller: true
     controls: true
     slide-number: false
     chalkboard: 
       buttons: false
     preview-links: auto
     margin: 0.2
-    logo: ../images/copyright.svg
-    header-logo: ../images/smartdata-logo.png
+    logo: ../_assets/images/copyright.svg
+    header-logo: ../_assets/images/smartdata-logo.png
     hide-from-titleSlide: "all"
-    theme: ../styles/slide-styles.scss
+    theme: ../_assets/styles/slide-styles.scss
     footer: <https://fromdatatowisdom.com/>
-    css: ../styles/additional-styles.css
+    css: ../_assets/styles/additional-styles.css
 filters: 
   - ../reveal-header
 title-slide-attributes: 
-  data-background-image: ../images/smartdata-logo.png
+  data-background-image: ../_assets/images/smartdata-logo.png
   data-background-size: 30%
   data-background-position: 2% 2%
 ---
@@ -218,7 +219,9 @@ This approximation may introduce bias or show other pool statistical properties 
 
 **Individual Participant Data (IPD) meta-analysis**
 
-## ![](images/paste-AB2A3297.png)
+![](images/paste-AB2A3297.png)
+
+------------------------------------------------------------------------
 
 ### Investigating heterogeneity
 

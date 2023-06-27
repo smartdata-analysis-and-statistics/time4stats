@@ -4,43 +4,40 @@ author: "Thomas Debray, PhD"
 format:
   revealjs: 
     transition: none
+    smaller: true
     controls: true
     slide-number: false
     chalkboard: 
       buttons: false
     preview-links: auto
     margin: 0.2
-    logo: ../images/copyright.svg
-    header-logo: ../images/smartdata-logo.png
+    logo: ../_assets/images/copyright.svg
+    header-logo: ../_assets/images/smartdata-logo.png
     hide-from-titleSlide: "all"
-    theme: ../styles/slide-styles.scss
+    theme: ../_assets/styles/slide-styles.scss
     footer: <https://fromdatatowisdom.com/>
-    css: ../styles/additional-styles.css
+    css: ../_assets/styles/additional-styles.css
 filters: 
   - ../reveal-header
 title-slide-attributes: 
-  data-background-image: ../images/smartdata-logo.png
+  data-background-image: ../_assets/images/smartdata-logo.png
   data-background-size: 30%
   data-background-position: 2% 2%
 ---
-
 
 ------------------------------------------------------------------------
 
 ### Background
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="20%"}
 ![](images/GETREAL.jpg)
 :::
 
 ::: {.column width="80%"}
 IMI GetReal: Incorporating real-life clinical data into drug development
-
 :::
-
-::::
+:::
 
 -   GetReal aimed to show how robust new methods of real-world evidence collection and synthesis could be adopted earlier in pharmaceutical research and development and the healthcare decision-making process.
 -   Together with Bern, we investigated statistical methods for network meta-analysis
@@ -51,16 +48,14 @@ IMI GetReal: Incorporating real-life clinical data into drug development
 
 ![](images/getreal_2015.jpeg)
 
-
-
 ------------------------------------------------------------------------
 
 ### Introduction
 
 Randomization evenly distributes measured and unmeasured factors among intervention groups and thereby
 
--   Facilitates identification of causal relationships 
--   Avoids bias and confounding 
+-   Facilitates identification of causal relationships
+-   Avoids bias and confounding
 -   Offers a framework for assessing efficacy
 
 The results of randomized, controlled trials are considered to be evidence of the highest grade
@@ -72,27 +67,22 @@ The results of randomized, controlled trials are considered to be evidence of th
 ![](images/evidence_hierarchy.png)
 
 ::: aside
-'Hierarchy of Evidence Pyramid' adapted from EBP \& the Medical Librarian training manual, Duke University 2019, and Online EBM Page Generator, Dartmouth College and Yale University 2019, under the license CC-BY-NC and 113P.
+'Hierarchy of Evidence Pyramid' adapted from EBP & the Medical Librarian training manual, Duke University 2019, and Online EBM Page Generator, Dartmouth College and Yale University 2019, under the license CC-BY-NC and 113P.
 :::
-
-
 
 ------------------------------------------------------------------------
 
 ### Limitations of randomized trials
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
-![](images/black_why_1996.png)
-![](images/egger_getreal_2016.png)
+![](images/black_why_1996.png) ![](images/egger_getreal_2016.png)
 :::
 
 ::: {.column width="50%"}
 ![](images/frieden_evidence_2017.png)
 :::
-
-::::
+:::
 
 ------------------------------------------------------------------------
 
@@ -104,30 +94,32 @@ The results of randomized, controlled trials are considered to be evidence of th
 -   Experimentation may be inadequate
 
 ::: aside
-Black N. BMJ. 1996 May 11;312(7040):1215–8. 
+Black N. BMJ. 1996 May 11;312(7040):1215--8.
 :::
 
 ------------------------------------------------------------------------
 
 ### The efficacy-effectiveness gap
+
 Variability in drug response may arise due to
 
-- Heterogeneity in case-mix (e.g., comorbidities)
-- Heterogeneity in concomitant medications
-- Heterogeneity in treatment adherence
-- Heterogeneity in prescription behaviour
+-   Heterogeneity in case-mix (e.g., comorbidities)
+-   Heterogeneity in concomitant medications
+-   Heterogeneity in treatment adherence
+-   Heterogeneity in prescription behaviour
 
 ::: aside
-Eichler HG, et al.Nat Rev Drug Discov. 2011 Jul 1;10(7):495–506. 
+Eichler HG, et al.Nat Rev Drug Discov. 2011 Jul 1;10(7):495--506.
 :::
 
 ------------------------------------------------------------------------
 
 ### The efficacy-effectiveness gap
+
 > Information from RCTs can only answer a minuscule fraction of the near-infinite number of questions about subpopulations, interactions, treatment settings, effects, etc., that are relevant to patients and healthcare professionals at the point of care
 
 ::: aside
-Eichler H, et al. Clin Pharmacol Ther. 2021 May;109(5):1212–8. 
+Eichler H, et al. Clin Pharmacol Ther. 2021 May;109(5):1212--8.
 :::
 
 ------------------------------------------------------------------------
@@ -137,8 +129,9 @@ Eichler H, et al. Clin Pharmacol Ther. 2021 May;109(5):1212–8.
 ------------------------------------------------------------------------
 
 ### Randomized trials and real-world data
-- The Achilles heel of experimental studies is **sample size** and the **lack of random selection**
-- The Achilles heel of observational studies is error due to **imbalance** in (un)observed variables
+
+-   The Achilles heel of experimental studies is **sample size** and the **lack of random selection**
+-   The Achilles heel of observational studies is error due to **imbalance** in (un)observed variables
 
 > ''Real-world data can improve our understanding of health and social care delivery, patient health and experiences, and the effects of interventions on patient and system outcomes in routine settings'' (NICE)
 
@@ -146,8 +139,7 @@ Eichler H, et al. Clin Pharmacol Ther. 2021 May;109(5):1212–8.
 
 ### What is real-world data (RWD)?
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="30%"}
 ![](images/fda.png)
 :::
@@ -155,23 +147,19 @@ Eichler H, et al. Clin Pharmacol Ther. 2021 May;109(5):1212–8.
 ::: {.column width="70%"}
 Data relating to patient health status and/or the delivery of health care routinely collected from a variety of sources
 :::
+:::
 
-::::
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="30%"}
 ![](images/ema.svg)
 :::
 
 ::: {.column width="70%"}
-Routinely collected data relating to a patient’s health status or the delivery of health care from a variety of sources other than traditional clinical trials
+Routinely collected data relating to a patient's health status or the delivery of health care from a variety of sources other than traditional clinical trials
+:::
 :::
 
-::::
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="30%"}
 ![](images/NICE.png)
 :::
@@ -179,18 +167,17 @@ Routinely collected data relating to a patient’s health status or the delivery
 ::: {.column width="70%"}
 Data collected outside the context of a highly controlled clinical trial
 :::
-
-::::
+:::
 
 ------------------------------------------------------------------------
 
 ### What is real-world data (RWD)?
 
-RWD is commonly understood as observational data 
+RWD is commonly understood as observational data
 
-- Primary use of data (e.g., data collected in an observational study, data collected with digital wearable devices or patients’ or physicians’ surveys) 
-- Secondary use of data (e.g., electronic healthcare records, claims data, registries)
-- A combination of both
+-   Primary use of data (e.g., data collected in an observational study, data collected with digital wearable devices or patients' or physicians' surveys)
+-   Secondary use of data (e.g., electronic healthcare records, claims data, registries)
+-   A combination of both
 
 ------------------------------------------------------------------------
 
@@ -238,7 +225,7 @@ ggplot(data=sourcesRWD, aes(x=fct_reorder(RWDsource, Count),y=Count)) +
 ```
 
 ::: aside
-Flynn R, et al. Clin Pharma and Therapeutics. 2022 Jan;111(1):90–7. 
+Flynn R, et al. Clin Pharma and Therapeutics. 2022 Jan;111(1):90--7.
 :::
 
 ------------------------------------------------------------------------
@@ -247,13 +234,13 @@ Flynn R, et al. Clin Pharma and Therapeutics. 2022 Jan;111(1):90–7.
 
 Real-world data is not new in medical decision making
 
-- Phase IV trials
-- Post-authorisation safety studies (PASS) 
-- Post-authorisation efficacy studies (PAES)
-- Studies to measure the effectiveness of risk minimisation measures (RMMs)
-- Studies to support life cycle benefit-risk evaluation
+-   Phase IV trials
+-   Post-authorisation safety studies (PASS)
+-   Post-authorisation efficacy studies (PAES)
+-   Studies to measure the effectiveness of risk minimisation measures (RMMs)
+-   Studies to support life cycle benefit-risk evaluation
 
-------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ### How is real-world data used?
 
@@ -261,18 +248,18 @@ Real-world data is not new in medical decision making
 -   Derive information on the current standard of care in different jurisdictions
 -   Augment or replace the concurrent control of a randomized clinical trial
 -   Monitor long-term safety and effectiveness
--   Tailor the  usage, schedule and dosage of a treatment to an individual patient's needs
-
+-   Tailor the usage, schedule and dosage of a treatment to an individual patient's needs
 
 ------------------------------------------------------------------------
 
 ### What is real-world evidence (RWE)?
+
 Evidence generated from the analysis of real-world data
 
 ![](images/reliance_RWD.png)
 
 ::: aside
-Concato J, Corrigan-Curay J. N Engl J Med. 2022 May 5;386(18):1680–2. 
+Concato J, Corrigan-Curay J. N Engl J Med. 2022 May 5;386(18):1680--2.
 :::
 
 ------------------------------------------------------------------------
@@ -282,7 +269,7 @@ Concato J, Corrigan-Curay J. N Engl J Med. 2022 May 5;386(18):1680–2.
 ![](images/brown_use_2019_tbl2.png)
 
 ::: aside
-Brown JP, et al. BMJ Open. 2019 Oct;9(10):e028133. 
+Brown JP, et al. BMJ Open. 2019 Oct;9(10):e028133.
 :::
 
 ------------------------------------------------------------------------
@@ -331,16 +318,16 @@ ggplot(data=ggdat, aes(x=fct_reorder(Objective, Count),y=Count)) +
 ```
 
 ::: aside
-Flynn R, et al. Clin Pharma and Therapeutics. 2022 Jan;111(1):90–7. 
+Flynn R, et al. Clin Pharma and Therapeutics. 2022 Jan;111(1):90--7.
 :::
 
 ------------------------------------------------------------------------
 
 ### RWE studies - what is the catch?
 
-- Selection bias
-- Information bias 
-- Confounding 
+-   Selection bias
+-   Information bias
+-   Confounding
 
 These biases may also appear in clinical trials, for instance when conducting subgroup analysis, principal stratum analysis, or indirect treatment comparisons.
 
@@ -348,7 +335,7 @@ These biases may also appear in clinical trials, for instance when conducting su
 
 ### Recommendations for RWE studies
 
-![](images/nice_rwe_framework_2022_02.png){width=65%}
+![](images/nice_rwe_framework_2022_02.png){width="65%"}
 
 ::: aside
 NICE real-world evidence framework. National Institute for Health and Care Excellence; 2022 Jun. Report No.: ECD9.
@@ -358,12 +345,11 @@ NICE real-world evidence framework. National Institute for Health and Care Excel
 
 ### Recommendations for RWE studies
 
-![](images/jahanshahi_use_2021_fig1.webp){width=65%}
+![](images/jahanshahi.jpg){width="70%"}
 
 ::: aside
-Jahanshahi M, et al. Ther Innov Regul Sci. 2021 Sep;55(5):1019–35. 
+Jahanshahi M, et al. Ther Innov Regul Sci. 2021 Sep;55(5):1019--35.
 :::
-
 
 ------------------------------------------------------------------------
 
@@ -372,16 +358,14 @@ Jahanshahi M, et al. Ther Innov Regul Sci. 2021 Sep;55(5):1019–35.
 ![](images/sarri_framework_2020_fig3.jpg)
 
 ::: aside
-Sarri G, et al. BMJ EBM. 2020 Dec 9;27:109–19. 
+Sarri G, et al. BMJ EBM. 2020 Dec 9;27:109--19.
 :::
-
 
 ------------------------------------------------------------------------
 
 ### Recommendations for RWE studies
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="45%"}
 ```{mermaid}
 flowchart TD
@@ -404,24 +388,24 @@ flowchart TD
   D --> E[Study reporting]
 ```
 :::
-
-::::
-
+:::
 
 ------------------------------------------------------------------------
 
 ### Analysis of RWE studies
+
 Statistical methods for addressing confounding
 
-- Covariate adjustment
-- Propensity score analysis
-- Prognostic score analysis
+-   Covariate adjustment
+-   Propensity score analysis
+-   Prognostic score analysis
 
 These methods are also the building blocks for studies conducting indirect treatment comparisons or incorporating historical controls.
 
 ------------------------------------------------------------------------
 
 ### Analysis of RWE studies
+
 Many other concerns should be explored:
 
 -   Operational definitions of key study variables
@@ -432,7 +416,6 @@ Many other concerns should be explored:
 -   Treatment switching or loss to follow up
 -   Non-adherence
 
-
 ------------------------------------------------------------------------
 
 # What is next?
@@ -441,17 +424,16 @@ Many other concerns should be explored:
 
 ### Regulatory decision making
 
-![](images/eichler_randomized_2021.png){width=60%}
+![](images/eichler_randomized_2021.png){width="60%"}
 
--   The future is not about randomized controlled trials (RCTs) ***vs.*** real-world evidence (RWE) but about RCTs ***and*** RWE — not just for the assessment of safety but also of effectiveness
+-   The future is not about randomized controlled trials (RCTs) ***vs.*** real-world evidence (RWE) but about RCTs ***and*** RWE --- not just for the assessment of safety but also of effectiveness
 -   Patients will need to be followed up for prolonged periods of time to empirically confirm or refute *a priori* comparative effectiveness assumptions
-
 
 ------------------------------------------------------------------------
 
 ### Requirements
 
--   Need for additional sources of (non-RCT) evidence 
+-   Need for additional sources of (non-RCT) evidence
 -   Need for better methods for evidence synthesis
 -   Need for revised regulatory (and other decision) frameworks
 
@@ -459,8 +441,7 @@ Many other concerns should be explored:
 
 ### Data platforms
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="30%"}
 ![](images/darwin-eu-logo.png)
 :::
@@ -468,11 +449,9 @@ Many other concerns should be explored:
 ::: {.column width="70%"}
 Catalogue of observational data sources for use in medicines regulation
 :::
+:::
 
-::::
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="30%"}
 ![](images/EHDEN_Logo_JPG.jpg)
 :::
@@ -480,8 +459,7 @@ Catalogue of observational data sources for use in medicines regulation
 ::: {.column width="70%"}
 Federated data network of allowing access to the data of EU citizens standardised to a common data model.
 :::
-
-::::
+:::
 
 ------------------------------------------------------------------------
 
@@ -492,9 +470,8 @@ Federated data network of allowing access to the data of EU citizens standardise
 -   Individualized absolute treatment effects provide a natural starting point to engage in shared decision making
 
 ::: aside
-Nguyen TL, et al. J Clin Epidemiol. 2020 May 25;125:47–56. 
+Nguyen TL, et al. J Clin Epidemiol. 2020 May 25;125:47--56.
 :::
-
 
 ------------------------------------------------------------------------
 
@@ -502,7 +479,7 @@ Nguyen TL, et al. J Clin Epidemiol. 2020 May 25;125:47–56.
 
 -   Subgroup analysis is often used to investigate heterogeneity in treatment effects
 -   Although subgroup effects can provide interesting insights and generate new hypotheses, they may be difficult to use for guiding treatment
--  It may be more informative to move to the absolute risk scale and estimate multivariable models that adjust for individual patient characteristics
+-   It may be more informative to move to the absolute risk scale and estimate multivariable models that adjust for individual patient characteristics
 
 ------------------------------------------------------------------------
 
@@ -513,21 +490,17 @@ Nguyen TL, et al. J Clin Epidemiol. 2020 May 25;125:47–56.
     -   However, the price to pay to allow for treatment-covariate interactions was small when using both shrinkage and selection, especially for the hierarchical group lasso
 -   Large RCTs
     -   Shrinkage and selection still needed
-    -   Allowing for all interactions was beneficial 
+    -   Allowing for all interactions was beneficial
 
 ::: aside
-Hoogland J, et al. Stat Med. 2021 Nov 20;40(26):5961–81. 
+Hoogland J, et al. Stat Med. 2021 Nov 20;40(26):5961--81.
 :::
-
-
 
 ------------------------------------------------------------------------
 
 ### Estimating individualized treatment effects
 
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
 ![](images/hoogland_tutorial_2021.png)
 :::
@@ -535,12 +508,9 @@ Hoogland J, et al. Stat Med. 2021 Nov 20;40(26):5961–81.
 ::: {.column width="50%"}
 ![](images/seo_comparing_2020.png)
 :::
+:::
 
-::::
-
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
 ![](images/efthimiou_measuring_2023.png)
 :::
@@ -548,12 +518,7 @@ Hoogland J, et al. Stat Med. 2021 Nov 20;40(26):5961–81.
 ::: {.column width="50%"}
 ![](images/chalkou_two-stage_2021.png)
 :::
-
-::::
-
-
-
-
+:::
 
 ------------------------------------------------------------------------
 
@@ -561,9 +526,7 @@ Hoogland J, et al. Stat Med. 2021 Nov 20;40(26):5961–81.
 
 A doubly robust precision medicine approach to fit, cross-validate and visualize prediction models for the conditional average treatment effect. Available from [GitHub](https://smartdata-analysis-and-statistics.github.io/precmed/) and [CRAN](https://CRAN.R-project.org/package=precmed).
 
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
 ![](images/precmed.png)
 :::
@@ -571,8 +534,7 @@ A doubly robust precision medicine approach to fit, cross-validate and visualize
 ::: {.column width="50%"}
 ![](images/precmed_CRAN.png)
 :::
-
-::::
+:::
 
 ------------------------------------------------------------------------
 
@@ -580,9 +542,7 @@ A doubly robust precision medicine approach to fit, cross-validate and visualize
 
 -   Edited by TPA Debray, T-L Nguyen and RW Platt
 -   21 chapters; publication expected in 2024
--   Contributions from ~ 40 authors (academia; industry; contract resesarch organizations; health technology assessment agencies; regulatory decision-making)
+-   Contributions from \~ 40 authors (academia; industry; contract resesarch organizations; health technology assessment agencies; regulatory decision-making)
 -   Example code on [GitHub](https://smartdata-analysis-and-statistics.github.io/comparative-effectiveness/)
 
-![](images/taylor_francis.png){height=80%}
-
-
+![](images/taylor_francis.png){height="80%"}

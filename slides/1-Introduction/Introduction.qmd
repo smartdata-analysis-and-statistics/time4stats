@@ -1,0 +1,64 @@
+---
+title: "The Theory of Multiple Imputation"
+author: "Thomas Debray, PhD"
+format:
+  revealjs: 
+    transition: none
+    smaller: true
+    controls: true
+    slide-number: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    margin: 0.2
+    logo: ../_assets/images/copyright.svg
+    header-logo: ../_assets/images/smartdata-logo.png
+    hide-from-titleSlide: "all"
+    theme: ../_assets/styles/slide-styles.scss
+    footer: <https://fromdatatowisdom.com/>
+    css: ../_assets/styles/additional-styles.css
+filters: 
+  - ../reveal-header
+title-slide-attributes: 
+  data-background-image: ../_assets/images/smartdata-logo.png
+  data-background-size: 30%
+  data-background-position: 2% 2%
+---
+
+### Introduction
+
+**Main characteristics of multiple imputation (MI)**
+
+Replace each missing value $𝑦^{mis}$ with M plausible values
+
+![](images/Picture1.png){fig-align="center" width="100%"}
+
+------------------------------------------------------------------------
+
+### Introduction
+
+**Main characteristics of multiple imputation (MI)**
+
+Each imputed value is generated [conditionally from the observed data]{style="color:blue;"}
+
+![](images/Picture2.png){fig-align="center" width="50%"}
+
+------------------------------------------------------------------------
+
+### Introduction
+
+**Main characteristics of multiple imputation (MI)**
+
+Borrowing of information across variables requires to define a multivariate distribution
+
+![](images/Picture2.png){fig-align="center" width="50%"}
+
+------------------------------------------------------------------------
+
+### Introduction
+
+Strategies to allow borrowing of information
+
+-   Simultaneous approaches that define a multivariate distribution f(Y ) directly ("**joint modelling**")
+
+-   Sequential approaches that build up a multivariate distribution using a ladder of conditional distributions, where the model for each variable conditions only on those earlier in the sequence ("**fully conditional specification**")
