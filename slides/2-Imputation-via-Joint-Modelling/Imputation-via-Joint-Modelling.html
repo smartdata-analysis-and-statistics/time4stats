@@ -14,7 +14,7 @@
   <meta name="generator" content="quarto-1.3.433">
 
   <meta name="author" content="Thomas Debray, PhD">
-  <title>time4stats - Comparative effectiveness and personalized medicine research using real-world data</title>
+  <title>time4stats - Imputation via Joint Modelling</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -325,16 +325,13 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" data-background-image="../_assets/images/smartdata-logo.png" data-background-position="2% 2%" data-background-size="30%" class="quarto-title-block center">
-  <h1 class="title">Comparative effectiveness and personalized medicine research using real-world data</h1>
+  <h1 class="title">Imputation via Joint Modelling</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -347,432 +344,192 @@ Thomas Debray, PhD
 </section>
 <section class="slide level2">
 
-<h3 id="background">Background</h3>
-<div class="columns">
-<div class="column" style="width:20%;">
-<p><img data-src="images/GETREAL.jpg"></p>
-</div><div class="column" style="width:80%;">
-<p>IMI GetReal: Incorporating real-life clinical data into drug development</p>
-</div>
-</div>
+<h3 id="imputation-via-joint-modelling">Imputation via Joint Modelling</h3>
+<p><img data-src="images/Picture1.png" style="width:80.0%" height="600"></p>
+</section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-1">Imputation via Joint Modelling</h3>
+<p>It is common to assume that all data follow a multivariate Normal or Student-T distribution</p>
+<p><span class="math inline">\((𝑥_1,𝑥_2,𝑦) \sim MVN (𝜇,"Σ" )\)</span></p>
+<p>For now, we consider that</p>
 <ul>
-<li>GetReal aimed to show how robust new methods of real-world evidence collection and synthesis could be adopted earlier in pharmaceutical research and development and the healthcare decision-making process.</li>
-<li>Together with Bern, we investigated statistical methods for network meta-analysis</li>
+<li>The mean vector μ is known</li>
+<li>The covariance matrix Σ is known</li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="iscb-utrecht">ISCB Utrecht</h3>
+<h3 id="imputation-via-joint-modelling-2">Imputation via Joint Modelling</h3>
 
-<img data-src="images/getreal_2015.jpeg" class="r-stretch"></section>
+<img data-src="images/Picture2.png" style="width:100.0%" class="r-stretch"></section>
 <section class="slide level2">
 
-<h3 id="introduction">Introduction</h3>
-<p>Randomization evenly distributes measured and unmeasured factors among intervention groups and thereby</p>
+<h3 id="imputation-via-joint-modelling-3">Imputation via Joint Modelling</h3>
+<p>How to use the conditional mean?</p>
 <ul>
-<li>Facilitates identification of causal relationships</li>
-<li>Avoids bias and confounding</li>
-<li>Offers a framework for assessing efficacy</li>
-</ul>
-<p>The results of randomized, controlled trials are considered to be evidence of the highest grade</p>
-</section>
-<section class="slide level2">
-
-<h3 id="the-hierarchy-of-evidence-pyramid">The Hierarchy of Evidence Pyramid</h3>
-<p><img data-src="images/evidence_hierarchy.png"></p>
-
-<aside><div>
-<p>‘Hierarchy of Evidence Pyramid’ adapted from EBP &amp; the Medical Librarian training manual, Duke University 2019, and Online EBM Page Generator, Dartmouth College and Yale University 2019, under the license CC-BY-NC and 113P.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="limitations-of-randomized-trials">Limitations of randomized trials</h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/black_why_1996.png"> <img data-src="images/egger_getreal_2016.png"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/frieden_evidence_2017.png"></p>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="limitations-of-randomized-trials-1">Limitations of randomized trials</h3>
+<li><p><span class="math inline">\(𝜇_1^∗\)</span> is the most likely value for <span class="math inline">\(𝑥_1\)</span>, and can thus be used as imputation.</p></li>
+<li><p><span class="math inline">\(𝜇_1^∗\)</span> is equal to the mean of <span class="math inline">\(𝑥_1\)</span> plus an adjustment.</p>
 <ul>
-<li>Experimentation may be unnecessary</li>
-<li>Experimentation may be inappropriate</li>
-<li>Experimentation may be impossible</li>
-<li>Experimentation may be inadequate</li>
-</ul>
-
-<aside><div>
-<p>Black N. BMJ. 1996 May 11;312(7040):1215–8.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="the-efficacy-effectiveness-gap">The efficacy-effectiveness gap</h3>
-<p>Variability in drug response may arise due to</p>
-<ul>
-<li>Heterogeneity in case-mix (e.g., comorbidities)</li>
-<li>Heterogeneity in concomitant medications</li>
-<li>Heterogeneity in treatment adherence</li>
-<li>Heterogeneity in prescription behaviour</li>
-</ul>
-
-<aside><div>
-<p>Eichler HG, et al.Nat Rev Drug Discov. 2011 Jul 1;10(7):495–506.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="the-efficacy-effectiveness-gap-1">The efficacy-effectiveness gap</h3>
-<blockquote>
-<p>Information from RCTs can only answer a minuscule fraction of the near-infinite number of questions about subpopulations, interactions, treatment settings, effects, etc., that are relevant to patients and healthcare professionals at the point of care</p>
-</blockquote>
-
-<aside><div>
-<p>Eichler H, et al.&nbsp;Clin Pharmacol Ther. 2021 May;109(5):1212–8.</p>
-</div></aside></section>
-<section class="slide level2">
-
-</section>
-<section>
-<section id="real-world-data-and-real-world-evidence" class="title-slide slide level1 center">
-<h1>Real-world data and Real-world evidence</h1>
-
-</section>
-<section class="slide level2">
-
-<h3 id="randomized-trials-and-real-world-data">Randomized trials and real-world data</h3>
-<ul>
-<li>The Achilles heel of experimental studies is <strong>sample size</strong> and the <strong>lack of random selection</strong></li>
-<li>The Achilles heel of observational studies is error due to <strong>imbalance</strong> in (un)observed variables</li>
-</ul>
-<blockquote>
-<p>‘’Real-world data can improve our understanding of health and social care delivery, patient health and experiences, and the effects of interventions on patient and system outcomes in routine settings’’ (NICE)</p>
-</blockquote>
-</section>
-<section class="slide level2">
-
-<h3 id="what-is-real-world-data-rwd">What is real-world data (RWD)?</h3>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="images/fda.png"></p>
-</div><div class="column" style="width:70%;">
-<p>Data relating to patient health status and/or the delivery of health care routinely collected from a variety of sources</p>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="images/ema.svg"></p>
-</div><div class="column" style="width:70%;">
-<p>Routinely collected data relating to a patient’s health status or the delivery of health care from a variety of sources other than traditional clinical trials</p>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="images/NICE.png"></p>
-</div><div class="column" style="width:70%;">
-<p>Data collected outside the context of a highly controlled clinical trial</p>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="what-is-real-world-data-rwd-1">What is real-world data (RWD)?</h3>
-<p>RWD is commonly understood as observational data</p>
-<ul>
-<li>Primary use of data (e.g., data collected in an observational study, data collected with digital wearable devices or patients’ or physicians’ surveys)</li>
-<li>Secondary use of data (e.g., electronic healthcare records, claims data, registries)</li>
-<li>A combination of both</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="sources-of-real-world-data">Sources of real-world data</h3>
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="seminar_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
-</div>
-</div>
-
-<aside><div>
-<p>Flynn R, et al.&nbsp;Clin Pharma and Therapeutics. 2022 Jan;111(1):90–7.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="studies-generating-real-world-data">Studies generating real-world data</h3>
-<p>Real-world data is not new in medical decision making</p>
-<ul>
-<li>Phase IV trials</li>
-<li>Post-authorisation safety studies (PASS)</li>
-<li>Post-authorisation efficacy studies (PAES)</li>
-<li>Studies to measure the effectiveness of risk minimisation measures (RMMs)</li>
-<li>Studies to support life cycle benefit-risk evaluation</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="how-is-real-world-data-used">How is real-world data used?</h3>
-<ul>
-<li>Explore and quantify the unmet medical need within a particular disease area</li>
-<li>Derive information on the current standard of care in different jurisdictions</li>
-<li>Augment or replace the concurrent control of a randomized clinical trial</li>
-<li>Monitor long-term safety and effectiveness</li>
-<li>Tailor the usage, schedule and dosage of a treatment to an individual patient’s needs</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="what-is-real-world-evidence-rwe">What is real-world evidence (RWE)?</h3>
-<p>Evidence generated from the analysis of real-world data</p>
-<p><img data-src="images/reliance_RWD.png"></p>
-
-<aside><div>
-<p>Concato J, Corrigan-Curay J. N Engl J Med. 2022 May 5;386(18):1680–2.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="how-is-rwe-used">How is RWE used?</h3>
-<p><img data-src="images/brown_use_2019_tbl2.png"></p>
-
-<aside><div>
-<p>Brown JP, et al.&nbsp;BMJ Open. 2019 Oct;9(10):e028133.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="how-is-rwe-used-1">How is RWE used?</h3>
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="seminar_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
-</div>
-</div>
-
-<aside><div>
-<p>Flynn R, et al.&nbsp;Clin Pharma and Therapeutics. 2022 Jan;111(1):90–7.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="rwe-studies---what-is-the-catch">RWE studies - what is the catch?</h3>
-<ul>
-<li>Selection bias</li>
-<li>Information bias</li>
-<li>Confounding</li>
-</ul>
-<p>These biases may also appear in clinical trials, for instance when conducting subgroup analysis, principal stratum analysis, or indirect treatment comparisons.</p>
-</section>
-<section class="slide level2">
-
-<h3 id="recommendations-for-rwe-studies">Recommendations for RWE studies</h3>
-<p><img data-src="images/nice_rwe_framework_2022_02.png" style="width:65.0%"></p>
-
-<aside><div>
-<p>NICE real-world evidence framework. National Institute for Health and Care Excellence; 2022 Jun.&nbsp;Report No.: ECD9.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="recommendations-for-rwe-studies-1">Recommendations for RWE studies</h3>
-<p><img data-src="images/jahanshahi.jpg" style="width:70.0%"></p>
-
-<aside><div>
-<p>Jahanshahi M, et al.&nbsp;Ther Innov Regul Sci. 2021 Sep;55(5):1019–35.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="recommendations-for-rwe-studies-2">Recommendations for RWE studies</h3>
-<p><img data-src="images/sarri_framework_2020_fig3.jpg"></p>
-
-<aside><div>
-<p>Sarri G, et al.&nbsp;BMJ EBM. 2020 Dec 9;27:109–19.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="recommendations-for-rwe-studies-3">Recommendations for RWE studies</h3>
-<div class="columns">
-<div class="column" style="width:45%;">
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-  Z[Study planning] --&gt; A(Defining the research question)
-  A --&gt; B(Planning study conduct)
-  B --&gt; C(Choosing fit-for-purpose data)
-  C --&gt; D(Primary data collection)
-  C --&gt; E[Study conduct]
-  D --&gt; E
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:55%;">
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-  Z[Study conduct] --&gt; A(Choosing study design and analytical methods)
-  A --&gt; B(Minimising risk of bias)
-  B --&gt; C(Assessing robustness of study results)
-  C --&gt; D(Using proportionate quality assurance processes)
-  D --&gt; E[Study reporting]
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="analysis-of-rwe-studies">Analysis of RWE studies</h3>
-<p>Statistical methods for addressing confounding</p>
-<ul>
-<li>Covariate adjustment</li>
-<li>Propensity score analysis</li>
-<li>Prognostic score analysis</li>
-</ul>
-<p>These methods are also the building blocks for studies conducting indirect treatment comparisons or incorporating historical controls.</p>
-</section>
-<section class="slide level2">
-
-<h3 id="analysis-of-rwe-studies-1">Analysis of RWE studies</h3>
-<p>Many other concerns should be explored:</p>
-<ul>
-<li>Operational definitions of key study variables</li>
-<li>Definition of time windows</li>
-<li>Choice of patient eligibility criteria</li>
-<li>Missing data and measurement error</li>
-<li>Alternative model specifications</li>
-<li>Treatment switching or loss to follow up</li>
-<li>Non-adherence</li>
-</ul>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="what-is-next" class="title-slide slide level1 center">
-<h1>What is next?</h1>
-
-</section>
-<section class="slide level2">
-
-<h3 id="regulatory-decision-making">Regulatory decision making</h3>
-
-<img data-src="images/eichler_randomized_2021.png" style="width:60.0%" class="r-stretch"><ul>
-<li>The future is not about randomized controlled trials (RCTs) <strong><em>vs.</em></strong> real-world evidence (RWE) but about RCTs <strong><em>and</em></strong> RWE — not just for the assessment of safety but also of effectiveness</li>
-<li>Patients will need to be followed up for prolonged periods of time to empirically confirm or refute <em>a priori</em> comparative effectiveness assumptions</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="requirements">Requirements</h3>
-<ul>
-<li>Need for additional sources of (non-RCT) evidence</li>
-<li>Need for better methods for evidence synthesis</li>
-<li>Need for revised regulatory (and other decision) frameworks</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="data-platforms">Data platforms</h3>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="images/darwin-eu-logo.png"></p>
-</div><div class="column" style="width:70%;">
-<p>Catalogue of observational data sources for use in medicines regulation</p>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img data-src="images/EHDEN_Logo_JPG.jpg"></p>
-</div><div class="column" style="width:70%;">
-<p>Federated data network of allowing access to the data of EU citizens standardised to a common data model.</p>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="individualizing-treatment-decisions">Individualizing treatment decisions</h3>
-<ul>
-<li>Causal treatment effects are estimated at the population level in randomised controlled trials (RCTs)</li>
-<li>However, clinical decision is often to be made at the individual level in practice</li>
-<li>Individualized absolute treatment effects provide a natural starting point to engage in shared decision making</li>
-</ul>
-
-<aside><div>
-<p>Nguyen TL, et al.&nbsp;J Clin Epidemiol. 2020 May 25;125:47–56.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="estimating-individualized-treatment-effects">Estimating individualized treatment effects</h3>
-<ul>
-<li>Subgroup analysis is often used to investigate heterogeneity in treatment effects</li>
-<li>Although subgroup effects can provide interesting insights and generate new hypotheses, they may be difficult to use for guiding treatment</li>
-<li>It may be more informative to move to the absolute risk scale and estimate multivariable models that adjust for individual patient characteristics</li>
-</ul>
-</section>
-<section class="slide level2">
-
-<h3 id="estimating-individualized-treatment-effects-1">Estimating individualized treatment effects</h3>
-<ul>
-<li>Small RCTs
-<ul>
-<li>Hard to improve beyond risk-magnification</li>
-<li>However, the price to pay to allow for treatment-covariate interactions was small when using both shrinkage and selection, especially for the hierarchical group lasso</li>
-</ul></li>
-<li>Large RCTs
-<ul>
-<li>Shrinkage and selection still needed</li>
-<li>Allowing for all interactions was beneficial</li>
+<li>If there is little correlation between the predictors and outcomes, then the best guess for <span class="math inline">\(𝑥_1\)</span> is the mean of <span class="math inline">\(𝑥_1\)</span>.</li>
 </ul></li>
 </ul>
-
-<aside><div>
-<p>Hoogland J, et al.&nbsp;Stat Med. 2021 Nov 20;40(26):5961–81.</p>
-</div></aside></section>
-<section class="slide level2">
-
-<h3 id="estimating-individualized-treatment-effects-2">Estimating individualized treatment effects</h3>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/hoogland_tutorial_2021.png"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/seo_comparing_2020.png"></p>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/efthimiou_measuring_2023.png"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/chalkou_two-stage_2021.png"></p>
-</div>
-</div>
 </section>
 <section class="slide level2">
 
-<h3 id="precmed-precision-medicine">precmed: Precision Medicine</h3>
-<p>A doubly robust precision medicine approach to fit, cross-validate and visualize prediction models for the conditional average treatment effect. Available from <a href="https://smartdata-analysis-and-statistics.github.io/precmed/">GitHub</a> and <a href="https://CRAN.R-project.org/package=precmed">CRAN</a>.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="images/precmed.png"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/precmed_CRAN.png"></p>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="comparative-effectiveness-and-personalized-medicine-using-real-world-data">Comparative effectiveness and personalized medicine using real-world data</h3>
+<h3 id="imputation-via-joint-modelling-4">Imputation via Joint Modelling</h3>
+<p><strong>Example</strong></p>
+<p>Multivariate distribution of patients presenting with lower respiratory tract infections in primary care:</p>
 <ul>
-<li>Edited by TPA Debray, T-L Nguyen and RW Platt</li>
-<li>21 chapters; publication expected in 2024</li>
-<li>Contributions from ~ 40 authors (academia; industry; contract resesarch organizations; health technology assessment agencies; regulatory decision-making)</li>
-<li>Example code on <a href="https://smartdata-analysis-and-statistics.github.io/comparative-effectiveness/">GitHub</a></li>
+<li>Age, years: mean = 52, SD = 16</li>
+<li>C-reactive protein: mean = 53, SD = 62</li>
+<li>Temperature, C°: mean = 37.5, SD = 0.8</li>
+<li>Cor (Age, CRP) = 0.09</li>
+<li>Cor(Age, Temperature) = -0.15</li>
+<li>Cor(CRP, Temperature) = 0.25</li>
 </ul>
-<p><img data-src="images/taylor_francis.png" style="height:80.0%"></p>
+</section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-5">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture3.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-6">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture4.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-7">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture5.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-8">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture6.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-9">Imputation via Joint Modelling</h3>
+<p>How to use the conditional variance?</p>
+<ul>
+<li><p>“Var” <span class="math inline">\((𝑥_1│𝑥_2, 𝑦)\)</span> quantifies the variance of <span class="math inline">\(𝜇_1^∗\)</span> , and can be used to draw multiple imputations. In particular, we can sample an imputed value from a Normal distribution with mean <span class="math inline">\(𝜇_1^∗\)</span> and variance “Var” <span class="math inline">\((𝑥_1│𝑥_2, 𝑦)\)</span></p></li>
+<li><p>“Var” <span class="math inline">\((𝑥_1│𝑥_2, 𝑦)\)</span> is equal to the variance of <span class="math inline">\(𝑥_1\)</span> minus an adjustment. If there is little correlation between the predictors and outcomes, then the variance of imputed values for <span class="math inline">\(𝑥_1\)</span> is equal to the variance of <span class="math inline">\(𝑥_1\)</span> in the original population.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-10">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture7.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-11">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture8.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-12">Imputation via Joint Modelling</h3>
+<div style="font-size: 0.85em">
+<p><strong>So, how to generate an imputed dataset?</strong></p>
+<p>An iterative procedure is needed:</p>
+<ul>
+<li>Estimate μ and Σ</li>
+<li>Use μ and Σ to impute the missing values</li>
+<li>Update estimates of μ and Σ using the imputed values</li>
+<li>Continue until estimates of μ and Σ stabilize</li>
+</ul>
+<p>This approach is known as the <strong>Gibbs sampler</strong></p>
+<p>A natural choice for the initial estimates of μ and Σ is to derive them directly using the complete data only.</p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-13">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture9.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-14">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture10.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-15">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture11.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-16">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture12.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-17">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture13.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-18">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture14.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-19">Imputation via Joint Modelling</h3>
+<p><strong>Illustration of the Gibbs sampler</strong></p>
+<ul>
+<li>We impute missing values using the new estimates for μ and “Σ”, and re-estimate μ and “Σ” .</li>
+<li>We iterate this procedure many times.</li>
+<li>Eventually, we should obtain reliable estimates for μ and “Σ” , and thus also obtain imputations that properly reflect their uncertainty</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-20">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture15.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-21">Imputation via Joint Modelling</h3>
+<p><strong>How to ensure that we end up in the posterior distribution?</strong></p>
+<ul>
+<li><p>Allow for sufficient imputation cycles!</p></li>
+<li><p>Repeat the whole process from different starting points</p>
+<ul>
+<li>E.g. Estimate the initial version of μ and Σ in a dataset where all missing values have been replaced by a random value</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-22">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture16.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-23">Imputation via Joint Modelling</h3>
+
+<img data-src="images/Picture17.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-24">Imputation via Joint Modelling</h3>
+<p><img data-src="images/Picture18.png" style="width:100.0%"> ## Imputation via Joint Modelling</p>
+</section>
+<section class="slide level2">
+
+<h3 id="imputation-via-joint-modelling-25">Imputation via Joint Modelling</h3>
+<p><strong>Final considerations</strong></p>
+<ul>
+<li><p>Normality assumptions may not always be realistic</p>
+<ul>
+<li>Non-continuous data</li>
+<li>Skewed data</li>
+<li>Nonlinear data</li>
+<li>Clustered data</li>
+</ul></li>
+<li><p>Several extensions have been proposed to accommodate for this</p></li>
+</ul>
 
 <p><img src="../_assets/images/copyright.svg" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -792,7 +549,7 @@ Thomas Debray, PhD
 <p> </p>
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -1006,44 +763,6 @@ Thomas Debray, PhD
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

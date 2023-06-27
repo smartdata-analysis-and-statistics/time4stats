@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "slides.html",
-    "href": "slides.html",
+    "objectID": "slides_prognostic.html",
+    "href": "slides_prognostic.html",
     "title": "Meta-analysis of Prognostic Studies",
     "section": "",
     "text": "The presentation"
-  },
-  {
-    "objectID": "slides/prognostic_model34/prognostic_model34.html#section",
-    "href": "slides/prognostic_model34/prognostic_model34.html#section",
-    "title": "Meta-analysis of Prognostic Studies",
-    "section": "",
-    "text": "Investigating heterogeneity\nMeta-regression\nAdjust the meta-analysis for study-lvel variables such as:\n\nStudy characteristics\n\nStudy design\nFollow-up time\nPredictor and outcome definitions\nCut-point for dichotomozing prognostic factor"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   },
   {
     "objectID": "index.html",
@@ -26,6 +12,13 @@
     "title": "time4stats",
     "section": "",
     "text": "Let’s talk about statistics\n\n2023\n\n25 jun. Comparative effectiveness and personalized medicine research using real-world data. Institute of Social and Preventive Medicine, Universitat Bern. Switzerland"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   },
   {
     "objectID": "slides/Workshop clinical trials/Workshop clinical trials.html#what-is-epidemiology",
@@ -950,5 +943,243 @@
     "title": "Introductory Statistics in Clinical Research",
     "section": "Appraising the quality of RWE",
     "text": "Appraising the quality of RWE"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#prediction",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#prediction",
+    "title": "Personalizing medical decision making",
+    "section": "Prediction",
+    "text": "Prediction\nEstimate something that is yet unknown\n\nPresence of a certain disease (diagnosis)\nFuture occurrence of a particular event (prognosis)"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#prediction-1",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#prediction-1",
+    "title": "Personalizing medical decision making",
+    "section": "Prediction",
+    "text": "Prediction\nCalculate the absolute risk (probability) for distinct individuals\nWhy?\n\nIdentify high-risk individuals\nIdentify absolute treatment effect\nTarget decision making to individuals\nCausal inference"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#how",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#how",
+    "title": "Personalizing medical decision making",
+    "section": "How?",
+    "text": "How?\nCalculate the absolute risk (probability) for distinct individuals\nHow?\nCombine information from multiple predictors\n\nSubject characteristics (e.g. age, gender)\nHistory and physical examination results (e.g. blood pressure)\nImaging results\n(Bio)markers\n(e.g. coronary plaque)"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#prediction-2",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#prediction-2",
+    "title": "Personalizing medical decision making",
+    "section": "Prediction",
+    "text": "Prediction\nCalculate the absolute risk (probability) for distinct individuals"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#prediction-3",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#prediction-3",
+    "title": "Personalizing medical decision making",
+    "section": "Prediction",
+    "text": "Prediction\nDevelop a multivariable statistical model\n\nNeed for patient data from large cohort studies\nMany strategies available\n(Regression, decision trees, neural networks)"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#machine-learning",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#machine-learning",
+    "title": "Personalizing medical decision making",
+    "section": "Machine Learning",
+    "text": "Machine Learning\n\nStrong focus on prediction and classification\nCombination of data-driven algorithms\n\nNearest Neighbour\nRecursive Partitioning\nNeural Network\nSupport Vector Machine\n\nAvoidance of modeling assumptions (e.g. additivity, linearity), resulting in high flexibility"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#why-do-we-need-external-validation",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#why-do-we-need-external-validation",
+    "title": "Personalizing medical decision making",
+    "section": "Why do we need external validation?",
+    "text": "Why do we need external validation?\n\nThe predictive performance of a model estimated on the development data is often too optimistic\nA prognostic model should provide predictions that are valid outside the specific context of the sample that was used for model development\nHow a model was derived is of little importance if it performs well."
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#causes-of-poor-performance",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#causes-of-poor-performance",
+    "title": "Personalizing medical decision making",
+    "section": "Causes of poor performance",
+    "text": "Causes of poor performance\n\nOverfitting\nInvalid predictor effects\nDiscrepancies in outcome and predictor assessment\nDifferences between study characteristics\nHeterogeneity in case-mix variation"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#what-is-a-good-model",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#what-is-a-good-model",
+    "title": "Personalizing medical decision making",
+    "section": "What is a “good” model?",
+    "text": "What is a “good” model?"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#what-is-a-good-model-1",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#what-is-a-good-model-1",
+    "title": "Personalizing medical decision making",
+    "section": "What is a “good” model?",
+    "text": "What is a “good” model?"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#current-shortcomings-of-validation-studies",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#current-shortcomings-of-validation-studies",
+    "title": "Personalizing medical decision making",
+    "section": "Current shortcomings of validation studies",
+    "text": "Current shortcomings of validation studies\nWhy do we need big datasets for external validation?\n\nExternal validation requires sufficient data \nThe predictive performance of a model tends to vary across settings, populations and periods\nMultiple external validation studies are needed to fully appreciate the generalizability of a prediction model"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#the-rise-of-big-data-sets",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#the-rise-of-big-data-sets",
+    "title": "Personalizing medical decision making",
+    "section": "The rise of big data sets",
+    "text": "The rise of big data sets\nData increasingly available for thousands or even millions of patients from multiple practices, hospitals, or countries.\n\nMeta-analysis of individual participant data (IPD) from multiple studies\n\nObservational studies\nRandomized controlled trials\n\nAnalyses of databases and registry data containing e-health records"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#individual-participant-data-meta-analyses",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#individual-participant-data-meta-analyses",
+    "title": "Personalizing medical decision making",
+    "section": "Individual Participant Data Meta-analyses",
+    "text": "Individual Participant Data Meta-analyses"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#an-illustrative-example",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#an-illustrative-example",
+    "title": "Personalizing medical decision making",
+    "section": "An illustrative example",
+    "text": "An illustrative example\nWynants et al. previously identified &gt;700 prediction models for coronavirus-19\nWe conducted a meta-analysis of participant-level data from 46 914 patients across 18 countries to externally validate the most promising models for predicting short term mortality\n\n\nde Jong VMT, Rousset RZ, Antonio-Villa NE, Buenen AG, Van Calster B, Bello-Chavolla OY, et al. Clinical prediction models for mortality in patients with covid-19: external validation and individual participant data meta-analysis. BMJ. 2022 Jul 12;e069881.\nWynants L, Van Calster B, Bonten MMJ, Collins GS, Debray TPA, De Vos M, et al. Prediction models for diagnosis and prognosis of covid-19 infection: systematic review and critical appraisal. BMJ. 2020 Apr 7;369:BMJ Publishing Group Ltd."
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#an-illustrative-example-1",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#an-illustrative-example-1",
+    "title": "Personalizing medical decision making",
+    "section": "An illustrative example",
+    "text": "An illustrative example"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#an-illustrative-example-2",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#an-illustrative-example-2",
+    "title": "Personalizing medical decision making",
+    "section": "An illustrative example",
+    "text": "An illustrative example"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#model-development-using-ipd-ma",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#model-development-using-ipd-ma",
+    "title": "Personalizing medical decision making",
+    "section": "Model development using IPD-MA",
+    "text": "Model development using IPD-MA\nInternal-external cross-validation"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#development-and-validation-of-encals",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#development-and-validation-of-encals",
+    "title": "Personalizing medical decision making",
+    "section": "Development and validation of ENCALS",
+    "text": "Development and validation of ENCALS\nPrognosis of amyotrophic lateral disease\n14 cohort studies (specialized ALS centres)\n\nN = 190 to 1,936 per study (total N = 11,475)\nMedian follow-up: 97.5 months\nComposite endpoint\n(Non-invasive ventilation for more than 23h/day, or death)"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#development-and-validation-of-encals-1",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#development-and-validation-of-encals-1",
+    "title": "Personalizing medical decision making",
+    "section": "Development and validation of ENCALS",
+    "text": "Development and validation of ENCALS"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#simple-versus-complex-modelling",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#simple-versus-complex-modelling",
+    "title": "Personalizing medical decision making",
+    "section": "Simple versus complex modelling",
+    "text": "Simple versus complex modelling\n\n\nPrediction of heart failure\nA cohort of 871,687 individuals from 225 general practices\n(43,987 events)\nCandidate predictors:  age, sex, current smoking, ethnicity (CE, Caucasian ethnicity), index of multiple deprivation (IMD), body mass index (BMI), creatinine level (CL), and total cholesterol (TC).\nImplementation of internal-external cross-validation to develop simple and complex Cox regression models\n\n\n\nTakada T, Nijman S, Denaxas S, Snell KIE, Uijl A, Nguyen TL, et al. Internal-external cross-validation helped to evaluate the generalizability of prediction models in large clustered datasets. J Clin Epidemiol. 2021 Apr 6;137:83–91."
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#simple-versus-complex-modelling-1",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#simple-versus-complex-modelling-1",
+    "title": "Personalizing medical decision making",
+    "section": "Simple versus complex modelling",
+    "text": "Simple versus complex modelling\nDevelopment and validation of several prognostic models\n\nCox regression model with four predictors (*) as linear terms\nCox regression model with eight predictors; including a RCS with three knots for all continuous predictor variables, and interaction terms between all possible combinations of two variables. Estimation involves a ridge penalty term."
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#developing-generalizable-prediction-models",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#developing-generalizable-prediction-models",
+    "title": "Personalizing medical decision making",
+    "section": "Developing generalizable prediction models",
+    "text": "Developing generalizable prediction models\nStepwise estimation procedure\n\n\nFitting of a pre-specified GLM in each study\nEvaluation of performance using IECV\nLoss = f(overall performance in hold-out studies, between-study variation)\nExpand (or reduce) model until the overall loss no longer decreases\nImplementation in “metamisc”\nhttps://CRAN.R-project.org/package=metamisc"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#reporting-guidelines",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#reporting-guidelines",
+    "title": "Personalizing medical decision making",
+    "section": "Reporting guidelines",
+    "text": "Reporting guidelines"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#background",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#background",
+    "title": "Personalizing medical decision making",
+    "section": "Background",
+    "text": "Background\n\nCausal treatment effects are estimated at the population level in randomised controlled trials (RCTs)\nHowever, clinical decision is often to be made at the individual level in practice.\nIndividualized absolute treatment effects provide a natural starting point to engage in shared decision making\n\n\nNguyen TL, Collins GS, Landais P, Le Manach Y. Counterfactual clinical prediction models could help to infer individualized treatment effects in randomized controlled trials-An illustration with the International Stroke Trial. J Clin Epidemiol. 2020 May 25;125:47–56."
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#background-1",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#background-1",
+    "title": "Personalizing medical decision making",
+    "section": "Background",
+    "text": "Background\nRequirements\n\nMove to the absolute risk scale\nAdjust for individual patient characteristics, including\n\nPrognostic variables\npredicting outcome risk on reference treatment\nTreatment variables\nwith potential for effect modification\n\nConsider counterfactual outcomes"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#background-2",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#background-2",
+    "title": "Personalizing medical decision making",
+    "section": "Background",
+    "text": "Background\nAn example: The SYNTAX score II\n“The SYNTAX score II is a clinical tool that combines clinical variables with the anatomical SYNTAX score, providing expected 4-year mortality for both coronary artery bypass grafting (CABG) and percutaneous coronary intervention (PCI) — thus recommending either PCI only, CABG only or equipoise in treatment based on long-term mortality.”\n\nDOI: 10.21037/acs.2018.07.02"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#background-3",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#background-3",
+    "title": "Personalizing medical decision making",
+    "section": "Background",
+    "text": "Background"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#background-4",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#background-4",
+    "title": "Personalizing medical decision making",
+    "section": "Background",
+    "text": "Background"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#methods-for-treatment-effect-modelling",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#methods-for-treatment-effect-modelling",
+    "title": "Personalizing medical decision making",
+    "section": "Methods for treatment effect modelling",
+    "text": "Methods for treatment effect modelling"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#simulation-study-1-interaction",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#simulation-study-1-interaction",
+    "title": "Personalizing medical decision making",
+    "section": "Simulation study (1 interaction)",
+    "text": "Simulation study (1 interaction)"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#empirical-example",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#empirical-example",
+    "title": "Personalizing medical decision making",
+    "section": "Empirical example",
+    "text": "Empirical example\n\nRCT with 1:1 allocation ratio (N = 512)\nPopulation: clinically diagnosed acute otitis media (AOM) in children 6 months to 5 years of age\nIntervention: amoxicillin\nOutcome: fever or ear pain was after 3 days’ follow-up\nBaseline data on: treatment received, sex, presence of recurrent AOM, fever, bilateral occurrence, ear pain, presence of a runny nose, cough, tympanic membrane abnormality, and age"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#empirical-example-1",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#empirical-example-1",
+    "title": "Personalizing medical decision making",
+    "section": "Empirical example",
+    "text": "Empirical example"
+  },
+  {
+    "objectID": "slides/Copenhagen 2023/Copenhagen2023.html#main-findings",
+    "href": "slides/Copenhagen 2023/Copenhagen2023.html#main-findings",
+    "title": "Personalizing medical decision making",
+    "section": "Main findings",
+    "text": "Main findings\n\nSmall RCTs\n\nHard to improve beyond risk-magnification\nHowever, the price to pay to allow for treatment-covariate interactions was small when using both shrinkage and selection, especially for the hierarchical group lasso\n\nLarge RCTs\n\nShrinkage and selection still needed\nAllowing for all interactions was beneficial"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
+    "title": "Advanced Topics",
+    "section": "Rubin’s rules",
+    "text": "Rubin’s rules\n\n\n\n\nhttps://fromdatatowisdom.com/"
   }
 ]
