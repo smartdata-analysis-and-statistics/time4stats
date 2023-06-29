@@ -1,0 +1,12 @@
+---
+title: "Teaching"
+page-layout: article
+title-block-banner: true
+---
+
+# Teaching
+
+## Multiple Imputation
+
+- [**Introduction**](1-Introduction/introduction-preview.qmd)
+- [**Imputation via Joint Modelling**](2-Imputation-via-Joint-Modelling/Imputation-via-Joint-Modelling.qmd)

@@ -1,0 +1,376 @@
+---
+title: "Personalizing medical decision making"
+subtitle: "Recent advances in prediction model research"
+author: "Thomas Debray, PhD"
+format:
+  revealjs: 
+    transition: none
+    smaller: true
+    controls: true
+    slide-number: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    margin: 0.2
+    logo: ../_assets/images/copyright.svg
+    header-logo: ../_assets/images/smartdata-logo.png
+    hide-from-titleSlide: "all"
+    theme: ../_assets/styles/slide-styles.scss
+    footer: <https://fromdatatowisdom.com/>
+    css: ../_assets/styles/additional-styles.css
+filters: 
+  - ../reveal-header
+title-slide-attributes: 
+  data-background-image: ../_assets/images/smartdata-logo.png
+  data-background-size: 30%
+  data-background-position: 2% 2%
+---
+
+### Prediction
+
+Estimate something that is yet unknown
+
+-   Presence of a certain disease ([diagnosis]{style="color:green;"})
+-   Future occurrence of a particular event ([prognosis]{style="color:green;"})
+
+![](images/Picture1.png){width="100%" height="400"}
+
+------------------------------------------------------------------------
+
+### Prediction
+
+Calculate the absolute risk (probability) for distinct individuals
+
+**Why?**
+
+-   Identify high-risk individuals
+-   Identify absolute treatment effect
+-   Target decision making to individuals
+-   Causal inference
+
+![](images/Picture2.png){width="100%" fig-align="right"}
+
+------------------------------------------------------------------------
+
+### How?
+
+Calculate the absolute risk (probability) for distinct individuals
+
+**How?**
+
+Combine information from multiple predictors
+
+-   Subject characteristics (e.g. age, gender)
+
+-   History and physical examination results (e.g. blood pressure)
+
+-   Imaging results
+
+-   (Bio)markers
+
+    (e.g. coronary plaque)
+
+------------------------------------------------------------------------
+
+### Prediction
+
+Calculate the absolute risk (probability) for distinct individuals
+
+![](images/Picture3.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Prediction
+
+Develop a multivariable statistical model
+
+-   Need for patient data from large cohort studies
+
+-   Many strategies available
+
+    (Regression, decision trees, neural networks)
+
+![](images/Picture4.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Machine Learning
+
+-   Strong focus on prediction and classification
+
+-   Combination of data-driven algorithms
+
+    -   Nearest Neighbour
+    -   Recursive Partitioning
+    -   Neural Network
+    -   Support Vector Machine
+
+-   Avoidance of modeling assumptions (e.g. additivity, linearity), resulting in high flexibility
+
+![](images/Picture5.png){width="20%" height="70" fig-align="right"}
+
+# Validation
+
+------------------------------------------------------------------------
+
+### Why do we need external validation?
+
+-   The predictive performance of a model estimated on the development data is often too optimistic
+-   A prognostic model should provide predictions that are valid outside the specific context of the sample that was used for model development
+-   How a model was derived is of little importance if it performs well.
+
+------------------------------------------------------------------------
+
+### Causes of poor performance
+
+-   Overfitting
+-   Invalid predictor effects
+-   Discrepancies in outcome and predictor assessment
+-   Differences between study characteristics
+-   Heterogeneity in case-mix variation
+
+------------------------------------------------------------------------
+
+### What is a "good" model?
+
+![](images/Picture6.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### What is a "good" model?
+
+![](images/Picture7.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Current shortcomings of validation studies
+
+**Why do we need big datasets for external validation?**
+
+-   External validation requires sufficient data 
+-   The predictive performance of a model tends to vary across settings, populations and periods
+-   Multiple external validation studies are needed to fully appreciate the generalizability of a prediction model
+
+# Meta-analysis
+
+------------------------------------------------------------------------
+
+### The rise of big data sets
+
+Data increasingly available for thousands or even millions of patients from multiple practices, hospitals, or countries.
+
+-   Meta-analysis of individual participant data (IPD) from multiple studies
+
+    -   Observational studies
+    -   Randomized controlled trials
+
+-   Analyses of databases and registry data containing e-health records
+
+![](images/Picture8.png){width="100%" fig-align="center"}
+
+------------------------------------------------------------------------
+
+### Individual Participant Data Meta-analyses
+
+![](images/Picture9.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### An illustrative example
+
+**Wynants et al. previously identified \>700 prediction models for coronavirus-19**
+
+We conducted a meta-analysis of participant-level data from 46 914 patients across 18 countries to externally validate the most promising models for predicting short term mortality
+
+-   de Jong VMT, Rousset RZ, Antonio-Villa NE, Buenen AG, Van Calster B, Bello-Chavolla OY, et al. Clinical prediction models for mortality in patients with covid-19: external validation and individual participant data meta-analysis. BMJ. 2022 Jul 12;e069881.
+
+-   Wynants L, Van Calster B, Bonten MMJ, Collins GS, Debray TPA, De Vos M, et al. Prediction models for diagnosis and prognosis of covid-19 infection: systematic review and critical appraisal. BMJ. 2020 Apr 7;369:BMJ Publishing Group Ltd.
+
+------------------------------------------------------------------------
+
+### An illustrative example
+
+![](images/Picture10.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### An illustrative example
+
+![](images/Picture11.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Model development using IPD-MA
+
+Internal-external cross-validation
+
+![](images/Picture12.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Development and validation of ENCALS
+
+**Prognosis of amyotrophic lateral disease**
+
+14 cohort studies (specialized ALS centres)
+
+-   N = 190 to 1,936 per study (total N = 11,475)
+
+-   Median follow-up: 97.5 months
+
+-   Composite endpoint
+
+    (Non-invasive ventilation for more than 23h/day, or death)
+
+------------------------------------------------------------------------
+
+### Development and validation of ENCALS
+
+![](images/Picture13.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Simple versus complex modelling
+
+-   Prediction of heart failure
+
+-   A cohort of 871,687 individuals from 225 general practices
+
+    (43,987 events)
+
+-   Candidate predictors: [*age*, *sex*, *current smoking*, *ethnicity*]{style="color:green;"}(CE, Caucasian ethnicity), index of multiple deprivation (IMD), body mass index (BMI), creatinine level (CL), and total cholesterol (TC).
+
+-   Implementation of internal-external cross-validation to develop simple and complex Cox regression models
+
+Takada T, Nijman S, Denaxas S, Snell KIE, Uijl A, Nguyen TL, et al. Internal-external cross-validation helped to evaluate the generalizability of prediction models in large clustered datasets. J Clin Epidemiol. 2021 Apr 6;137:83--91.
+
+------------------------------------------------------------------------
+
+### Simple versus complex modelling
+
+Development and validation of several prognostic models
+
+1.  Cox regression model with four predictors (\*) as linear terms
+2.  Cox regression model with eight predictors; including a RCS with three knots for all continuous predictor variables, and interaction terms between all possible combinations of two variables. Estimation involves a ridge penalty term.
+
+![](images/Picture14.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Developing generalizable prediction models
+
+Stepwise estimation procedure
+
+-   Fitting of a pre-specified GLM in each study
+
+-   Evaluation of performance using IECV
+
+-   Loss = f(overall performance in hold-out studies, between-study variation)
+
+-   Expand (or reduce) model until the overall loss no longer decreases
+
+-   Implementation in "metamisc"
+
+    https://CRAN.R-project.org/package=metamisc
+
+![](images/Picture15.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Reporting guidelines
+
+![](images/Picture16.png){width="100%"}
+
+# Treatment effect modelling
+
+------------------------------------------------------------------------
+
+### Background
+
+-   Causal treatment effects are estimated at the population level in randomised controlled trials (RCTs)
+-   However, clinical decision is often to be made at the individual level in practice.
+-   Individualized absolute treatment effects provide a natural starting point to engage in shared decision making
+
+Nguyen TL, Collins GS, Landais P, Le Manach Y. Counterfactual clinical prediction models could help to infer individualized treatment effects in randomized controlled trials-An illustration with the International Stroke Trial. J Clin Epidemiol. 2020 May 25;125:47--56.
+
+------------------------------------------------------------------------
+
+### Background
+
+Requirements
+
+-   Move to the absolute risk scale
+
+-   Adjust for individual patient characteristics, including
+
+    -   Prognostic variables
+
+        predicting outcome risk on reference treatment
+
+    -   Treatment variables
+
+        with potential for effect modification
+
+-   Consider counterfactual outcomes
+
+------------------------------------------------------------------------
+
+### Background
+
+An example: **The SYNTAX score II**
+
+"*The SYNTAX score II is a clinical tool that combines clinical variables with the anatomical SYNTAX score, providing expected 4-year mortality for both coronary artery bypass grafting (CABG) and percutaneous coronary intervention (PCI) --- thus recommending either PCI only, CABG only or equipoise in treatment based on long-term mortality*."
+
+------------------------------------------------------------------------
+
+### Background
+
+![](images/Picture17.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Background
+
+![](images/Picture18.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Methods for treatment effect modelling
+
+![](images/Picture19.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Simulation study (1 interaction)
+
+![](images/Picture20.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Empirical example
+
+-   RCT with 1:1 allocation ratio (N = 512)
+-   Population: clinically diagnosed acute otitis media (AOM) in children 6 months to 5 years of age
+-   Intervention: amoxicillin
+-   Outcome: fever or ear pain was after 3 days' follow-up
+-   Baseline data on: treatment received, sex, presence of recurrent AOM, fever, bilateral occurrence, ear pain, presence of a runny nose, cough, tympanic membrane abnormality, and age
+
+------------------------------------------------------------------------
+
+### Empirical example
+
+![](images/Picture21.png){width="100%"}
+
+------------------------------------------------------------------------
+
+### Main findings
+
+-   Small RCTs
+
+    -   Hard to improve beyond risk-magnification
+    -   However, the price to pay to allow for treatment-covariate interactions was small when using both shrinkage and selection, especially for the hierarchical group lasso
+
+-   Large RCTs
+
+    -   Shrinkage and selection still needed
+    -   Allowing for all interactions was beneficial

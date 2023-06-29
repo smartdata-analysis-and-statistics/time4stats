@@ -9,8 +9,9 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - href: slides_prognostic.qmd
-        text: Materials
+      - href: slides/index.qmd
+        text: Teaching
+      
 
 format:
   html:

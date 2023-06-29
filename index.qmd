@@ -1,9 +1,22 @@
 ---
-title: "time4stats"
+title: "News"
+page-layout: article
+title-block-banner: true
 ---
 
 Let's talk about statistics
 
-# 2023
+# Recent Publications
 
-- 25 jun. [Comparative effectiveness and personalized medicine research using real-world data](slides/2023-06-14%20-%20Workshop%20Bern/seminar.html). Institute of Social and Preventive Medicine, Universitat Bern. Switzerland
+-   xxxx
+-   xxxx
+
+# Latest workshops
+
+## 2023
+
+-   25 Jun. [Comparative effectiveness and personalized medicine research using real-world data](slides/2023-06-14-Workshop-Bern/seminar.html). Institute of Social and Preventive Medicine, Universitat Bern. Switzerland
+
+# Upcoming workshops
+
+-   xxxx

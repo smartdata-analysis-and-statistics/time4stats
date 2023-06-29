@@ -1,0 +1,10 @@
+---
+title: "Introduction to Multiple Imputation"
+editor: visual
+---
+
+Here is the preview of Introduction to Multiple Imputation
+
+```{=html}
+<iframe width="600px" src="Introduction.html" height="337.5px" style="border: 1px solid black;"></iframe>
+```
