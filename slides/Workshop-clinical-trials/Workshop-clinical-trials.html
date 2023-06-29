@@ -7,7 +7,10 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
+<link href="../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.433">
 
   <meta name="author" content="Thomas Debray, PhD">
@@ -31,9 +34,12 @@
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../_assets/styles/additional-styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -324,7 +330,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-background-image="../_assets/images/smartdata-logo.png" data-background-position="2% 2%" data-background-size="30%" class="quarto-title-block center">
   <h1 class="title">Introductory Statistics in Clinical Research</h1>
   <p class="subtitle">With a special focus on biosimilar research</p>
 
@@ -342,8 +348,9 @@ Thomas Debray, PhD
 <h1>Introduction</h1>
 
 </section>
-<section id="what-is-epidemiology" class="slide level2">
-<h2>What is epidemiology?</h2>
+<section class="slide level2">
+
+<h3 id="what-is-epidemiology">What is epidemiology?</h3>
 <p>Study the occurrence of illness and its relationship to determinants</p>
 <ul>
 <li>Diagnosis</li>
@@ -352,38 +359,35 @@ Thomas Debray, PhD
 <li>Treatment of disease</li>
 </ul>
 </section>
-<section id="the-role-of-study-design" class="slide level2">
-<h2>The role of study design</h2>
+<section class="slide level2">
+
+<h3 id="the-role-of-study-design">The role of study design</h3>
 <ol type="1">
 <li>Theoretical design</li>
 <li>Design of data collection</li>
 <li>Design of data analysis</li>
 </ol>
 </section>
-<section id="theoretical-design" class="slide level2">
-<h2>Theoretical design</h2>
+<section class="slide level2">
+
+<h3 id="theoretical-design">Theoretical design</h3>
 <p>Formulating the research question in terms of</p>
 <ul>
 <li>Domain: target population</li>
 </ul>
-<div style="font-size: 0.7em">
 <p>e.g., Adults with relapsing–remitting multiple sclerosis</p>
-</div>
 <ul>
 <li>Determinants</li>
 </ul>
-<div style="font-size: 0.7em">
 <p>e.g., Treatment with dimethyl fumarate</p>
-</div>
 <ul>
 <li>Outcome</li>
 </ul>
-<div style="font-size: 0.7em">
 <p>e.g., Impairement as measured using the Expanded Disability Status Scale</p>
-</div>
 </section>
-<section id="design-of-data-collection" class="slide level2">
-<h2>Design of Data Collection</h2>
+<section class="slide level2">
+
+<h3 id="design-of-data-collection">Design of Data Collection</h3>
 <p>Prospective</p>
 <ul>
 <li>Data are yet to be collected and recorded for both outcome and determinants when the study is started</li>
@@ -396,8 +400,9 @@ Thomas Debray, PhD
 </ul>
 <p>Combinations of retrospective and prospective data collection can occur.</p>
 </section>
-<section id="design-of-data-collection-1" class="slide level2">
-<h2>Design of Data Collection</h2>
+<section class="slide level2">
+
+<h3 id="design-of-data-collection-1">Design of Data Collection</h3>
 <p><strong>Issue #1</strong>: Time between collection of determinant and outcome information</p>
 <ol type="a">
 <li><p>Cross-sectional design: data on determinant and outcome are measured simultaneously</p>
@@ -411,8 +416,9 @@ Thomas Debray, PhD
 </ul></li>
 </ol>
 </section>
-<section id="design-of-data-collection-2" class="slide level2">
-<h2>Design of Data Collection</h2>
+<section class="slide level2">
+
+<h3 id="design-of-data-collection-2">Design of Data Collection</h3>
 <p><strong>Issue #2</strong>: Selection of study participants</p>
 <p>Census</p>
 <ul>
@@ -420,33 +426,32 @@ Thomas Debray, PhD
 <li>e.g., a registry study to investigate treatment persistence and disability follow-up in consecutive patients with relapsing-remitting multiple sclerosis (doi: <span style="color:blue;">10.1136/jnnp-2018-319831</span>)</li>
 </ul>
 </section>
-<section id="design-of-data-collection-3" class="slide level2">
-<h2>Design of Data Collection</h2>
+<section class="slide level2">
+
+<h3 id="design-of-data-collection-3">Design of Data Collection</h3>
 <p><strong>Issue #2</strong>: Selection of study participants</p>
 <p>Simple random sampling</p>
-<div style="font-size: 0.9em">
 <ul>
 <li>Rather than examining the entire population (census), an equally informative subgroup of the population is studied.</li>
 <li>Every subject has an equal chance of being selected for the study</li>
 <li>Distribution of determinants in the sample will reliably reflect the distributions in the population experience from whom the sample was drawn</li>
 <li>e.g., a national survey to investigate health outcomes and lifestyle in people with multiple sclerosis</li>
 </ul>
-</div>
 </section>
-<section id="design-of-data-collection-4" class="slide level2">
-<h2>Design of Data Collection</h2>
+<section class="slide level2">
+
+<h3 id="design-of-data-collection-4">Design of Data Collection</h3>
 <p><strong>Issue #2</strong>: Selection of study participants</p>
 <p>Simple random sampling</p>
-<div style="font-size: 0.9em">
 <ul>
 <li>Randomly select study participants within certain strata/subgroups of the population</li>
 <li>e.g., a case-control study where researchers recruit incident MS cases from a registry and subsequently construct a random sample of “control” individuals who are similar to the cases but do not have MS. The two groups are then compared with respect to historical determinants (e.g., sleep duration and sleep quality)</li>
 <li>Another example, randomization will be stratified based on region or disease history (treatment naïve or not), body weight (common for PK study) and other factor main potentially influence the study measurements.</li>
 </ul>
-</div>
 </section>
-<section id="design-of-data-collection-5" class="slide level2">
-<h2>Design of Data Collection</h2>
+<section class="slide level2">
+
+<h3 id="design-of-data-collection-5">Design of Data Collection</h3>
 <p><strong>Issue #2</strong>: Selection of study participants</p>
 <p>Non-probability sampling</p>
 <ul>
@@ -454,28 +459,26 @@ Thomas Debray, PhD
 <li>e.g., Randomized clinical trials that are based on convenience samples from selected hospitals, including only patients with strict characteristics</li>
 </ul>
 </section>
-<section id="design-of-data-collection-6" class="slide level2">
-<h2>Design of Data Collection</h2>
+<section class="slide level2">
+
+<h3 id="design-of-data-collection-6">Design of Data Collection</h3>
 <p><strong>Issue #3</strong>: Experimental versus non-interventional (observational) research</p>
 
-<img data-src="Picture 1.png" style="width:100.0%" class="r-stretch"></section>
-<section id="design-of-data-collection-7" class="slide level2">
-<h2>Design of Data Collection</h2>
+<img data-src="images/Picture1.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="design-of-data-collection-7">Design of Data Collection</h3>
 <p><strong>Issue #3</strong>: Experimental versus non-interventional (observational) research</p>
-<div style="font-size: 0.8em">
 <ul>
 <li>The term ‘trial’ implies an element of experimentation and a prospective approach in the collection of data, whereas a ‘study’ is a systematic assessment of events that unfold without interfering with their course.</li>
 <li>A non-interventional trial may be interpreted as “a study where the medicinal product(s) is (are) prescribed independent to inclusion of the patient in the study and as part of a therapeutic strategy, including diagnostic and monitoring procedures, which is not decided in advance by a study protocol but is applied according to the current clinical practice”</li>
 </ul>
-</div>
-<div style="font-size: 0.5em">
 <p>Source: European Network of Centres for Pharmacoepidemiology and Pharmacovigilance. ENCePP considerations on the definition of non-interventional trials under the current legislative framework [<span style="color:blue;">ref</span>]</p>
-</div>
 </section>
-<section id="design-of-data-collection-8" class="slide level2">
-<h2>Design of Data Collection</h2>
+<section class="slide level2">
+
+<h3 id="design-of-data-collection-8">Design of Data Collection</h3>
 <p>Examples of non-interventional studies</p>
-<div style="font-size: 0.9em">
 <ul>
 <li>A cross-sectional study to characterize the first symptoms of MS</li>
 <li>A survey to investigate health outcomes in people with MS</li>
@@ -483,30 +486,30 @@ Thomas Debray, PhD
 <li>A drug utilization study (DUS) using registry data to investigate patterns of the usage of medicines in routine clinical practice</li>
 <li>A registry study to investigate treatment persistence and disability follow-up in consecutive patients with relapsing-remitting multiple sclerosis (doi: <span style="color:blue;">10.1136/jnnp-2018-319831</span>)</li>
 </ul>
-</div>
 </section>
-<section id="design-of-data-collection-9" class="slide level2">
-<h2>Design of Data Collection</h2>
+<section class="slide level2">
+
+<h3 id="design-of-data-collection-9">Design of Data Collection</h3>
 <p>Examples of experimental clinical trials</p>
 <ul>
 <li>A phase III clinical trial to investigate the efficacy and safety of dimethyl fumarate as compared with placebo in patients with relapsing–remitting multiple sclerosis (doi: <span style="color:blue;">10.1056/NEJMoa1206328</span>)</li>
 <li>A single-arm study where all participants are assigned to receive the experimental intervention after which their results are compared to the patient’s history</li>
 </ul>
 </section>
-<section id="common-study-designs" class="slide level2">
-<h2>Common study designs</h2>
+<section class="slide level2">
 
-<img data-src="Picture 2.png" style="width:100.0%" class="r-stretch"><div style="font-size: 0.5em">
-<p>NIS: Non-interventional study; EXP: experimental study</p>
-</div>
+<h3 id="common-study-designs">Common study designs</h3>
+
+<img data-src="images/Picture2.png" style="width:100.0%" class="r-stretch"><p>NIS: Non-interventional study; EXP: experimental study</p>
 </section></section>
 <section>
 <section id="experimental-clinical-trials" class="title-slide slide level1 center">
 <h1>Experimental clinical Trials</h1>
 
 </section>
-<section id="background" class="slide level2">
-<h2>Background</h2>
+<section class="slide level2">
+
+<h3 id="background">Background</h3>
 <p>Key characteristics</p>
 <ul>
 <li>Prospective experiment of medical intervention(s)</li>
@@ -515,8 +518,9 @@ Thomas Debray, PhD
 <li>Patients are allocated to the intervention, do not choose it</li>
 </ul>
 </section>
-<section id="background-1" class="slide level2">
-<h2>Background</h2>
+<section class="slide level2">
+
+<h3 id="background-1">Background</h3>
 <p>Key design features</p>
 <ul>
 <li>Inclusion and exclusion criteria</li>
@@ -525,8 +529,9 @@ Thomas Debray, PhD
 <li>Blinding</li>
 </ul>
 </section>
-<section id="eligibility-criteria" class="slide level2">
-<h2>Eligibility criteria</h2>
+<section class="slide level2">
+
+<h3 id="eligibility-criteria">Eligibility criteria</h3>
 <p>Need to specify which participants are recruited</p>
 <ul>
 <li>Balance the advantages and disadvantages of having a highly selected group against those associated with including a wide variety of subjects</li>
@@ -534,8 +539,9 @@ Thomas Debray, PhD
 <li>Wide eligibility criteria tends to increase generalizability of trial results</li>
 </ul>
 </section>
-<section id="control-group" class="slide level2">
-<h2>Control group</h2>
+<section class="slide level2">
+
+<h3 id="control-group">Control group</h3>
 <p>To what reference should the experimental treatment be compared (if any)?</p>
 <ul>
 <li>Placebo control</li>
@@ -545,22 +551,21 @@ Thomas Debray, PhD
 </ul>
 <p>Drugs with no efficacy can seem impressive in uncontrolled trials (e.g.&nbsp;due to placebo effect)</p>
 </section>
-<section id="randomization" class="slide level2">
-<h2>Randomization</h2>
+<section class="slide level2">
+
+<h3 id="randomization">Randomization</h3>
 <p>Randomization evenly distributes measured and unmeasured factors&nbsp;among intervention groups</p>
-<div style="font-size: 0.8em">
 <ul>
 <li>Each subject has the same chance of being allocated to any treatment group</li>
 <li>The only systematic difference between the study arms should be the treatment given</li>
 <li>Any differences in results observed at the end of the trial should be due to the effect of the new treatment, and not to any other factors</li>
 <li>Avoids bias and confounding</li>
 </ul>
-</div>
 <p>=&gt; Randomization facilitates identification of causal relationships</p>
 </section>
-<section id="blinding" class="slide level2">
-<h2>Blinding</h2>
-<div style="font-size: 0.8em">
+<section class="slide level2">
+
+<h3 id="blinding">Blinding</h3>
 <p>Aim: to conceal the trial intervention given to each subject</p>
 <p>Subjects or researchers may have expectations associated with a particular treatment. This may affect the data integrity:</p>
 <ul>
@@ -568,25 +573,23 @@ Thomas Debray, PhD
 <li>How the researcher manages or assesses the subject</li>
 </ul>
 <p>It is generally recommended to blind the subject and anyone involved in giving the treatment, or managing or assessing the subject (double-blinded)</p>
-</div>
 </section>
-<section id="trial-design" class="slide level2">
-<h2>Trial design</h2>
+<section class="slide level2">
+
+<h3 id="trial-design">Trial design</h3>
 <p>Parallel group design</p>
-<div style="font-size: 0.8em">
 <ul>
 <li>Patients are each randomised to ONE of the treatment arms</li>
 <li>The results from the 2 (or more) groups are compared at the end of the trial</li>
 <li>Used when treatments have long-lasting effects</li>
 <li>Recommended approach for phase III trials</li>
 </ul>
-</div>
 
-<img data-src="Picture 3.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
-<section id="trial-design-1" class="slide level2">
-<h2>Trial design</h2>
+<img data-src="images/Picture3.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
+<section class="slide level2">
+
+<h3 id="trial-design-1">Trial design</h3>
 <p>Crossover design</p>
-<div style="font-size: 0.8em">
 <ul>
 <li>Instead of randomly allocating subjects to treatment arms, the ordering of treatments is random</li>
 <li>Washout between treatment periods</li>
@@ -595,24 +598,26 @@ Thomas Debray, PhD
 <li>Not suitable to investigate long-term outcomes (e.g., safety)</li>
 <li>Often used in phase I trials that include a control group</li>
 </ul>
-</div>
 </section>
-<section id="trial-design-2" class="slide level2">
-<h2>Trial design</h2>
+<section class="slide level2">
 
-<img data-src="Picture 4.png" style="width:100.0%" class="r-stretch"></section>
-<section id="phases" class="slide level2">
-<h2>Phases</h2>
+<h3 id="trial-design-2">Trial design</h3>
+
+<img data-src="images/Picture4.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="phases">Phases</h3>
 <p>Four main types of clinical trials</p>
 
-<img data-src="Picture 5.png" style="width:100.0%" class="r-stretch"></section></section>
+<img data-src="images/Picture5.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="phase-1-trials" class="title-slide slide level1 center">
 <h1>Phase 1 trials</h1>
 
-<img data-src="Picture 6.png" style="width:100.0%" class="r-stretch"></section>
-<section id="phase-i-trial" class="slide level2">
-<h2>Phase I trial</h2>
+<img data-src="images/Picture6.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="phase-i-trial">Phase I trial</h3>
 <p>Typical objectives</p>
 <ul>
 <li><p>Exploratory</p></li>
@@ -624,8 +629,9 @@ Thomas Debray, PhD
 <li><p>To detect the most common side effects</p></li>
 </ul>
 </section>
-<section id="phase-i-trial-1" class="slide level2">
-<h2>Phase I trial</h2>
+<section class="slide level2">
+
+<h3 id="phase-i-trial-1">Phase I trial</h3>
 <p>Key endpoints: PK parameters</p>
 <ul>
 <li>Area under the curve (AUC): quantify total drug exposure</li>
@@ -634,9 +640,9 @@ Thomas Debray, PhD
 <li><span class="math inline">\(t_{1/2}\)</span> : terminal half-life, the time it takes for the plasma concentration to decrease by 50% in the final part of the curve, when the drug is being eliminated</li>
 </ul>
 </section>
-<section id="example-of-a-phase-i-trial-nct01884935" class="slide level2">
-<h2>Example of a phase I trial (NCT01884935)</h2>
-<div style="font-size: 0.9em">
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-i-trial-nct01884935">Example of a phase I trial (NCT01884935)</h3>
 <ul>
 <li><p>Population</p>
 <ul>
@@ -655,24 +661,25 @@ Thomas Debray, PhD
 <li>…</li>
 </ul></li>
 </ul>
-</div>
 </section>
-<section id="example-of-a-phase-i-trial-nct01884935-1" class="slide level2">
-<h2>Example of a phase I trial (NCT01884935)</h2>
+<section class="slide level2">
 
-<img data-src="Picture 7.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-i-trial-nct01884935-2" class="slide level2">
-<h2>Example of a phase I trial (NCT01884935)</h2>
+<h3 id="example-of-a-phase-i-trial-nct01884935-1">Example of a phase I trial (NCT01884935)</h3>
 
-<img data-src="Picture 8.png" style="width:100.0%" class="r-stretch"></section></section>
+<img data-src="images/Picture7.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-i-trial-nct01884935-2">Example of a phase I trial (NCT01884935)</h3>
+
+<img data-src="images/Picture8.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="phase-2-trials" class="title-slide slide level1 center">
 <h1>Phase 2 trials</h1>
 
-<img data-src="Picture 9.png" style="width:100.0%" class="r-stretch"></section>
-<section id="phase-ii-trial" class="slide level2">
-<h2>Phase II trial</h2>
-<div style="font-size: 0.9em">
+<img data-src="images/Picture9.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="phase-ii-trial">Phase II trial</h3>
 <p>Key characteristics</p>
 <ul>
 <li>Aim is to obtain a preliminary estimate of efficacy, and/or to determine the optimal dose</li>
@@ -683,11 +690,10 @@ Thomas Debray, PhD
 <ul>
 <li>A randomized, blinded, parallel-group, phase 2 study exploring the safety, tolerability, and efficacy of multiple regimens of Natalizumab in adult subjects with relapsing MS.</li>
 </ul>
-</div>
 </section>
-<section id="example-of-a-phase-ii-trial-nct01405820" class="slide level2">
-<h2>Example of a phase II trial (NCT01405820)</h2>
-<div style="font-size: 0.8em">
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-ii-trial-nct01405820">Example of a phase II trial (NCT01405820)</h3>
 <ul>
 <li><p>Population</p>
 <ul>
@@ -707,15 +713,15 @@ Thomas Debray, PhD
 <li>Cumulative number of combined unique active lesions</li>
 </ul></li>
 </ul>
-</div>
 </section></section>
 <section>
 <section id="phase-3-trials" class="title-slide slide level1 center">
 <h1>Phase 3 trials</h1>
 
-<img data-src="Picture 10.png" style="width:100.0%" class="r-stretch"></section>
-<section id="phase-iii-trial" class="slide level2">
-<h2>Phase III trial</h2>
+<img data-src="images/Picture10.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="phase-iii-trial">Phase III trial</h3>
 <p>Key characteristics</p>
 <ul>
 <li>Aim is to obtain a definitive estimate of efficacy</li>
@@ -724,9 +730,9 @@ Thomas Debray, PhD
 <li>Commonly implemented to obtain a marketing licence (“pivotal trial”)</li>
 </ul>
 </section>
-<section id="example-of-a-phase-iii-trial-nct00027300" class="slide level2">
-<h2>Example of a phase III trial (NCT00027300)</h2>
-<div style="font-size: 0.8em">
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-iii-trial-nct00027300">Example of a phase III trial (NCT00027300)</h3>
 <p>A 2:1 randomized placebo-controlled trial to determine the safety and efficacy of natalizumab in the treatment of individuals with relapsing multiple sclerosis.</p>
 <ul>
 <li><p>Population</p>
@@ -747,33 +753,34 @@ Thomas Debray, PhD
 <li>Annualized rate of relapse</li>
 </ul></li>
 </ul>
-</div>
 </section>
-<section id="example-of-a-phase-iii-trial-nct00027300-1" class="slide level2">
-<h2>Example of a phase III trial (NCT00027300)</h2>
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-iii-trial-nct00027300-1">Example of a phase III trial (NCT00027300)</h3>
 <p>Eligibility criteria</p>
-<div style="font-size: 0.7em">
+<blockquote>
 <p>“Enrollment was limited to men and women who were between the ages of 18 and 50 years and had a diagnosis of relapsing multiple sclerosis; who had a score of 0 to 5.0 on the Expanded Disability Status Scale (EDSS), a rating that ranges from 0 to 10, with higher scores indicating more severe disease; who had undergone magnetic resonance imaging (MRI) showing lesions consistent with multiple sclerosis; and who had had at least one medically documented relapse within the 12 months before the study began. Patients with disease that was categorized as primary progressive, secondary progressive, or progressive relapsing were excluded. Additional exclusion criteria included the following: a relapse within 50 days before the administration of the first dose of the study drug, treatment with cyclophosphamide or mitoxantrone within the previous year, or treatment with interferon beta, glatiramer acetate, cyclosporine, azathioprine, methotrexate, or intravenous immune globulin within the previous 6 months. Patients who had received treatment with interferon beta, glatiramer acetate, or both for more than six months were also excluded.”</p>
-</div>
-<div style="font-size: 0.5em">
+</blockquote>
 <p><strong>Ref</strong>: Polman CH, et al.&nbsp;A Randomized, Placebo-Controlled Trial of Natalizumab for Relapsing Multiple Sclerosis. N Engl J Med. 2006 Mar 2;354(9):899–910.</p>
-</div>
 </section>
-<section id="example-of-a-phase-iii-trial-nct00027300-2" class="slide level2">
-<h2>Example of a phase III trial (NCT00027300)</h2>
+<section class="slide level2">
 
-<img data-src="Picture 11.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-iii-trial-nct00027300-3" class="slide level2">
-<h2>Example of a phase III trial (NCT00027300)</h2>
+<h3 id="example-of-a-phase-iii-trial-nct00027300-2">Example of a phase III trial (NCT00027300)</h3>
 
-<img data-src="Picture 12.png" style="width:100.0%" class="r-stretch"></section></section>
+<img data-src="images/Picture11.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-iii-trial-nct00027300-3">Example of a phase III trial (NCT00027300)</h3>
+
+<img data-src="images/Picture12.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="phase-4-trials" class="title-slide slide level1 center">
 <h1>Phase 4 trials</h1>
 
-<img data-src="Picture 13.png" style="width:100.0%" class="r-stretch"></section>
-<section id="phase-iv-trial" class="slide level2">
-<h2>Phase IV trial</h2>
+<img data-src="images/Picture13.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="phase-iv-trial">Phase IV trial</h3>
 <p>Key characteristics</p>
 <ul>
 <li>Aim is to study rare side effects or subgroup of patients and “real-world” effectiveness once the new treatment has been adopted into routine clinical practice</li>
@@ -781,9 +788,9 @@ Thomas Debray, PhD
 <li>Commonly involves investigation of patient-reported outcomes</li>
 </ul>
 </section>
-<section id="example-of-a-phase-iv-trial-nct00871780" class="slide level2">
-<h2>Example of a phase IV trial (NCT00871780)</h2>
-<div style="font-size: 0.9em">
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-iv-trial-nct00871780">Example of a phase IV trial (NCT00871780)</h3>
 <p>A prospective, open-label, non-randomized clinical trial to determine if natalizumab improves ambulatory measures in relapsing-remitting MS patients.</p>
 <ul>
 <li><p>Population</p>
@@ -802,37 +809,43 @@ Thomas Debray, PhD
 <li>Change From Baseline in Expanded Disability Status Scale</li>
 </ul></li>
 </ul>
-</div>
 </section>
-<section id="example-of-a-phase-iv-trial-nct00871780-1" class="slide level2">
-<h2>Example of a phase IV trial (NCT00871780)</h2>
+<section class="slide level2">
 
-<img data-src="Picture 14.png" style="width:100.0%" class="r-stretch"></section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
+<h3 id="example-of-a-phase-iv-trial-nct00871780-1">Example of a phase IV trial (NCT00871780)</h3>
 
-<img data-src="Picture 15.png" style="width:100.0%" class="r-stretch"></section></section>
+<img data-src="images/Picture14.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="summary">Summary</h3>
+
+<img data-src="images/Picture15.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="analysis-of-clinical-trials" class="title-slide slide level1 center">
 <h1>Analysis of clinical trials</h1>
-<p>Experimental clinical Trials</p>
+
 </section>
-<section id="estimation-of-treatment-effect" class="slide level2">
-<h2>Estimation of treatment effect</h2>
+<section class="slide level2">
+
+<p>Experimental clinical Trials</p>
+<h3 id="estimation-of-treatment-effect">Estimation of treatment effect</h3>
 <p>In randomized clinical trials, we can quantify the treatment effect of drug A (active) versus drug B (control) as follows:</p>
 
-<img data-src="Picture 16.png" style="width:100.0%" class="r-stretch"></section>
-<section id="estimation-of-treatment-effect-1" class="slide level2">
-<h2>Estimation of treatment effect</h2>
+<img data-src="images/Picture16.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 17.png" style="width:100.0%" class="r-stretch"></section>
-<section id="estimation-of-treatment-effect-2" class="slide level2">
-<h2>Estimation of treatment effect</h2>
+<h3 id="estimation-of-treatment-effect-1">Estimation of treatment effect</h3>
+
+<img data-src="images/Picture17.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="estimation-of-treatment-effect-2">Estimation of treatment effect</h3>
 <p>If the data are assumed to be normally distributed, an approximate 95% confidence interval is given by <span style="color:blue;">Mean ± (SD/sqrt(n)*1.96)</span></p>
 
-<img data-src="Picture 18.png" style="width:100.0%" class="r-stretch"></section>
-<section id="formal-testing-of-treatment-effects" class="slide level2">
-<h2>Formal testing of treatment effects</h2>
+<img data-src="images/Picture18.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="formal-testing-of-treatment-effects">Formal testing of treatment effects</h3>
 <p>Hypothesis test to evaluate the difference between two (or more) drugs</p>
 <ul>
 <li><span class="math inline">\(𝐻_0\)</span> : Null hypothesis</li>
@@ -841,17 +854,19 @@ Thomas Debray, PhD
 </ul>
 <p>We assume that <span class="math inline">\(𝐻_0\)</span> is true and subsequently determine the likelihood of the observed data. This results in a p-value (= the probability that an effect as large as that observed, or more if <span class="math inline">\(𝐻_0\)</span> is true)</p>
 </section>
-<section id="formal-testing-of-treatment-effects-1" class="slide level2">
-<h2>Formal testing of treatment effects</h2>
+<section class="slide level2">
+
+<h3 id="formal-testing-of-treatment-effects-1">Formal testing of treatment effects</h3>
 <p>Interpretation of p-values</p>
 <ul>
 <li>P-values &lt; 0.05 provide evidence to reject <span class="math inline">\(𝐻_0\)</span> (and usually indicate that drug A is superior / non-inferior / equivalent to drug B)</li>
 <li>P-values &gt; 0.05 indicate that there is not enough evidence to reject <span class="math inline">\(𝐻_0\)</span> (which does not necessarily mean that <span class="math inline">\(𝐻_0\)</span> is true)</li>
 </ul>
 
-<img data-src="Picture 19.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
-<section id="formal-testing-of-treatment-effects-2" class="slide level2">
-<h2>Formal testing of treatment effects</h2>
+<img data-src="images/Picture19.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
+<section class="slide level2">
+
+<h3 id="formal-testing-of-treatment-effects-2">Formal testing of treatment effects</h3>
 <p>Possible reasons for p&gt;0.05</p>
 <ul>
 <li>There really is no difference</li>
@@ -860,21 +875,24 @@ Thomas Debray, PhD
 </ul>
 <p>Absence of evidence ≠ evidence of absence</p>
 </section>
-<section id="formal-testing-of-treatment-effects-3" class="slide level2">
-<h2>Formal testing of treatment effects</h2>
+<section class="slide level2">
 
-<img data-src="Picture 20.png" style="width:100.0%" class="r-stretch"></section>
-<section id="formal-testing-of-treatment-effects-4" class="slide level2">
-<h2>Formal testing of treatment effects</h2>
+<h3 id="formal-testing-of-treatment-effects-3">Formal testing of treatment effects</h3>
 
-<img data-src="Picture 21.png" style="width:100.0%" class="r-stretch"></section>
-<section id="formal-testing-of-treatment-effects-5" class="slide level2">
-<h2>Formal testing of treatment effects</h2>
+<img data-src="images/Picture20.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 22.png" style="width:100.0%" class="r-stretch"></section>
-<section id="formal-testing-of-treatment-effects-6" class="slide level2">
-<h2>Formal testing of treatment effects</h2>
-<div style="font-size: 0.9em">
+<h3 id="formal-testing-of-treatment-effects-4">Formal testing of treatment effects</h3>
+
+<img data-src="images/Picture21.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="formal-testing-of-treatment-effects-5">Formal testing of treatment effects</h3>
+
+<img data-src="images/Picture22.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="formal-testing-of-treatment-effects-6">Formal testing of treatment effects</h3>
 <p>Determination of a clinically meaningful difference <span class="math inline">\(\delta\)</span></p>
 <ul>
 <li><p>Different choice of 𝛿 may affect the sample size calculation</p></li>
@@ -886,81 +904,88 @@ Thomas Debray, PhD
 </ul></li>
 <li><p>One of the most controversial subjects in drug development</p></li>
 </ul>
-</div>
 </section>
-<section id="errors-when-testing-hypotheses" class="slide level2">
-<h2>Errors when testing hypotheses</h2>
+<section class="slide level2">
+
+<h3 id="errors-when-testing-hypotheses">Errors when testing hypotheses</h3>
 <ul>
 <li>There is a chance that we incorrectly fail to reject <span class="math inline">\(𝐻_0\)</span></li>
 <li>There is a chance that we incorrectly reject <span class="math inline">\(𝐻_0\)</span></li>
 <li>The chance of error needs to be controlled</li>
 </ul>
 
-<img data-src="Picture 23.png" style="width:100.0%" class="r-stretch"></section>
-<section id="type-i-error" class="slide level2">
-<h2>Type I error</h2>
+<img data-src="images/Picture23.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 24.png" style="width:100.0%" class="r-stretch"></section>
-<section id="type-ii-error" class="slide level2">
-<h2>Type II error</h2>
+<h3 id="type-i-error">Type I error</h3>
 
-<img data-src="Picture 25.png" style="width:100.0%" class="r-stretch"></section>
-<section id="controlling-type-i-and-type-ii-errors" class="slide level2">
-<h2>Controlling type I and type II errors</h2>
+<img data-src="images/Picture24.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 26.png" style="width:100.0%" class="r-stretch"></section>
-<section id="confidence-intervals" class="slide level2">
-<h2>Confidence intervals</h2>
+<h3 id="type-ii-error">Type II error</h3>
 
-<img data-src="Picture 27.png" style="width:100.0%" class="r-stretch"></section>
-<section id="sample-size-estimation" class="slide level2">
-<h2>Sample size estimation</h2>
+<img data-src="images/Picture25.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 28.png" style="width:100.0%" class="r-stretch"></section>
-<section id="sample-size-estimation-1" class="slide level2">
-<h2>Sample size estimation</h2>
+<h3 id="controlling-type-i-and-type-ii-errors">Controlling type I and type II errors</h3>
 
-<img data-src="Picture 29.png" style="width:100.0%" class="r-stretch"></section></section>
+<img data-src="images/Picture26.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="confidence-intervals">Confidence intervals</h3>
+
+<img data-src="images/Picture27.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="sample-size-estimation">Sample size estimation</h3>
+
+<img data-src="images/Picture28.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="sample-size-estimation-1">Sample size estimation</h3>
+
+<img data-src="images/Picture29.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="clinical-trials-for-biosimilars" class="title-slide slide level1 center">
 <h1>Clinical trials for biosimilars</h1>
 
 </section>
-<section id="introduction-1" class="slide level2">
-<h2>Introduction</h2>
+<section class="slide level2">
+
+<h3 id="introduction-1">Introduction</h3>
 <p>A biosimilar medicine is a biological medicine that is developed to be highly similar and clinically equivalent to an existing medicine.</p>
-<div style="font-size: 0.8em">
 <ul>
-<li>A biosimilar contains a version of an active substance of an already approved biological medicine, which is referred to as the ‘<span style="color:red;"> reference medicine</span>’.</li>
+<li>A biosimilar contains a version of an active substance of an already approved biological medicine, which is referred to as the ‘<span style="color:red;">reference medicine</span>’.</li>
 <li>Similarity to the reference medicine must be established based on a comprehensive biosimilar comparability exercise, such that they do not have any clinically meaningful differences from the reference medicine in terms of quality, biological activity, safety, efficacy and immunogenicity.</li>
 </ul>
-</div>
 </section>
-<section id="introduction-2" class="slide level2">
-<h2>Introduction</h2>
+<section class="slide level2">
+
+<h3 id="introduction-2">Introduction</h3>
 <p>A biosimilar is not regarded as a generic of a biological medicine.</p>
-<div style="font-size: 0.7em">
 <ul>
 <li>This is mostly because the natural variability and more complex manufacturing of biological medicines do not allow an exact replication of the molecular microheterogeneity.</li>
 <li>Consequently, more studies are needed for regulatory approval of biosimilars than for generics to ensure that minor differences do not affect safety or efficacy.</li>
 </ul>
-</div>
 </section>
-<section id="introduction-3" class="slide level2">
-<h2>Introduction</h2>
+<section class="slide level2">
 
-<img data-src="Picture 30.png" style="width:100.0%" class="r-stretch"></section>
-<section id="clinical-development-plan-cdp" class="slide level2">
-<h2>Clinical Development Plan (CDP)</h2>
+<h3 id="introduction-3">Introduction</h3>
 
-<img data-src="Picture 31.png" style="width:100.0%" class="r-stretch"></section></section>
+<img data-src="images/Picture30.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="clinical-development-plan-cdp">Clinical Development Plan (CDP)</h3>
+
+<img data-src="images/Picture1.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="phase-1-biosimilar-trials" class="title-slide slide level1 center">
 <h1>Phase 1 biosimilar trials</h1>
 
-<img data-src="Picture 32.png" style="width:100.0%" class="r-stretch"></section>
-<section id="clinical-development-plan" class="slide level2">
-<h2>Clinical Development Plan</h2>
+<img data-src="images/Picture32.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="clinical-development-plan">Clinical Development Plan</h3>
 <p><strong>Phase I</strong></p>
 <ul>
 <li>Randomized to 2-3 arms including the reference product(s)</li>
@@ -970,41 +995,39 @@ Thomas Debray, PhD
 <li>Recommend parallel design other than cross-over design from FDA.</li>
 </ul>
 </section>
-<section id="examples" class="slide level2">
-<h2>Examples</h2>
+<section class="slide level2">
 
-<img data-src="Picture 33.png" style="width:100.0%" class="r-stretch"><p>HV = Healthy volunteers</p>
+<h3 id="examples">Examples</h3>
+
+<img data-src="images/Picture33.png" style="width:100.0%" class="r-stretch"><p>HV = Healthy volunteers</p>
 <ul>
 <li>The reference product was studied in 2 separate arms: one US-sourced drug and one EU-sourced drug</li>
 </ul>
 </section>
-<section id="pharmacokinetic-parameters" class="slide level2">
-<h2>Pharmacokinetic parameters</h2>
+<section class="slide level2">
+
+<h3 id="pharmacokinetic-parameters">Pharmacokinetic parameters</h3>
 <p>The trial should demonstrate bio-equivalence for various PK parameters</p>
 <ul>
 <li>Area under the blood or plasma concentration–time curve (AUC)</li>
 <li>Maximum concentration Cmax</li>
-<li>…</li>
 </ul>
-<div style="font-size: 0.5em">
 <p><strong>Ref</strong>: Committee for medicinal products for human use (CHMP). Guideline on the investigation of bioequivalence. London, UK: European Medicines Agency; 2010 Jan.&nbsp;Report No.: CPMP/EWP/QWP/1401/98.</p>
-</div>
 </section>
-<section id="requirements-for-hypothesis-testing" class="slide level2">
-<h2>Requirements for hypothesis testing</h2>
+<section class="slide level2">
+
+<h3 id="requirements-for-hypothesis-testing">Requirements for hypothesis testing</h3>
 <ul>
 <li>Hypothesis testing should be based on the ratio of the population geometric means</li>
 <li>The 90% confidence interval for the ratio of the test and reference products should be contained within the acceptance interval of 80.00 to 125.00%.</li>
 <li>A margin of clinical equivalence (∆) is chosen by defining the largest difference that is clinically acceptable, so that a difference bigger than this would matter in practice.</li>
 <li>The data should be transformed prior to analysis using a logarithmic transformation and subsequently be analyzed using ANOVA</li>
 </ul>
-<div style="font-size: 0.5em">
 <p><strong>Ref</strong>: Committee for medicinal products for human use (CHMP). Guideline on the investigation of bioequivalence. London, UK: European Medicines Agency; 2010 Jan.&nbsp;Report No.: CPMP/EWP/QWP/1401/98.</p>
-</div>
 </section>
-<section id="hypothesis-test-for-pk-parameters" class="slide level2">
-<h2>Hypothesis test for PK parameters</h2>
-<div style="font-size: 0.7em">
+<section class="slide level2">
+
+<h3 id="hypothesis-test-for-pk-parameters">Hypothesis test for PK parameters</h3>
 <p>Consider a PK parameter that follows a log-normal distribution (e.g., <span class="math inline">\(C_{max}\)</span> or AUC)</p>
 <p>We can assess equivalence by testing the following hypothesis:</p>
 <ul>
@@ -1015,14 +1038,15 @@ Thomas Debray, PhD
 <li><p>The equivalence margins 80% and 125% are set by regulators.</p></li>
 </ul>
 <p>Note: We use the geometric mean for 𝜇 because data are skewed (the geometric mean can be approximated using the median)</p>
-</div>
 </section>
-<section id="hypothesis-test-for-pk-parameters-1" class="slide level2">
-<h2>Hypothesis test for PK parameters</h2>
+<section class="slide level2">
 
-<img data-src="Picture 34.png" style="width:100.0%" class="r-stretch"></section>
-<section id="testing-of-multiple-endpoints" class="slide level2">
-<h2>Testing of multiple endpoints</h2>
+<h3 id="hypothesis-test-for-pk-parameters-1">Hypothesis test for PK parameters</h3>
+
+<img data-src="images/Picture34.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="testing-of-multiple-endpoints">Testing of multiple endpoints</h3>
 <p>It is often required to investigate equivalence for more than one primary variable. For example, EMA recommends showing equivalence both for AUC and Cmax</p>
 <p>A decision must be made as to whether it is desirable to</p>
 <ul>
@@ -1031,13 +1055,11 @@ Thomas Debray, PhD
 <li><p>Demonstrate equivalence for <span style="color:red;">at least one</span> of the primary endpoints</p>
 <p>(also known as “multiple primary endpoints”)</p></li>
 </ul>
-<div style="font-size: 0.5em">
 <p><strong>Ref</strong>: Sozu T, Sugimoto T, Hamasaki T, Evans SR. Sample Size Determination in Clinical Trials with Multiple Endpoints. Cham: Springer International Publishing; 2015.</p>
-</div>
 </section>
-<section id="testing-of-multiple-co-primary-endpoints" class="slide level2">
-<h2>Testing of multiple co-primary endpoints</h2>
-<div style="font-size: 0.8em">
+<section class="slide level2">
+
+<h3 id="testing-of-multiple-co-primary-endpoints">Testing of multiple co-primary endpoints</h3>
 <p>When the trial aims to evaluate the joint effects on <strong>all</strong> of the <span class="math inline">\(m\)</span> <span style="color:red;">co-primary</span> endpoints</p>
 <ul>
 <li><p>Equivalence has to be shown for all 𝑚 tests</p></li>
@@ -1048,17 +1070,16 @@ Thomas Debray, PhD
 <li>The probability that the trial will be “successful” decreases (for a fixed sample size)</li>
 </ul></li>
 </ul>
-</div>
-<div style="font-size: 0.5em">
 <p><strong>Ref</strong>: Sozu T, Sugimoto T, Hamasaki T, Evans SR. Sample Size Determination in Clinical Trials with Multiple Endpoints. Cham: Springer International Publishing; 2015.</p>
-</div>
 </section>
-<section id="testing-of-multiple-co-primary-endpoints-1" class="slide level2">
-<h2>Testing of multiple co-primary endpoints</h2>
+<section class="slide level2">
 
-<img data-src="Picture 35.png" style="width:100.0%" class="r-stretch"></section>
-<section id="testing-of-multiple-co-primary-endpoints-2" class="slide level2">
-<h2>Testing of multiple co-primary endpoints</h2>
+<h3 id="testing-of-multiple-co-primary-endpoints-1">Testing of multiple co-primary endpoints</h3>
+
+<img data-src="images/Picture35.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="testing-of-multiple-co-primary-endpoints-2">Testing of multiple co-primary endpoints</h3>
 <p>Increase in sample size can be extreme, especially if</p>
 <ul>
 <li>No correlation exists between the test statistics</li>
@@ -1066,36 +1087,43 @@ Thomas Debray, PhD
 </ul>
 <p>One possible solution, if the required sample size is not feasible, is to power the study so that at least k out of m tests have to meet the equivalence criterion</p>
 </section>
-<section id="testing-of-multiple-primary-endpoints" class="slide level2">
-<h2>Testing of multiple primary endpoints</h2>
+<section class="slide level2">
 
-<img data-src="Picture 36.png" style="width:100.0%" class="r-stretch"></section>
-<section id="testing-of-multiple-primary-endpoints-1" class="slide level2">
-<h2>Testing of multiple primary endpoints</h2>
+<h3 id="testing-of-multiple-primary-endpoints">Testing of multiple primary endpoints</h3>
 
-<img data-src="Picture 37.png" style="width:100.0%" class="r-stretch"></section>
-<section id="testing-of-multiple-primary-endpoints-2" class="slide level2">
-<h2>Testing of multiple primary endpoints</h2>
+<img data-src="images/Picture36.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 38.png" style="width:100.0%" class="r-stretch"></section>
-<section id="testing-of-multiple-primary-endpoints-3" class="slide level2">
-<h2>Testing of multiple primary endpoints</h2>
+<h3 id="testing-of-multiple-primary-endpoints-1">Testing of multiple primary endpoints</h3>
 
-<img data-src="Picture 39.png" style="width:100.0%" class="r-stretch"></section>
-<section id="testing-of-multiple-primary-endpoints-4" class="slide level2">
-<h2>Testing of multiple primary endpoints</h2>
+<img data-src="images/Picture37.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 40.png" style="width:100.0%" class="r-stretch"></section>
-<section id="adaptive-trial-designs" class="slide level2">
-<h2>Adaptive trial designs</h2>
+<h3 id="testing-of-multiple-primary-endpoints-2">Testing of multiple primary endpoints</h3>
+
+<img data-src="images/Picture38.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="testing-of-multiple-primary-endpoints-3">Testing of multiple primary endpoints</h3>
+
+<img data-src="images/Picture39.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="testing-of-multiple-primary-endpoints-4">Testing of multiple primary endpoints</h3>
+
+<img data-src="images/Picture40.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="adaptive-trial-designs">Adaptive trial designs</h3>
 <ul>
 <li>Trial specifications are often based on preliminary and/or uncertain information</li>
 <li>Performing a study in a fixed sample size design implies a considerable risk of resulting in a too high or too low sample size.</li>
 <li>It is desirable to terminate the trial when the treatment seems to be ineffective.</li>
 </ul>
 </section>
-<section id="adaptive-trial-designs-1" class="slide level2">
-<h2>Adaptive trial designs</h2>
+<section class="slide level2">
+
+<h3 id="adaptive-trial-designs-1">Adaptive trial designs</h3>
 <p>We can adopt a multi-stage design to</p>
 <ul>
 <li>Recruit a portion of the planned sample</li>
@@ -1103,8 +1131,9 @@ Thomas Debray, PhD
 <li>Determine whether a test drug is promising enough to warrant further testing</li>
 </ul>
 </section>
-<section id="adaptive-trial-designs-2" class="slide level2">
-<h2>Adaptive trial designs</h2>
+<section class="slide level2">
+
+<h3 id="adaptive-trial-designs-2">Adaptive trial designs</h3>
 <p>Sample size re-estimation in bioequivalence studies inflates the type I error according to</p>
 <ul>
 <li>The required sample size</li>
@@ -1112,12 +1141,11 @@ Thomas Debray, PhD
 <li>The standardized equivalence or non-inferiority margin</li>
 </ul>
 <p>The elevation of the significance level is negligible for most practical situations.</p>
-<div style="font-size: 0.5em">
 <p><strong>Ref</strong>: Friede T, Kieser M. Blinded sample size reassessment in non-inferiority and equivalence trials. Statist Med. 2003 Mar 30;22(6):995–1007.</p>
-</div>
 </section>
-<section id="simulations-for-sample-size-estimation" class="slide level2">
-<h2>Simulations for sample size estimation</h2>
+<section class="slide level2">
+
+<h3 id="simulations-for-sample-size-estimation">Simulations for sample size estimation</h3>
 <p>Empirical sample size estimation through simulation</p>
 <ul>
 <li>Testing for equivalence on (co-)primary endpoints</li>
@@ -1125,110 +1153,131 @@ Thomas Debray, PhD
 <li>Evaluate impact of adaptive design choices</li>
 <li>Empirically assess type I and type II error as a function of sample size and other parameters</li>
 </ul>
-<div style="font-size: 0.5em">
 <p><strong>Ref</strong>: Mielke J, Jones B, Jilma B, König F. Sample Size for Multiple Hypothesis Testing in Biosimilar Development. Statistics in Biopharmaceutical Research. 2018 Jan 2;10(1):39–49.</p>
-</div>
 </section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<section class="slide level2">
 
-<img data-src="Picture 41.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-1" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336">Example of a phase 1 biosimilar study (NCT01922336)</h3>
 
-<img data-src="Picture 42.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-2" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<img data-src="images/Picture41.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 43.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-3" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-1">Example of a phase 1 biosimilar study (NCT01922336)</h3>
 
-<img data-src="Picture 44.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-4" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<img data-src="images/Picture42.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 45.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-5" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-2">Example of a phase 1 biosimilar study (NCT01922336)</h3>
 
-<img data-src="Picture 46.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-6" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<img data-src="images/Picture43.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 47.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-7" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-3">Example of a phase 1 biosimilar study (NCT01922336)</h3>
 
-<img data-src="Picture 48.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-8" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<img data-src="images/Picture44.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 49.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-9" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-4">Example of a phase 1 biosimilar study (NCT01922336)</h3>
 
-<img data-src="Picture 50.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-10" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<img data-src="images/Picture45.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 51.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-11" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-5">Example of a phase 1 biosimilar study (NCT01922336)</h3>
 
-<img data-src="Picture 52.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-12" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<img data-src="images/Picture46.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 53.png" style="width:100.0%" class="r-stretch"></section>
-<section id="example-of-a-phase-1-biosimilar-study-nct01922336-13" class="slide level2">
-<h2>Example of a phase 1 biosimilar study (NCT01922336)</h2>
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-6">Example of a phase 1 biosimilar study (NCT01922336)</h3>
 
-<img data-src="Picture 54.png" style="width:100.0%" class="r-stretch"></section></section>
+<img data-src="images/Picture47.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-7">Example of a phase 1 biosimilar study (NCT01922336)</h3>
+
+<img data-src="images/Picture48.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-8">Example of a phase 1 biosimilar study (NCT01922336)</h3>
+
+<img data-src="images/Picture49.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-9">Example of a phase 1 biosimilar study (NCT01922336)</h3>
+
+<img data-src="images/Picture50.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-10">Example of a phase 1 biosimilar study (NCT01922336)</h3>
+
+<img data-src="images/Picture51.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-11">Example of a phase 1 biosimilar study (NCT01922336)</h3>
+
+<img data-src="images/Picture52.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-12">Example of a phase 1 biosimilar study (NCT01922336)</h3>
+
+<img data-src="images/Picture53.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="example-of-a-phase-1-biosimilar-study-nct01922336-13">Example of a phase 1 biosimilar study (NCT01922336)</h3>
+
+<img data-src="images/Picture54.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="phase-3-biosimilar-trials" class="title-slide slide level1 center">
 <h1>Phase 3 biosimilar trials</h1>
 
-<img data-src="Picture 55.png" style="width:100.0%" class="r-stretch"></section>
-<section id="clinical-development-plan-of-phase-3" class="slide level2">
-<h2>Clinical Development Plan of Phase 3</h2>
+<img data-src="images/Picture55.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 56.png" style="width:100.0%" class="r-stretch"></section>
-<section id="clinical-development-plan-of-phase-3-1" class="slide level2">
-<h2>Clinical Development Plan of Phase 3</h2>
+<h3 id="clinical-development-plan-of-phase-3">Clinical Development Plan of Phase 3</h3>
+
+<img data-src="images/Picture56.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="clinical-development-plan-of-phase-3-1">Clinical Development Plan of Phase 3</h3>
 <p>Key differences in sample size estimation</p>
-<div style="font-size: 0.7em">
 <ul>
 <li>Choice of endpoint (preferences may differ between EMA and FDA)</li>
 <li>Data distribution: Normal, Binary, Binomial, etc.</li>
 <li>Choice and justification of equivalence margin (e.g., clinical relevance)</li>
 </ul>
-</div>
 <p>Equivalence should be demonstrated for all (primary) endpoints for all comparisons between the bio-similar and the (EU-sourced and US-sourced) reference drug</p>
 </section>
-<section id="clinical-development-plan-of-phase-3-2" class="slide level2">
-<h2>Clinical Development Plan of Phase 3</h2>
+<section class="slide level2">
 
-<img data-src="Picture 57.png" style="width:100.0%" class="r-stretch"></section>
-<section id="clinical-development-plan-of-phase-3-3" class="slide level2">
-<h2>Clinical Development Plan of Phase 3</h2>
+<h3 id="clinical-development-plan-of-phase-3-2">Clinical Development Plan of Phase 3</h3>
 
-<img data-src="Picture 58.png" style="width:100.0%" class="r-stretch"></section>
-<section id="clinical-development-plan-of-phase-3-4" class="slide level2">
-<h2>Clinical Development Plan of Phase 3</h2>
+<img data-src="images/Picture57.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 59.png" style="width:100.0%" class="r-stretch"></section></section>
+<h3 id="clinical-development-plan-of-phase-3-3">Clinical Development Plan of Phase 3</h3>
+
+<img data-src="images/Picture58.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="clinical-development-plan-of-phase-3-4">Clinical Development Plan of Phase 3</h3>
+
+<img data-src="images/Picture59.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="software-for-sample-size-estimation" class="title-slide slide level1 center">
 <h1>Software for sample size estimation</h1>
 
 </section>
-<section id="integral-simulation-for-2-treatment-arms-1-outcome" class="slide level2">
-<h2>Integral Simulation for 2 Treatment Arms &amp; 1 Outcome</h2>
-<p>A Shiny App</p>
+<section class="slide level2">
+
+<h3 id="integral-simulation-for-2-treatment-arms-1-outcome">Integral Simulation for 2 Treatment Arms &amp; 1 Outcome</h3>
+</section></section>
+<section>
+<section id="a-shiny-app" class="title-slide slide level1 center">
+<h1>A Shiny App</h1>
+
 </section>
-<section id="apps-structure" class="slide level2">
-<h2>App’s Structure</h2>
+<section class="slide level2">
+
+<h3 id="apps-structure">App’s Structure</h3>
 <ol type="1">
 <li><p>LANDING PAGE</p>
 <ul>
@@ -1244,65 +1293,79 @@ Thomas Debray, PhD
 </ul></li>
 </ol>
 </section>
-<section id="landing-page" class="slide level2">
-<h2>Landing Page</h2>
+<section class="slide level2">
 
-<img data-src="Picture 60.png" style="width:100.0%" class="r-stretch"></section>
-<section id="input-panel" class="slide level2">
-<h2>Input Panel</h2>
+<h3 id="landing-page">Landing Page</h3>
 
-<img data-src="Picture 61.png" style="width:100.0%" class="r-stretch"></section>
-<section id="input-panel-2" class="slide level2">
-<h2>Input Panel (2)</h2>
+<img data-src="images/Picture60.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 62.png" style="width:100.0%" class="r-stretch"></section>
-<section id="input-panel-3" class="slide level2">
-<h2>Input Panel (3)</h2>
+<h3 id="input-panel">Input Panel</h3>
 
-<img data-src="Picture 63.png" style="width:100.0%" class="r-stretch"></section>
-<section id="output-panel" class="slide level2">
-<h2>Output Panel</h2>
+<img data-src="images/Picture61.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 64.png" style="width:100.0%" class="r-stretch"></section>
-<section id="output-panel-1" class="slide level2">
-<h2>Output Panel</h2>
+<h3 id="input-panel-2">Input Panel (2)</h3>
 
-<img data-src="Picture 65.png" style="width:100.0%" class="r-stretch"></section>
-<section id="generated-report" class="slide level2">
-<h2>Generated Report</h2>
+<img data-src="images/Picture62.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 66.png" style="width:100.0%" class="r-stretch"></section>
-<section id="generated-report-2" class="slide level2">
-<h2>Generated Report (2)</h2>
+<h3 id="input-panel-3">Input Panel (3)</h3>
 
-<img data-src="Picture 67.png" style="width:100.0%" class="r-stretch"></section></section>
+<img data-src="images/Picture63.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="output-panel">Output Panel</h3>
+
+<img data-src="images/Picture64.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="output-panel-1">Output Panel</h3>
+
+<img data-src="images/Picture65.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="generated-report">Generated Report</h3>
+
+<img data-src="images/Picture66.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="generated-report-2">Generated Report (2)</h3>
+
+<img data-src="images/Picture67.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="non-randomized-intervention-studies" class="title-slide slide level1 center">
 <h1>Non-randomized Intervention Studies</h1>
 
 </section>
-<section id="randomization-1" class="slide level2">
-<h2>Randomization</h2>
+<section class="slide level2">
 
-<img data-src="Picture 68.png" style="width:100.0%" class="r-stretch"></section>
-<section id="limitations-of-randomized-trials" class="slide level2">
-<h2>Limitations of randomized trials</h2>
+<h3 id="randomization-1">Randomization</h3>
 
-<img data-src="Picture 69.png" style="width:100.0%" class="r-stretch"></section>
-<section id="limitations-of-randomized-trials-1" class="slide level2">
-<h2>Limitations of randomized trials</h2>
+<img data-src="images/Picture68.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 70.png" style="width:100.0%" class="r-stretch"></section>
-<section id="the-efficacy-effectiveness-gap" class="slide level2">
-<h2>The efficacy-effectiveness gap</h2>
+<h3 id="limitations-of-randomized-trials">Limitations of randomized trials</h3>
 
-<img data-src="Picture 71.png" style="width:100.0%" class="r-stretch"></section>
-<section id="what-is-real-world-data-rwd" class="slide level2">
-<h2>What is real-world data (RWD)?</h2>
+<img data-src="images/Picture69.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 72.png" style="width:100.0%" class="r-stretch"></section>
-<section id="what-is-real-world-data-rwd-1" class="slide level2">
-<h2>What is real-world data (RWD)?</h2>
+<h3 id="limitations-of-randomized-trials-1">Limitations of randomized trials</h3>
+
+<img data-src="images/Picture70.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="the-efficacy-effectiveness-gap">The efficacy-effectiveness gap</h3>
+
+<img data-src="images/Picture71.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="what-is-real-world-data-rwd">What is real-world data (RWD)?</h3>
+
+<img data-src="images/Picture72.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="what-is-real-world-data-rwd-1">What is real-world data (RWD)?</h3>
 <p>Routinely collected data relating to a patient’s health status or the delivery of health care from a variety of sources other than traditional clinical trials</p>
 <p><strong>Primary research data</strong></p>
 <ul>
@@ -1315,12 +1378,14 @@ Thomas Debray, PhD
 <li>E.g., data from (inter)national databases or electronic healthcare records</li>
 </ul>
 </section>
-<section id="sources-of-real-world-data" class="slide level2">
-<h2>Sources of real-world data</h2>
+<section class="slide level2">
 
-<img data-src="Picture 73.png" style="width:100.0%" class="r-stretch"></section>
-<section id="sources-of-real-world-data-1" class="slide level2">
-<h2>Sources of real-world data</h2>
+<h3 id="sources-of-real-world-data">Sources of real-world data</h3>
+
+<img data-src="images/Picture73.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="sources-of-real-world-data-1">Sources of real-world data</h3>
 <p><strong>Clinical Practice Research Datalink | CPRD</strong></p>
 <p>The CPRD database contains coded and anonymised EHR data from &gt;2000 primary care practices in UK capturing information on:</p>
 <ul>
@@ -1332,21 +1397,24 @@ Thomas Debray, PhD
 <li>Referrals to hospital and specialist care</li>
 </ul>
 </section>
-<section id="sources-of-real-world-data-2" class="slide level2">
-<h2>Sources of real-world data</h2>
+<section class="slide level2">
 
-<img data-src="Picture 74.png" style="width:100.0%" class="r-stretch"></section>
-<section id="sources-of-real-world-data-3" class="slide level2">
-<h2>Sources of real-world data</h2>
+<h3 id="sources-of-real-world-data-2">Sources of real-world data</h3>
 
-<img data-src="Picture 75.png" style="width:100.0%" class="r-stretch"></section></section>
+<img data-src="images/Picture74.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="sources-of-real-world-data-3">Sources of real-world data</h3>
+
+<img data-src="images/Picture75.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="real-world-evidence" class="title-slide slide level1 center">
 <h1>Real-world Evidence</h1>
 
 </section>
-<section id="what-is-real-world-evidence-rwe" class="slide level2">
-<h2>What is real-world evidence (RWE)?</h2>
+<section class="slide level2">
+
+<h3 id="what-is-real-world-evidence-rwe">What is real-world evidence (RWE)?</h3>
 <ul>
 <li><p>Information derived from the analysis of RWD</p>
 <ul>
@@ -1363,8 +1431,9 @@ Thomas Debray, PhD
 </ul></li>
 </ul>
 </section>
-<section id="real-world-evidence-studies" class="slide level2">
-<h2>Real-world evidence studies</h2>
+<section class="slide level2">
+
+<h3 id="real-world-evidence-studies">Real-world evidence studies</h3>
 <p>Well-designed, well-executed, and well reported nonrandomized observational studies are a critical component of the body of evidence</p>
 <ul>
 <li><p>RWE studies may help to identify how new drugs are utilized and impacted under routine prescribing practice</p></li>
@@ -1373,24 +1442,29 @@ Thomas Debray, PhD
 <li><p>High degree of reproducibility for RWE studies with good methodological transparency [ref]</p></li>
 </ul>
 </section>
-<section id="use-of-real-world-evidence" class="slide level2">
-<h2>Use of real-world evidence</h2>
+<section class="slide level2">
 
-<img data-src="Picture 76.png" style="width:100.0%" class="r-stretch"></section>
-<section id="rwe-from-prospective-cohort-studies" class="slide level2">
-<h2>RWE from prospective cohort studies</h2>
+<h3 id="use-of-real-world-evidence">Use of real-world evidence</h3>
 
-<img data-src="Picture 77.png" style="width:100.0%" class="r-stretch"></section>
-<section id="rwe-from-registry-based-studies" class="slide level2">
-<h2>RWE from registry-based studies</h2>
+<img data-src="images/Picture76.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 78.png" style="width:100.0%" class="r-stretch"></section>
-<section id="rwe-from-pragmatic-trials" class="slide level2">
-<h2>RWE from pragmatic trials</h2>
+<h3 id="rwe-from-prospective-cohort-studies">RWE from prospective cohort studies</h3>
 
-<img data-src="Picture 79.png" style="width:100.0%" class="r-stretch"></section>
-<section id="leveraging-rwd-in-clinical-trials" class="slide level2">
-<h2>Leveraging RWD in clinical trials</h2>
+<img data-src="images/Picture77.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="rwe-from-registry-based-studies">RWE from registry-based studies</h3>
+
+<img data-src="images/Picture78.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="rwe-from-pragmatic-trials">RWE from pragmatic trials</h3>
+
+<img data-src="images/Picture79.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="leveraging-rwd-in-clinical-trials">Leveraging RWD in clinical trials</h3>
 <p>Incorporation of historical data during the design and analysis of clinical trials may help to:</p>
 <ul>
 <li>Lower both cost and trial duration</li>
@@ -1398,20 +1472,23 @@ Thomas Debray, PhD
 <li>Address ethical barriers (e.g.&nbsp;pediatric studies)</li>
 </ul>
 </section>
-<section id="rwe-studies-what-is-the-catch" class="slide level2">
-<h2>RWE studies – what is the catch?</h2>
+<section class="slide level2">
+
+<h3 id="rwe-studies-what-is-the-catch">RWE studies – what is the catch?</h3>
 <p>The analysis of real-world data is prone to various sources of bias.</p>
 <ul>
 <li>The Achilles heel of observational studies is error due to imbalance in unobserved variables</li>
 </ul>
 
-<img data-src="Picture 80.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
-<section id="rwe-studies-what-is-the-catch-1" class="slide level2">
-<h2>RWE studies – what is the catch?</h2>
+<img data-src="images/Picture80.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
+<section class="slide level2">
 
-<img data-src="Picture 81.png" style="width:100.0%" class="r-stretch"></section>
-<section id="rwe-studies-what-is-the-catch-2" class="slide level2">
-<h2>RWE studies – what is the catch?</h2>
+<h3 id="rwe-studies-what-is-the-catch-1">RWE studies – what is the catch?</h3>
+
+<img data-src="images/Picture81.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="rwe-studies-what-is-the-catch-2">RWE studies – what is the catch?</h3>
 <p>Missing data</p>
 <ul>
 <li>Key variables and outcomes are not always measured or collected</li>
@@ -1422,8 +1499,9 @@ Thomas Debray, PhD
 <li>Lack of time zero data (especially when making secondary use of RWD)</li>
 </ul>
 </section>
-<section id="rwe-studies-what-is-the-catch-3" class="slide level2">
-<h2>RWE studies – what is the catch?</h2>
+<section class="slide level2">
+
+<h3 id="rwe-studies-what-is-the-catch-3">RWE studies – what is the catch?</h3>
 <p>Heterogeneity</p>
 <ul>
 <li>Routine clinical practice (e.g., treatment options, dosage)</li>
@@ -1433,16 +1511,33 @@ Thomas Debray, PhD
 <li>Analysis methods [ref] (e.g.&nbsp;when combining data across multiple registries)</li>
 </ul>
 </section>
-<section id="rwe-studies-what-is-the-catch-4" class="slide level2">
-<h2>RWE studies – what is the catch?</h2>
+<section class="slide level2">
 
-<img data-src="Picture 82.png" style="width:100.0%" class="r-stretch"></section>
-<section id="appraising-the-quality-of-rwe" class="slide level2">
-<h2>Appraising the quality of RWE</h2>
+<h3 id="rwe-studies-what-is-the-catch-4">RWE studies – what is the catch?</h3>
 
+<img data-src="images/Picture82.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 83.png" style="width:100.0%" class="r-stretch"><div class="footer footer-default">
+<h3 id="appraising-the-quality-of-rwe">Appraising the quality of RWE</h3>
+<p><img data-src="images/Picture83.png" style="width:100.0%"></p>
 
+<p><img src="../_assets/images/copyright.svg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://fromdatatowisdom.com/" class="uri">https://fromdatatowisdom.com/</a></p>
+</div>
+<div class="reveal-header">
+<div class="header-logo" data-hide-from-titleslide="true">
+<img data-src="../_assets/images/smartdata-logo.png">
+</div>
+<div class="sc-title">
+<p> </p>
+</div>
+<div class="header-text" data-hide-from-titleslide="true">
+<p> </p>
+</div>
+<div class="sb-title">
+<p> </p>
+</div>
 </div>
 </section></section>
     </div>
@@ -1455,6 +1550,7 @@ Thomas Debray, PhD
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1469,18 +1565,19 @@ Thomas Debray, PhD
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
-'previewLinksAuto': false,
-'smaller': false,
+'controlsAuto': false,
+'previewLinksAuto': true,
+'smaller': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":false},
+'smaller': true,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -1627,7 +1724,7 @@ Thomas Debray, PhD
         height: 700,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 0.2,
 
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
@@ -1647,7 +1744,7 @@ Thomas Debray, PhD
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -1656,44 +1753,6 @@ Thomas Debray, PhD
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

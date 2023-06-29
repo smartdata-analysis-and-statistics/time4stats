@@ -7,7 +7,10 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
+<link href="../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.433">
 
   <meta name="author" content="Thomas Debray, PhD">
@@ -31,9 +34,12 @@
     }
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../_assets/styles/additional-styles.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -324,7 +330,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-background-image="../_assets/images/smartdata-logo.png" data-background-position="2% 2%" data-background-size="30%" class="quarto-title-block center">
   <h1 class="title">Personalizing medical decision making</h1>
   <p class="subtitle">Recent advances in prediction model research</p>
 
@@ -337,17 +343,19 @@ Thomas Debray, PhD
 </div>
 
 </section>
-<section id="prediction" class="slide level2">
-<h2>Prediction</h2>
+<section class="slide level2">
+
+<h3 id="prediction">Prediction</h3>
 <p>Estimate something that is yet unknown</p>
 <ul>
 <li>Presence of a certain disease (<span style="color:green;">diagnosis</span>)</li>
 <li>Future occurrence of a particular event (<span style="color:green;">prognosis</span>)</li>
 </ul>
-<p><img data-src="Picture 1.png" style="width:100.0%" height="400"></p>
+<p><img data-src="images/Picture1.png" style="width:100.0%" height="400"></p>
 </section>
-<section id="prediction-1" class="slide level2">
-<h2>Prediction</h2>
+<section class="slide level2">
+
+<h3 id="prediction-1">Prediction</h3>
 <p>Calculate the absolute risk (probability) for distinct individuals</p>
 <p><strong>Why?</strong></p>
 <ul>
@@ -357,9 +365,10 @@ Thomas Debray, PhD
 <li>Causal inference</li>
 </ul>
 
-<img data-src="Picture 2.png" style="width:100.0%" class="r-stretch quarto-figure-right"></section>
-<section id="how" class="slide level2">
-<h2>How?</h2>
+<img data-src="images/Picture2.png" style="width:100.0%" class="r-stretch quarto-figure-right"></section>
+<section class="slide level2">
+
+<h3 id="how">How?</h3>
 <p>Calculate the absolute risk (probability) for distinct individuals</p>
 <p><strong>How?</strong></p>
 <p>Combine information from multiple predictors</p>
@@ -371,13 +380,15 @@ Thomas Debray, PhD
 <p>(e.g.&nbsp;coronary plaque)</p></li>
 </ul>
 </section>
-<section id="prediction-2" class="slide level2">
-<h2>Prediction</h2>
+<section class="slide level2">
+
+<h3 id="prediction-2">Prediction</h3>
 <p>Calculate the absolute risk (probability) for distinct individuals</p>
 
-<img data-src="Picture 3.png" style="width:100.0%" class="r-stretch"></section>
-<section id="prediction-3" class="slide level2">
-<h2>Prediction</h2>
+<img data-src="images/Picture3.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="prediction-3">Prediction</h3>
 <p>Develop a multivariable statistical model</p>
 <ul>
 <li><p>Need for patient data from large cohort studies</p></li>
@@ -385,9 +396,10 @@ Thomas Debray, PhD
 <p>(Regression, decision trees, neural networks)</p></li>
 </ul>
 
-<img data-src="Picture 4.png" style="width:100.0%" class="r-stretch"></section>
-<section id="machine-learning" class="slide level2">
-<h2>Machine Learning</h2>
+<img data-src="images/Picture4.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="machine-learning">Machine Learning</h3>
 <ul>
 <li><p>Strong focus on prediction and classification</p></li>
 <li><p>Combination of data-driven algorithms</p>
@@ -401,7 +413,7 @@ Thomas Debray, PhD
 </ul>
 <div class="quarto-figure quarto-figure-right">
 <figure>
-<p><img data-src="Picture 5.png" style="width:20.0%" height="70"></p>
+<p><img data-src="images/Picture5.png" style="width:20.0%" height="70"></p>
 </figure>
 </div>
 </section>
@@ -410,16 +422,18 @@ Thomas Debray, PhD
 <h1>Validation</h1>
 
 </section>
-<section id="why-do-we-need-external-validation" class="slide level2">
-<h2>Why do we need external validation?</h2>
+<section class="slide level2">
+
+<h3 id="why-do-we-need-external-validation">Why do we need external validation?</h3>
 <ul>
 <li>The predictive performance of a model estimated on the development data is often too optimistic</li>
 <li>A prognostic model should provide predictions that are valid outside the specific context of the sample that was used for model development</li>
 <li>How a model was derived is of little importance if it performs well.</li>
 </ul>
 </section>
-<section id="causes-of-poor-performance" class="slide level2">
-<h2>Causes of poor performance</h2>
+<section class="slide level2">
+
+<h3 id="causes-of-poor-performance">Causes of poor performance</h3>
 <ul>
 <li>Overfitting</li>
 <li>Invalid predictor effects</li>
@@ -428,16 +442,19 @@ Thomas Debray, PhD
 <li>Heterogeneity in case-mix variation</li>
 </ul>
 </section>
-<section id="what-is-a-good-model" class="slide level2">
-<h2>What is a “good” model?</h2>
+<section class="slide level2">
 
-<img data-src="Picture 6.png" style="width:100.0%" class="r-stretch"></section>
-<section id="what-is-a-good-model-1" class="slide level2">
-<h2>What is a “good” model?</h2>
+<h3 id="what-is-a-good-model">What is a “good” model?</h3>
 
-<img data-src="Picture 7.png" style="width:100.0%" class="r-stretch"></section>
-<section id="current-shortcomings-of-validation-studies" class="slide level2">
-<h2>Current shortcomings of validation studies</h2>
+<img data-src="images/Picture6.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="what-is-a-good-model-1">What is a “good” model?</h3>
+
+<img data-src="images/Picture7.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="current-shortcomings-of-validation-studies">Current shortcomings of validation studies</h3>
 <p><strong>Why do we need big datasets for external validation?</strong></p>
 <ul>
 <li>External validation requires sufficient data&nbsp;</li>
@@ -450,8 +467,9 @@ Thomas Debray, PhD
 <h1>Meta-analysis</h1>
 
 </section>
-<section id="the-rise-of-big-data-sets" class="slide level2">
-<h2>The rise of big data sets</h2>
+<section class="slide level2">
+
+<h3 id="the-rise-of-big-data-sets">The rise of big data sets</h3>
 <p>Data increasingly available for thousands or even millions of patients from multiple practices, hospitals, or countries.</p>
 <ul>
 <li><p>Meta-analysis of individual participant data (IPD) from multiple studies</p>
@@ -462,37 +480,41 @@ Thomas Debray, PhD
 <li><p>Analyses of databases and registry data containing e-health records</p></li>
 </ul>
 
-<img data-src="Picture 8.png" style="width:100.0%" class="r-stretch quarto-figure-right"></section>
-<section id="individual-participant-data-meta-analyses" class="slide level2">
-<h2>Individual Participant Data Meta-analyses</h2>
+<img data-src="images/Picture8.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section>
+<section class="slide level2">
 
-<img data-src="Picture 9.png" style="width:100.0%" class="r-stretch"></section>
-<section id="an-illustrative-example" class="slide level2">
-<h2>An illustrative example</h2>
+<h3 id="individual-participant-data-meta-analyses">Individual Participant Data Meta-analyses</h3>
+
+<img data-src="images/Picture9.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="an-illustrative-example">An illustrative example</h3>
 <p><strong>Wynants et al.&nbsp;previously identified &gt;700 prediction models for coronavirus-19</strong></p>
 <p>We conducted a meta-analysis of participant-level data from 46 914 patients across 18 countries to externally validate the most promising models for predicting short term mortality</p>
-<div style="font-size: 0.5em">
 <ul>
 <li><p>de Jong VMT, Rousset RZ, Antonio-Villa NE, Buenen AG, Van Calster B, Bello-Chavolla OY, et al.&nbsp;Clinical prediction models for mortality in patients with covid-19: external validation and individual participant data meta-analysis. BMJ. 2022 Jul 12;e069881.</p></li>
 <li><p>Wynants L, Van Calster B, Bonten MMJ, Collins GS, Debray TPA, De Vos M, et al.&nbsp;Prediction models for diagnosis and prognosis of covid-19 infection: systematic review and critical appraisal. BMJ. 2020 Apr 7;369:BMJ Publishing Group Ltd.</p></li>
 </ul>
-</div>
 </section>
-<section id="an-illustrative-example-1" class="slide level2">
-<h2>An illustrative example</h2>
+<section class="slide level2">
 
-<img data-src="Picture 10.png" style="width:100.0%" class="r-stretch"></section>
-<section id="an-illustrative-example-2" class="slide level2">
-<h2>An illustrative example</h2>
+<h3 id="an-illustrative-example-1">An illustrative example</h3>
 
-<img data-src="Picture 11.png" style="width:100.0%" class="r-stretch"></section>
-<section id="model-development-using-ipd-ma" class="slide level2">
-<h2>Model development using IPD-MA</h2>
+<img data-src="images/Picture10.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="an-illustrative-example-2">An illustrative example</h3>
+
+<img data-src="images/Picture11.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="model-development-using-ipd-ma">Model development using IPD-MA</h3>
 <p>Internal-external cross-validation</p>
 
-<img data-src="Picture 12.png" style="width:100.0%" class="r-stretch"></section>
-<section id="development-and-validation-of-encals" class="slide level2">
-<h2>Development and validation of ENCALS</h2>
+<img data-src="images/Picture12.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="development-and-validation-of-encals">Development and validation of ENCALS</h3>
 <p><strong>Prognosis of amyotrophic lateral disease</strong></p>
 <p>14 cohort studies (specialized ALS centres)</p>
 <ul>
@@ -502,38 +524,37 @@ Thomas Debray, PhD
 <p>(Non-invasive ventilation for more than 23h/day, or death)</p></li>
 </ul>
 </section>
-<section id="development-and-validation-of-encals-1" class="slide level2">
-<h2>Development and validation of ENCALS</h2>
+<section class="slide level2">
 
-<img data-src="Picture 13.png" style="width:100.0%" class="r-stretch"></section>
-<section id="simple-versus-complex-modelling" class="slide level2">
-<h2>Simple versus complex modelling</h2>
-<div style="font-size: 0.8em">
+<h3 id="development-and-validation-of-encals-1">Development and validation of ENCALS</h3>
+
+<img data-src="images/Picture13.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="simple-versus-complex-modelling">Simple versus complex modelling</h3>
 <ul>
 <li><p>Prediction of heart failure</p></li>
 <li><p>A cohort of 871,687 individuals from 225 general practices</p>
 <p>(43,987 events)</p></li>
-<li><p>Candidate predictors: <span style="color:green;"> <em>age</em>, <em>sex</em>, <em>current smoking</em>, <em>ethnicity</em> </span>(CE, Caucasian ethnicity), index of multiple deprivation (IMD), body mass index (BMI), creatinine level (CL), and total cholesterol (TC).</p></li>
+<li><p>Candidate predictors: <span style="color:green;"><em>age</em>, <em>sex</em>, <em>current smoking</em>, <em>ethnicity</em></span>(CE, Caucasian ethnicity), index of multiple deprivation (IMD), body mass index (BMI), creatinine level (CL), and total cholesterol (TC).</p></li>
 <li><p>Implementation of internal-external cross-validation to develop simple and complex Cox regression models</p></li>
 </ul>
-</div>
-<div style="font-size: 0.5em">
 <p>Takada T, Nijman S, Denaxas S, Snell KIE, Uijl A, Nguyen TL, et al.&nbsp;Internal-external cross-validation helped to evaluate the generalizability of prediction models in large clustered datasets. J Clin Epidemiol. 2021 Apr 6;137:83–91.</p>
-</div>
 </section>
-<section id="simple-versus-complex-modelling-1" class="slide level2">
-<h2>Simple versus complex modelling</h2>
+<section class="slide level2">
+
+<h3 id="simple-versus-complex-modelling-1">Simple versus complex modelling</h3>
 <p>Development and validation of several prognostic models</p>
 <ol type="1">
 <li>Cox regression model with four predictors (*) as linear terms</li>
 <li>Cox regression model with eight predictors; including a RCS with three knots for all continuous predictor variables, and interaction terms between all possible combinations of two variables. Estimation involves a ridge penalty term.</li>
 </ol>
 
-<img data-src="Picture 14.png" style="width:100.0%" class="r-stretch"></section>
-<section id="developing-generalizable-prediction-models" class="slide level2">
-<h2>Developing generalizable prediction models</h2>
+<img data-src="images/Picture14.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="developing-generalizable-prediction-models">Developing generalizable prediction models</h3>
 <p>Stepwise estimation procedure</p>
-<div style="font-size: 0.7em">
 <ul>
 <li><p>Fitting of a pre-specified GLM in each study</p></li>
 <li><p>Evaluation of performance using IECV</p></li>
@@ -542,31 +563,31 @@ Thomas Debray, PhD
 <li><p>Implementation in “metamisc”</p>
 <p>https://CRAN.R-project.org/package=metamisc</p></li>
 </ul>
-</div>
 
-<img data-src="Picture 15.png" style="width:100.0%" class="r-stretch"></section>
-<section id="reporting-guidelines" class="slide level2">
-<h2>Reporting guidelines</h2>
+<img data-src="images/Picture15.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 16.png" style="width:100.0%" class="r-stretch"></section></section>
+<h3 id="reporting-guidelines">Reporting guidelines</h3>
+
+<img data-src="images/Picture16.png" style="width:100.0%" class="r-stretch"></section></section>
 <section>
 <section id="treatment-effect-modelling" class="title-slide slide level1 center">
 <h1>Treatment effect modelling</h1>
 
 </section>
-<section id="background" class="slide level2">
-<h2>Background</h2>
+<section class="slide level2">
+
+<h3 id="background">Background</h3>
 <ul>
 <li>Causal treatment effects are estimated at the population level in randomised controlled trials (RCTs)</li>
 <li>However, clinical decision is often to be made at the individual level in practice.</li>
 <li>Individualized absolute treatment effects provide a natural starting point to engage in shared decision making</li>
 </ul>
-<div style="font-size: 0.5em">
 <p>Nguyen TL, Collins GS, Landais P, Le Manach Y. Counterfactual clinical prediction models could help to infer individualized treatment effects in randomized controlled trials-An illustration with the International Stroke Trial. J Clin Epidemiol. 2020 May 25;125:47–56.</p>
-</div>
 </section>
-<section id="background-1" class="slide level2">
-<h2>Background</h2>
+<section class="slide level2">
+
+<h3 id="background-1">Background</h3>
 <p>Requirements</p>
 <ul>
 <li><p>Move to the absolute risk scale</p></li>
@@ -580,32 +601,35 @@ Thomas Debray, PhD
 <li><p>Consider counterfactual outcomes</p></li>
 </ul>
 </section>
-<section id="background-2" class="slide level2">
-<h2>Background</h2>
+<section class="slide level2">
+
+<h3 id="background-2">Background</h3>
 <p>An example: <strong>The SYNTAX score II</strong></p>
 <p>“<em>The SYNTAX score II is a clinical tool that combines clinical variables with the anatomical SYNTAX score, providing expected 4-year mortality for both coronary artery bypass grafting (CABG) and percutaneous coronary intervention (PCI) — thus recommending either PCI only, CABG only or equipoise in treatment based on long-term mortality</em>.”</p>
-<div style="font-size: 0.5em">
-<p>DOI: 10.21037/acs.2018.07.02</p>
-</div>
 </section>
-<section id="background-3" class="slide level2">
-<h2>Background</h2>
+<section class="slide level2">
 
-<img data-src="Picture 17.png" style="width:100.0%" class="r-stretch"></section>
-<section id="background-4" class="slide level2">
-<h2>Background</h2>
+<h3 id="background-3">Background</h3>
 
-<img data-src="Picture 18.png" style="width:100.0%" class="r-stretch"></section>
-<section id="methods-for-treatment-effect-modelling" class="slide level2">
-<h2>Methods for treatment effect modelling</h2>
+<img data-src="images/Picture17.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
 
-<img data-src="Picture 19.png" style="width:100.0%" class="r-stretch"></section>
-<section id="simulation-study-1-interaction" class="slide level2">
-<h2>Simulation study (1 interaction)</h2>
+<h3 id="background-4">Background</h3>
 
-<img data-src="Picture 20.png" style="width:100.0%" class="r-stretch"></section>
-<section id="empirical-example" class="slide level2">
-<h2>Empirical example</h2>
+<img data-src="images/Picture18.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="methods-for-treatment-effect-modelling">Methods for treatment effect modelling</h3>
+
+<img data-src="images/Picture19.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="simulation-study-1-interaction">Simulation study (1 interaction)</h3>
+
+<img data-src="images/Picture20.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="empirical-example">Empirical example</h3>
 <ul>
 <li>RCT with 1:1 allocation ratio (N = 512)</li>
 <li>Population: clinically diagnosed acute otitis media (AOM) in children 6 months to 5 years of age</li>
@@ -614,12 +638,14 @@ Thomas Debray, PhD
 <li>Baseline data on: treatment received, sex, presence of recurrent AOM, fever, bilateral occurrence, ear pain, presence of a runny nose, cough, tympanic membrane abnormality, and age</li>
 </ul>
 </section>
-<section id="empirical-example-1" class="slide level2">
-<h2>Empirical example</h2>
+<section class="slide level2">
 
-<img data-src="Picture 21.png" style="width:100.0%" class="r-stretch"></section>
-<section id="main-findings" class="slide level2">
-<h2>Main findings</h2>
+<h3 id="empirical-example-1">Empirical example</h3>
+
+<img data-src="images/Picture21.png" style="width:100.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="main-findings">Main findings</h3>
 <ul>
 <li><p>Small RCTs</p>
 <ul>
@@ -633,8 +659,23 @@ Thomas Debray, PhD
 </ul></li>
 </ul>
 
+<p><img src="../_assets/images/copyright.svg" class="slide-logo"></p>
 <div class="footer footer-default">
-
+<p><a href="https://fromdatatowisdom.com/" class="uri">https://fromdatatowisdom.com/</a></p>
+</div>
+<div class="reveal-header">
+<div class="header-logo" data-hide-from-titleslide="true">
+<img data-src="../_assets/images/smartdata-logo.png">
+</div>
+<div class="sc-title">
+<p> </p>
+</div>
+<div class="header-text" data-hide-from-titleslide="true">
+<p> </p>
+</div>
+<div class="sb-title">
+<p> </p>
+</div>
 </div>
 </section></section>
     </div>
@@ -647,6 +688,7 @@ Thomas Debray, PhD
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -661,18 +703,19 @@ Thomas Debray, PhD
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
-'previewLinksAuto': false,
-'smaller': false,
+'controlsAuto': false,
+'previewLinksAuto': true,
+'smaller': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': false,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":false},
+'smaller': true,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -819,7 +862,7 @@ Thomas Debray, PhD
         height: 700,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 0.2,
 
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
@@ -839,7 +882,7 @@ Thomas Debray, PhD
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -848,44 +891,6 @@ Thomas Debray, PhD
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

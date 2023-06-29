@@ -1,55 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides_prognostic.html</loc>
-    <lastmod>2023-06-27T04:46:14.511Z</lastmod>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/about.html</loc>
+    <lastmod>2023-06-29T10:54:47.455Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/2023-06-14 - Workshop Bern/seminar.html</loc>
-    <lastmod>2023-06-27T04:46:13.539Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/4-Design-and-Reporting-Missing-Data/4-Design-and-reporting-missing-data.html</loc>
-    <lastmod>2023-06-27T04:46:10.027Z</lastmod>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/1-Introduction/introduction-preview.html</loc>
+    <lastmod>2023-06-29T10:54:46.927Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/2-Imputation-via-Joint-Modelling/Imputation-via-Joint-Modelling.html</loc>
-    <lastmod>2023-06-27T04:46:08.115Z</lastmod>
+    <lastmod>2023-06-29T10:54:46.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/2023-06-14-Workshop-Bern/seminar.html</loc>
+    <lastmod>2023-06-29T10:54:45.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/Copenhagen-2023/Copenhagen2023.html</loc>
+    <lastmod>2023-06-29T10:54:41.979Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/3-Imputation-via-FCS/Imputation-via-FCS.html</loc>
-    <lastmod>2023-06-27T04:46:07.051Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/1-Introduction/Introduction.html</loc>
-    <lastmod>2023-06-27T04:46:03.231Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/index.html</loc>
-    <lastmod>2023-06-27T04:45:59.123Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/about.html</loc>
-    <lastmod>2023-06-27T04:46:00.811Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/Workshop clinical trials/Workshop clinical trials.html</loc>
-    <lastmod>2023-06-27T04:46:06.687Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/MA-Prognostic-factor/MA-Prognostic-factors.html</loc>
-    <lastmod>2023-06-27T04:46:07.695Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/Copenhagen 2023/Copenhagen2023.html</loc>
-    <lastmod>2023-06-27T04:46:09.399Z</lastmod>
+    <lastmod>2023-06-29T10:54:40.715Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/prognostic_model34/prognostic_model34.html</loc>
-    <lastmod>2023-06-27T04:46:10.567Z</lastmod>
+    <lastmod>2023-06-29T10:54:39.999Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/MA-Prognostic-factor/MA-Prognostic-factors.html</loc>
+    <lastmod>2023-06-29T10:54:35.703Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/Workshop-clinical-trials/Workshop-clinical-trials.html</loc>
+    <lastmod>2023-06-29T10:54:39.459Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/5-Advanced Topics/Advanced-topics.html</loc>
-    <lastmod>2023-06-27T04:46:13.931Z</lastmod>
+    <lastmod>2023-06-29T10:54:40.391Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/index.html</loc>
+    <lastmod>2023-06-29T10:54:41.371Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/2023-06-14-Workshop-Bern/slides_prognostic.html</loc>
+    <lastmod>2023-06-29T10:54:42.255Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/4-Design-and-Reporting-Missing-Data/4-Design-and-reporting-missing-data.html</loc>
+    <lastmod>2023-06-29T10:54:45.935Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/slides/1-Introduction/Introduction.html</loc>
+    <lastmod>2023-06-29T10:54:46.635Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/smartdata-analysis-and-statistics/time4stats/index.html</loc>
+    <lastmod>2023-06-29T10:54:47.207Z</lastmod>
   </url>
 </urlset>
