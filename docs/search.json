@@ -7,27 +7,6 @@
     "text": "Let’s talk about statistics"
   },
   {
-    "objectID": "slides/2023-06-14-Workshop-Bern/slides_prognostic.html",
-    "href": "slides/2023-06-14-Workshop-Bern/slides_prognostic.html",
-    "title": "Meta-analysis of Prognostic Studies",
-    "section": "",
-    "text": "The presentation"
-  },
-  {
-    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
-    "href": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
-    "title": "Advanced Topics",
-    "section": "Rubin’s rules",
-    "text": "Rubin’s rules\n\n\n\n\nhttps://fromdatatowisdom.com/"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "index.html#section",
     "href": "index.html#section",
     "title": "News",
@@ -54,5 +33,26 @@
     "title": "Teaching",
     "section": "",
     "text": "Introduction\nImputation via Joint Modelling"
+  },
+  {
+    "objectID": "slides/2023-06-14-Workshop-Bern/slides_prognostic.html",
+    "href": "slides/2023-06-14-Workshop-Bern/slides_prognostic.html",
+    "title": "Meta-analysis of Prognostic Studies",
+    "section": "",
+    "text": "The presentation"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
+    "title": "Advanced Topics",
+    "section": "Rubin’s rules",
+    "text": "Rubin’s rules\n\n\n\n\nhttps://fromdatatowisdom.com/"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   }
 ]

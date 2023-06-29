@@ -4,7 +4,6 @@ page-layout: article
 title-block-banner: true
 ---
 
-# Teaching
 
 ## Multiple Imputation
 
