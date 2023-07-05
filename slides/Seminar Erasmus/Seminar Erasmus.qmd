@@ -1,0 +1,350 @@
+---
+title: "Meta-analysis of Individual Participant Data"
+author: "Thomas Debray, PhD"
+format:
+  revealjs: 
+    transition: none
+    smaller: true
+    controls: true
+    slide-number: false
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    margin: 0.2
+    logo: ../_assets/images/copyright.svg
+    header-logo: ../_assets/images/smartdata-logo.png
+    hide-from-titleSlide: "all"
+    theme: ../_assets/styles/slide-styles.scss
+    footer: <https://fromdatatowisdom.com/>
+    css: ../_assets/styles/additional-styles.css
+filters: 
+  - ../reveal-header
+title-slide-attributes: 
+  data-background-image: ../_assets/images/smartdata-logo.png
+  data-background-size: 30%
+  data-background-position: 2% 2%
+---
+
+## Need for evidence synthesis
+
+Single studies often have limited power, especially when
+
+- Estimating treatment-covariate interactions
+- Modelling of multiple treatments
+- Developing & validating prediction models
+
+IPD meta-analysis offers particular advantages when focusing on personalized medicine
+
+## Need for evidence synthesis
+
+**Main opportunities**
+
+- Increase total sample size
+- Increase available case-mix variability
+- Ability to standardize analysis methods across IPD sets
+- Ability to investigate more complex associations
+- Ability to evaluate generalizability of the model across different settings and populations
+
+## Approaches for IPD-MA
+
+Two alternate approaches exist to summarize the evidence from multiple studies:
+
+- **Two-stage meta-analysis**
+  
+  Analyze each study separately and pool the resulting estimates using standard meta-analytic techniques
+
+- **One-stage meta-analysis**
+  
+  Analyze IPD from all studies simultaneously by adopting a statistical model that accounts for clustering among patients
+
+![](Picture 1.png){width=20% fig-align="right"}
+
+
+## Two-stage meta-analysis
+
+**Step 1**: Analyze each trial individually to reduce the IPD to relevant summary data (aggregate data; AD)
+
+- Estimates of relative treatment effect
+- Estimates of treatment-covariate interaction
+- Other…
+
+with corresponding estimates of precision
+
+**Step 2**: Summarize the generated AD using meta-analysis methods
+
+## One-stage meta-analysis
+
+Analyze all studies simultaneously by specifying an appropriate statistical model that accounts for clustering of subjects within trials.
+
+When accounting for clustering, these models are also known as:
+
+- Multilevel models
+- Hierarchical models
+- Mixed effects models
+- Random intercept models
+
+## Assumptions of meta-analysis models
+
+- **Fixed (common) effect**
+  
+  All studies share the same underlying (e.g. treatment) effect
+  
+  \
+- **Random effects**
+  
+  Effects are different but related across studies
+
+  \
+- **Stratified (fixed) effects**
+  
+  Effects are different and unrelated across studies
+  
+## Possible causes of between-study heterogeneity
+
+- Publication bias
+- Variation in study protocols
+- Variation in study quality
+- Differences in interventions received (e.g. dose)
+- Differences in follow-up length
+- Treatment-covariate interaction
+
+## Treatment-covariate interaction
+
+The magnitude of treatment effect (measured on a scale such as a mean difference, risk ratio, odds ratio, or hazard ratio) changes according to the value of a risk factor
+
+\
+
+This situation is also referred to as presence of **subgroup effects**
+
+\
+
+Estimation of treatment-covariate interaction is highly prone to overfitting
+
+## Treatment-covariate interaction
+
+![](Picture 2.png)
+
+## Identifying subgroup effects in IPDMA
+
+- Increased power to detect genuine treatment-covariate interactions, due to
+
+    - Increased sample size
+    - Increased variability in case-mix
+
+- Potential to avoid ecological bias (as compared to AD-MA)by separating within-trial from across-trial information 
+- Potential to invesstigate non-linear effects 
+
+\
+
+::: {style="font-size: 0.7em"}
+The next slides are based on
+\
+**Predicting personalised absolute treatment effects in individual participant data meta-analysis: an introduction to splines**. Belias M, Rovers MM, Hoogland J, Reitsma JB, Debray TPA, IntHout J [Under review]
+:::
+
+## Identifying subgroup effects in IPDMA
+
+**Practical example**
+
+- 5 RCTs for bilateral Acute Otitis Media
+- Efficacy of antibiotics on fever and/or ear-pain after 3-7 days
+- Investigation of treatment effect modification by age
+
+    - Restricted cubic splines (3 knots)
+    - B splines (3 equidistant knots)
+    - P splines (17 equidistant knots)
+    - Smoothing splines
+
+- Pooling methods
+
+    - Pointwise meta-analysis of treatment effect function
+    - Multivariate meta-analysis of treatment effect parameters
+    - Generalized Additive Mixed Models (GAMM)
+
+## Pointwise (two-stage) meta-analysis
+
+![](Picture 3.png)
+
+## Multivariate (two-stage) meta-analysis
+
+![](Picture 4.png)
+
+
+## GAMMs (one-stage meta-analysis)
+
+![](Picture 5.png)
+
+
+## Identifying subgroup effects in IPDMA
+
+All spline-based approaches and pooling methods performed equally well. However,
+
+- Pointwise meta-analysis may lead to non-smooth pooled treatment functions and confidence intervals. 
+GAMMs are prone to ecological bias
+- Multivariate meta-analysis requires well defined parameters to pool but can yield smooth treatment functions and avoids ecological bias
+
+Estimation of treatment effect functions helps to investigate presence and nature of effect modification
+
+## Individualizing treatment effect estimates
+
+Estimates of relative risk and subgroup effects
+
+- Do not indicate how individual outcomes are affected by treatment 
+- Cannot directly be used to personalize healthcare
+
+What outcomes are most likely to happen for the specific individual <span style="color:blue;">in the presence</span> and <span style="color:blue;">in the absence</span> of the intervention?
+
+=> Prediction of counterfactual treatment outcomes
+
+![](Picture 6.png){fig-align="right"}
+
+
+## Prediction of absolute treatment effect
+
+::: {style="font-size: 0.9em"}
+Develop a multivariable (e.g. regression) model directly on RCT data with inclusion of
+
+<span style="color:blue;">Prognostic variables</span>
+
+- Subject characteristics (e.g. age, gender)
+- History and physical examination results (e.g. blood pressure)
+- Imaging results
+- (Bio)markers (e.g. coronary plaque)
+
+<span style="color:blue;">Treatment variables</span>
+
+- With potential for effect modification
+:::
+
+![](Picture 7.png){width=35% fig-align="right"}
+
+## Estimation of absolute treatment effect
+
+- Accurate estimates of <span style="color:blue;">relative treatment effect</span> remain key
+
+    - An obvious choice to develop treatment effect models is to use patient-level data from randomized clinical trials (RCTs)
+
+- Accurate estimates of <span style="color:blue;">prognostic effects</span> are important
+
+    - Prognostic effects can reliably be estimated in randomized data but also in non-randomized studies
+
+- Accurate estimates of <span style="color:blue;">baseline risk</span> are important
+
+    - Due to strict eligibility criteria, RCT-based estimates of baseline risk may not generalize well to real-world populations
+
+## A selection of modeling approaches
+
+- Risk magnification
+
+    - Prediction model where treatment status is included as a main effect
+    - #parameters: p (<span style="color:blue;">predictors</span>) + 1 (<span style="color:blue;">treatment</span>) + 1 (<span style="color:blue;">intercept</span>)
+
+- Full modelling
+
+    - Prediction model with one or more treatment-covariate interactions
+    - #parameters: p (<span style="color:blue;">predictors</span>) + 1 (<span style="color:blue;">treatment</span>) + 1 (<span style="color:blue;">intercept</span>) + q (<span style="color:blue;">interactions</span>)
+
+- Baseline risk modification
+
+    - Prediction model that includes an interaction between treatment and the linear predictor 
+    - #parameters: p (<span style="color:blue;">predictors</span>) + 1 (<span style="color:blue;">treatment</span>) + 1 (<span style="color:blue;">intercept</span>) + 1 (<span style="color:blue;">interaction</span>)
+
+## A selection of modeling approaches
+
+**Key literature**
+
+- van Klaveren D, Vergouwe Y, et al. **Estimates of absolute treatment benefit for individual patients required careful modeling of statistical interactions**. J Clin Epidemiol. 2015 Feb 27; 
+
+- Hoogland J, IntHout J, et al. **A tutorial on individualized treatment effect prediction from randomized trials with a binary endpoint**. Stat Med. 2021 Aug 16; 
+
+- Nguyen T-L, Collins GS, Landais P, Le Manach Y. **Counterfactual clinical prediction models could help to infer individualized treatment effects in randomized controlled trials-An illustration with the International Stroke Trial**. J Clin Epidemiol. 2020 May 25;125:47–56. 
+
+## Findings from simulation studies
+
+- Risk magnification generally works well 
+- Shrinkage and selection critical even in large RCTs
+- Inclusion of interaction terms should be driven by domain knowledge
+- Modelling of interaction terms only beneficial in large trials
+
+Danger of overfitting & lack of sample representativeness
+=> IPDMA may help to improve internal & external validity
+
+## Personalizing treatment in major depression
+
+**Practical example**
+
+- Multi-centre trial to examine treatment strategies for untreated unipolar major depressive episodes (N = 1544) => **similarities with IPDMA**
+- Prediction of PHQ-9 (depression severity, ranges from 0 to 27) after 9 weeks
+- Identify treatment benefit of
+
+    - Continuing sertraline (N = 512)
+    - Continuing sertraline and adding mirtazapine (N = 502)
+    - Switching to mirtazapine (N  = 530)
+
+- 88 covariates
+
+    - Socio-demographic variables
+    - Baseline clinical characteristics
+    - Depression characteristics
+
+## Personalizing treatment in major depression
+
+![](Picture 8.png)
+
+## Personalizing treatment in major depression
+
+**Modelling strategies**
+
+- Penalized linear regression (LASSO)
+- Penalized linear regression (ridge)
+- Support Vector Machine (polynomial or radial kernel)
+- Artificial neural network (1 hidden layer and 3 or 4 nodes)
+
+Repeated 10-fold cross-validation for optimization of hyper-parameters
+
+Generate a prediction of the outcome under all three different treatment strategies (potential outcomes)
+
+## Internal-external cross-validation
+
+![](Picture 9.png)
+
+## Internal-external cross-validation
+
+![](Picture 10.png){fig-align="center"}
+
+Differences in case-mix distribution between sites
+
+## Generalizability of RIDGE
+
+![](Picture 11.png){fig-align="center"}
+
+Homogeneous performance across hold-out sites
+
+## Generalizability of SVM
+
+![](Picture 12.png){fig-align="center"}
+
+Homogeneous performance across hold-out sites
+
+## Personalizing treatment in major depression
+
+**Three subgroup of patients**
+
+- Recommended to continue sertraline (123 patients)
+- Recommended to combine mirtazapine and sertraline (696 patients)
+- Recommended to switch to mirtazapine (725 patients)
+
+Both combining and switching would reduce PHQ-9 scores by 1.2 to 1.4 points in the targeted population
+
+## Methods for prediction modelling in IPDMA
+
+![](Picture 13.png){fig-align="center"}
+
+## Ongoing work:  methodology for IPDMA
+
+- Methods for cross-design synthesis
+- Methods for multiple imputation
+- Methods for prediction of treatment benefit (development & validation)
+
+**Comparative effectiveness and personalized medicine using Real-World Data**, a book edited by Thomas Debray & Tri-Long Nguyen
+
