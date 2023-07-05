@@ -14,13 +14,6 @@
     "text": "Here is the preview of Introduction to Multiple Imputation"
   },
   {
-    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
-    "href": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
-    "title": "Advanced Topics",
-    "section": "Rubin’s rules",
-    "text": "Rubin’s rules\n\n\n\n\nhttps://fromdatatowisdom.com/"
-  },
-  {
     "objectID": "slides/index.html",
     "href": "slides/index.html",
     "title": "Teaching",
@@ -33,6 +26,230 @@
     "title": "Teaching",
     "section": "",
     "text": "Introduction\nImputation via Joint Modelling"
+  },
+  {
+    "objectID": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
+    "href": "slides/5-Advanced Topics/Advanced-topics.html#rubins-rules-2",
+    "title": "Advanced Topics",
+    "section": "Rubin’s rules",
+    "text": "Rubin’s rules\n\n\n\n\nhttps://fromdatatowisdom.com/"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#need-for-evidence-synthesis",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#need-for-evidence-synthesis",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Need for evidence synthesis",
+    "text": "Need for evidence synthesis\nSingle studies often have limited power, especially when\n\nEstimating treatment-covariate interactions\nModelling of multiple treatments\nDeveloping & validating prediction models\n\nIPD meta-analysis offers particular advantages when focusing on personalized medicine"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#need-for-evidence-synthesis-1",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#need-for-evidence-synthesis-1",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Need for evidence synthesis",
+    "text": "Need for evidence synthesis\nMain opportunities\n\nIncrease total sample size\nIncrease available case-mix variability\nAbility to standardize analysis methods across IPD sets\nAbility to investigate more complex associations\nAbility to evaluate generalizability of the model across different settings and populations"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#approaches-for-ipd-ma",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#approaches-for-ipd-ma",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Approaches for IPD-MA",
+    "text": "Approaches for IPD-MA\nTwo alternate approaches exist to summarize the evidence from multiple studies:\n\nTwo-stage meta-analysis\nAnalyze each study separately and pool the resulting estimates using standard meta-analytic techniques\nOne-stage meta-analysis\nAnalyze IPD from all studies simultaneously by adopting a statistical model that accounts for clustering among patients"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#two-stage-meta-analysis",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#two-stage-meta-analysis",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Two-stage meta-analysis",
+    "text": "Two-stage meta-analysis\nStep 1: Analyze each trial individually to reduce the IPD to relevant summary data (aggregate data; AD)\n\nEstimates of relative treatment effect\nEstimates of treatment-covariate interaction\nOther…\n\nwith corresponding estimates of precision\nStep 2: Summarize the generated AD using meta-analysis methods"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#one-stage-meta-analysis",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#one-stage-meta-analysis",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "One-stage meta-analysis",
+    "text": "One-stage meta-analysis\nAnalyze all studies simultaneously by specifying an appropriate statistical model that accounts for clustering of subjects within trials.\nWhen accounting for clustering, these models are also known as:\n\nMultilevel models\nHierarchical models\nMixed effects models\nRandom intercept models"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#assumptions-of-meta-analysis-models",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#assumptions-of-meta-analysis-models",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Assumptions of meta-analysis models",
+    "text": "Assumptions of meta-analysis models\n\nFixed (common) effect\nAll studies share the same underlying (e.g. treatment) effect\n\n\nRandom effects\nEffects are different but related across studies\n\n\nStratified (fixed) effects\nEffects are different and unrelated across studies"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#possible-causes-of-between-study-heterogeneity",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#possible-causes-of-between-study-heterogeneity",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Possible causes of between-study heterogeneity",
+    "text": "Possible causes of between-study heterogeneity\n\nPublication bias\nVariation in study protocols\nVariation in study quality\nDifferences in interventions received (e.g. dose)\nDifferences in follow-up length\nTreatment-covariate interaction"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#treatment-covariate-interaction",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#treatment-covariate-interaction",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Treatment-covariate interaction",
+    "text": "Treatment-covariate interaction\nThe magnitude of treatment effect (measured on a scale such as a mean difference, risk ratio, odds ratio, or hazard ratio) changes according to the value of a risk factor\n\n\nThis situation is also referred to as presence of subgroup effects\n\n\nEstimation of treatment-covariate interaction is highly prone to overfitting"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#treatment-covariate-interaction-1",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#treatment-covariate-interaction-1",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Treatment-covariate interaction",
+    "text": "Treatment-covariate interaction"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#identifying-subgroup-effects-in-ipdma",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#identifying-subgroup-effects-in-ipdma",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Identifying subgroup effects in IPDMA",
+    "text": "Identifying subgroup effects in IPDMA\n\nIncreased power to detect genuine treatment-covariate interactions, due to\n\nIncreased sample size\nIncreased variability in case-mix\n\nPotential to avoid ecological bias (as compared to AD-MA)\u000bby separating within-trial from across-trial information\nPotential to invesstigate non-linear effects\n\n\n\n\nThe next slides are based on\nPredicting personalised absolute treatment effects in individual participant data meta-analysis: an introduction to splines. Belias M, Rovers MM, Hoogland J, Reitsma JB, Debray TPA, IntHout J [Under review]"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#identifying-subgroup-effects-in-ipdma-1",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#identifying-subgroup-effects-in-ipdma-1",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Identifying subgroup effects in IPDMA",
+    "text": "Identifying subgroup effects in IPDMA\nPractical example\n\n5 RCTs for bilateral Acute Otitis Media\nEfficacy of antibiotics on fever and/or ear-pain after 3-7 days\nInvestigation of treatment effect modification by age\n\nRestricted cubic splines (3 knots)\nB splines (3 equidistant knots)\nP splines (17 equidistant knots)\nSmoothing splines\n\nPooling methods\n\nPointwise meta-analysis of treatment effect function\nMultivariate meta-analysis of treatment effect parameters\nGeneralized Additive Mixed Models (GAMM)"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#pointwise-two-stage-meta-analysis",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#pointwise-two-stage-meta-analysis",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Pointwise (two-stage) meta-analysis",
+    "text": "Pointwise (two-stage) meta-analysis"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#multivariate-two-stage-meta-analysis",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#multivariate-two-stage-meta-analysis",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Multivariate (two-stage) meta-analysis",
+    "text": "Multivariate (two-stage) meta-analysis"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#gamms-one-stage-meta-analysis",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#gamms-one-stage-meta-analysis",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "GAMMs (one-stage meta-analysis)",
+    "text": "GAMMs (one-stage meta-analysis)"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#identifying-subgroup-effects-in-ipdma-2",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#identifying-subgroup-effects-in-ipdma-2",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Identifying subgroup effects in IPDMA",
+    "text": "Identifying subgroup effects in IPDMA\nAll spline-based approaches and pooling methods performed equally well. However,\n\nPointwise meta-analysis may lead to non-smooth pooled treatment functions and confidence intervals. GAMMs are prone to ecological bias\nMultivariate meta-analysis requires well defined parameters to pool but can yield smooth treatment functions and avoids ecological bias\n\nEstimation of treatment effect functions helps to investigate presence and nature of effect modification"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#individualizing-treatment-effect-estimates",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#individualizing-treatment-effect-estimates",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Individualizing treatment effect estimates",
+    "text": "Individualizing treatment effect estimates\nEstimates of relative risk and subgroup effects\n\nDo not indicate how individual outcomes are affected by treatment\nCannot directly be used to personalize healthcare\n\nWhat outcomes are most likely to happen for the specific individual in the presence and in the absence of the intervention?\n=&gt; Prediction of counterfactual treatment outcomes"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#prediction-of-absolute-treatment-effect",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#prediction-of-absolute-treatment-effect",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Prediction of absolute treatment effect",
+    "text": "Prediction of absolute treatment effect\n\nDevelop a multivariable (e.g. regression) model directly on RCT data with inclusion of\nPrognostic variables\n\nSubject characteristics (e.g. age, gender)\nHistory and physical examination results (e.g. blood pressure)\nImaging results\n(Bio)markers (e.g. coronary plaque)\n\nTreatment variables\n\nWith potential for effect modification"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#estimation-of-absolute-treatment-effect",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#estimation-of-absolute-treatment-effect",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Estimation of absolute treatment effect",
+    "text": "Estimation of absolute treatment effect\n\nAccurate estimates of relative treatment effect remain key\n\nAn obvious choice to develop treatment effect models is to use patient-level data from randomized clinical trials (RCTs)\n\nAccurate estimates of prognostic effects are important\n\nPrognostic effects can reliably be estimated in randomized data but also in non-randomized studies\n\nAccurate estimates of baseline risk are important\n\nDue to strict eligibility criteria, RCT-based estimates of baseline risk may not generalize well to real-world populations"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#a-selection-of-modeling-approaches",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#a-selection-of-modeling-approaches",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "A selection of modeling approaches",
+    "text": "A selection of modeling approaches\n\nRisk magnification\n\nPrediction model where treatment status is included as a main effect\n#parameters: p (predictors) + 1 (treatment) + 1 (intercept)\n\nFull modelling\n\nPrediction model with one or more treatment-covariate interactions\n#parameters: p (predictors) + 1 (treatment) + 1 (intercept) + q (interactions)\n\nBaseline risk modification\n\nPrediction model that includes an interaction between treatment and the linear predictor\n#parameters: p (predictors) + 1 (treatment) + 1 (intercept) + 1 (interaction)"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#a-selection-of-modeling-approaches-1",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#a-selection-of-modeling-approaches-1",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "A selection of modeling approaches",
+    "text": "A selection of modeling approaches\nKey literature\n\nvan Klaveren D, Vergouwe Y, et al. Estimates of absolute treatment benefit for individual patients required careful modeling of statistical interactions. J Clin Epidemiol. 2015 Feb 27;\nHoogland J, IntHout J, et al. A tutorial on individualized treatment effect prediction from randomized trials with a binary endpoint. Stat Med. 2021 Aug 16;\nNguyen T-L, Collins GS, Landais P, Le Manach Y. Counterfactual clinical prediction models could help to infer individualized treatment effects in randomized controlled trials-An illustration with the International Stroke Trial. J Clin Epidemiol. 2020 May 25;125:47–56."
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#findings-from-simulation-studies",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#findings-from-simulation-studies",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Findings from simulation studies",
+    "text": "Findings from simulation studies\n\nRisk magnification generally works well\nShrinkage and selection critical even in large RCTs\nInclusion of interaction terms should be driven by domain knowledge\nModelling of interaction terms only beneficial in large trials\n\nDanger of overfitting & lack of sample representativeness =&gt; IPDMA may help to improve internal & external validity"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#personalizing-treatment-in-major-depression",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#personalizing-treatment-in-major-depression",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Personalizing treatment in major depression",
+    "text": "Personalizing treatment in major depression\nPractical example\n\nMulti-centre trial to examine treatment strategies for untreated unipolar major depressive episodes (N = 1544) =&gt; similarities with IPDMA\nPrediction of PHQ-9 (depression severity, ranges from 0 to 27) after 9 weeks\nIdentify treatment benefit of\n\nContinuing sertraline (N = 512)\nContinuing sertraline and adding mirtazapine (N = 502)\nSwitching to mirtazapine (N = 530)\n\n88 covariates\n\nSocio-demographic variables\nBaseline clinical characteristics\nDepression characteristics"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#personalizing-treatment-in-major-depression-1",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#personalizing-treatment-in-major-depression-1",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Personalizing treatment in major depression",
+    "text": "Personalizing treatment in major depression"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#personalizing-treatment-in-major-depression-2",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#personalizing-treatment-in-major-depression-2",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Personalizing treatment in major depression",
+    "text": "Personalizing treatment in major depression\nModelling strategies\n\nPenalized linear regression (LASSO)\nPenalized linear regression (ridge)\nSupport Vector Machine (polynomial or radial kernel)\nArtificial neural network (1 hidden layer and 3 or 4 nodes)\n\nRepeated 10-fold cross-validation for optimization of hyper-parameters\nGenerate a prediction of the outcome under all three different treatment strategies (potential outcomes)"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#internal-external-cross-validation",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#internal-external-cross-validation",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Internal-external cross-validation",
+    "text": "Internal-external cross-validation"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#internal-external-cross-validation-1",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#internal-external-cross-validation-1",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Internal-external cross-validation",
+    "text": "Internal-external cross-validation\n\nDifferences in case-mix distribution between sites"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#generalizability-of-ridge",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#generalizability-of-ridge",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Generalizability of RIDGE",
+    "text": "Generalizability of RIDGE\n\nHomogeneous performance across hold-out sites"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#generalizability-of-svm",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#generalizability-of-svm",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Generalizability of SVM",
+    "text": "Generalizability of SVM\n\nHomogeneous performance across hold-out sites"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#personalizing-treatment-in-major-depression-3",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#personalizing-treatment-in-major-depression-3",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Personalizing treatment in major depression",
+    "text": "Personalizing treatment in major depression\nThree subgroup of patients\n\nRecommended to continue sertraline (123 patients)\nRecommended to combine mirtazapine and sertraline (696 patients)\nRecommended to switch to mirtazapine (725 patients)\n\nBoth combining and switching would reduce PHQ-9 scores by 1.2 to 1.4 points in the targeted population"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#methods-for-prediction-modelling-in-ipdma",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#methods-for-prediction-modelling-in-ipdma",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Methods for prediction modelling in IPDMA",
+    "text": "Methods for prediction modelling in IPDMA"
+  },
+  {
+    "objectID": "slides/Seminar Erasmus/Seminar Erasmus.html#ongoing-work-methodology-for-ipdma",
+    "href": "slides/Seminar Erasmus/Seminar Erasmus.html#ongoing-work-methodology-for-ipdma",
+    "title": "Meta-analysis of Individual Participant Data",
+    "section": "Ongoing work: methodology for IPDMA",
+    "text": "Ongoing work: methodology for IPDMA\n\nMethods for cross-design synthesis\nMethods for multiple imputation\nMethods for prediction of treatment benefit (development & validation)\n\nComparative effectiveness and personalized medicine using Real-World Data, a book edited by Thomas Debray & Tri-Long Nguyen\n\n\n\nhttps://fromdatatowisdom.com/"
   },
   {
     "objectID": "slides/2023-06-14-Workshop-Bern/slides_prognostic.html",
